@@ -1,24 +1,12 @@
 // Adaptive, responsive sidebar
 // --------------------------------------------------
+// The theme sets a calc()-based width at @media (min-width: 66.5rem)
+// that bloats the sidebar. Neutralize it so the sidebar stays compact.
 
-// Sidebar widths by breakpoint
-$sidebar-width-md: 200px;
-$sidebar-width-lg: 220px;
-$sidebar-width-xl: 248px;
-
-// Override the fixed sidebar width
 .side-bar {
-  width: $sidebar-width-md;
-  min-width: $sidebar-width-md;
-
-  @media (min-width: 1064px) {
-    width: $sidebar-width-lg;
-    min-width: $sidebar-width-lg;
-  }
-
-  @media (min-width: 1400px) {
-    width: $sidebar-width-xl;
-    min-width: $sidebar-width-xl;
+  @media (min-width: 66.5rem) {
+    width: 16.5rem !important;
+    min-width: 16.5rem !important;
   }
 }
 
@@ -33,28 +21,4 @@ $sidebar-width-xl: 248px;
 .nav-list .nav-list-item {
   padding-left: 0;
   font-size: 0.85rem;
-}
-
-// Let main content fill remaining space
-.main {
-  margin-left: $sidebar-width-md;
-
-  @media (min-width: 1064px) {
-    margin-left: $sidebar-width-lg;
-  }
-
-  @media (min-width: 1400px) {
-    margin-left: $sidebar-width-xl;
-  }
-}
-
-// On mobile, sidebar collapses — clear the margin
-@media (max-width: 799px) {
-  .side-bar {
-    width: 100%;
-    min-width: unset;
-  }
-  .main {
-    margin-left: 0;
-  }
 }
