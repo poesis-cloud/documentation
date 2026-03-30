@@ -1,16 +1,10 @@
-// Adaptive sidebar — fit content instead of fixed width
-.side-bar {
-  width: fit-content;
-  min-width: auto;
-  max-width: 280px;
+// Reduce internal padding in sidebar to minimize wasted space
+.site-nav,
+.site-header {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.site-nav {
-  white-space: nowrap;
-}
-
-@media (min-width: 50rem) {
-  .main {
-    margin-left: auto;
-  }
+.nav-list .nav-list-item {
+  padding-left: 0;
 }
