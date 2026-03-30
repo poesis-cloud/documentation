@@ -1,21 +1,21 @@
-// Narrower sidebar — reduce wasted space
+// Slightly narrower sidebar — reduce wasted space without clipping
 .side-bar {
-  width: 200px;
-  min-width: 200px;
+  width: 232px;
+  min-width: 232px;
 }
 
 @media (min-width: 50rem) {
   .main {
-    margin-left: 200px;
+    margin-left: 232px;
   }
 }
 
 @media (min-width: 66rem) {
   .side-bar {
-    width: 220px;
-    min-width: 220px;
+    width: 248px;
+    min-width: 248px;
   }
   .main {
-    margin-left: 220px;
+    margin-left: 248px;
   }
 }
