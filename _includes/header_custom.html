@@ -98,20 +98,20 @@
         e.preventDefault();
         dd.style.display = "none";
         var lang = a.getAttribute("data-lang");
-        // Clear ALL googtrans cookie variants first
-        var expiry = "expires=Thu, 01 Jan 1970 00:00:00 UTC";
-        document.cookie = "googtrans=; " + expiry + "; path=/;";
-        document.cookie = "googtrans=; " + expiry + "; path=/; domain=docs.poesis.cloud;";
-        document.cookie = "googtrans=; " + expiry + "; path=/; domain=.docs.poesis.cloud;";
-        document.cookie = "googtrans=; " + expiry + "; path=" + location.pathname + ";";
+        var combo = document.querySelector("select.goog-te-combo");
 
         if (!lang) {
-          // Restore original — just reload after clearing
-          location.reload();
+          // Restore original — select empty value in Google's dropdown
+          if (combo) {
+            combo.value = "";
+            combo.dispatchEvent(new Event("change"));
+          }
         } else {
-          document.cookie = "googtrans=/en/" + lang + "; path=/";
-          document.cookie = "googtrans=/en/" + lang + "; path=/; domain=.docs.poesis.cloud";
-          location.reload();
+          // Trigger translation via Google's own select element
+          if (combo) {
+            combo.value = lang;
+            combo.dispatchEvent(new Event("change"));
+          }
         }
       });
     });
