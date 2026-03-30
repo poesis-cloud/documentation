@@ -1,8 +1,5 @@
-<div class="translate-wrapper" style="display:inline-block; position:relative; vertical-align:middle;">
-  <button id="translate-btn" class="btn-translate" aria-label="Translate this page">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="vertical-align:-2px; margin-right:4px;"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
-    Translate
-  </button>
+<li class="aux-nav-list-item" style="position:relative;">
+  <a href="#" id="translate-btn" class="site-button" aria-label="Translate this page">Translate</a>
   <div id="translate-dropdown" class="translate-dropdown" style="display:none;">
     <a href="#" data-lang="fr">Français</a>
     <a href="#" data-lang="de">Deutsch</a>
@@ -14,53 +11,50 @@
     <a href="#" data-lang="zh-CN">中文</a>
     <a href="#" data-lang="ko">한국어</a>
     <a href="#" data-lang="ar">العربية</a>
+    <a href="#" data-lang="ru">Русский</a>
     <hr style="margin:4px 0; border:0; border-top:1px solid var(--border-color);">
     <a href="#" data-lang="">Show original</a>
   </div>
-</div>
+</li>
 
 <style>
-  .btn-translate {
-    font-size: 0.75rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: var(--link-color);
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    line-height: 1;
-    white-space: nowrap;
-  }
-  .btn-translate:hover { text-decoration: underline; }
   .translate-dropdown {
     position: absolute;
     top: 100%;
     right: 0;
-    margin-top: 6px;
-    background: var(--body-background-color);
+    margin-top: 0;
+    background-color: var(--body-background-color);
     border: 1px solid var(--border-color);
-    border-radius: 6px;
+    border-radius: 4px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     min-width: 140px;
     z-index: 1001;
     padding: 4px 0;
+    opacity: 1;
   }
   .translate-dropdown a {
     display: block;
     padding: 6px 14px;
-    font-size: 0.8rem;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     color: var(--body-text-color);
     text-decoration: none;
   }
   .translate-dropdown a:hover {
-    background: var(--sidebar-color, #f5f6fa);
+    background-image: linear-gradient(-90deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.03) 100%);
   }
 </style>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    // Move translate <li> into the aux-nav-list so it matches the other buttons
+    var translateLi = document.getElementById("translate-btn").closest("li");
+    var auxList = document.querySelector(".aux-nav-list");
+    if (auxList && translateLi) {
+      auxList.insertBefore(translateLi, auxList.firstChild);
+    }
+
     var btn = document.getElementById("translate-btn");
     var dd = document.getElementById("translate-dropdown");
 
