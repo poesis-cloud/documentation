@@ -22,8 +22,7 @@
   .translate-dropdown {
     position: fixed;
     background: #fff;
-    background: var(--body-background-color, #fff);
-    border: 1px solid var(--border-color, #ddd);
+    border: 1px solid #d1d5db;
     border-radius: 4px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     min-width: 140px;
@@ -36,11 +35,25 @@
     font-size: 0.6875rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--body-text-color);
+    color: #1f2328;
     text-decoration: none;
   }
   .translate-dropdown a:hover {
-    background-image: linear-gradient(-90deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.03) 100%);
+    background: #f3f4f6;
+  }
+  /* Dark theme */
+  [data-theme-name="teal-dark"] .translate-dropdown,
+  .dark .translate-dropdown {
+    background: #2d333b;
+    border-color: #444c56;
+  }
+  [data-theme-name="teal-dark"] .translate-dropdown a,
+  .dark .translate-dropdown a {
+    color: #e6edf3;
+  }
+  [data-theme-name="teal-dark"] .translate-dropdown a:hover,
+  .dark .translate-dropdown a:hover {
+    background: #3b434d;
   }
 </style>
 
@@ -85,14 +98,19 @@
         e.preventDefault();
         dd.style.display = "none";
         var lang = a.getAttribute("data-lang");
+        // Clear ALL googtrans cookie variants first
+        var expiry = "expires=Thu, 01 Jan 1970 00:00:00 UTC";
+        document.cookie = "googtrans=; " + expiry + "; path=/;";
+        document.cookie = "googtrans=; " + expiry + "; path=/; domain=docs.poesis.cloud;";
+        document.cookie = "googtrans=; " + expiry + "; path=/; domain=.docs.poesis.cloud;";
+        document.cookie = "googtrans=; " + expiry + "; path=" + location.pathname + ";";
+
         if (!lang) {
-          // Restore original
-          document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-          document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.docs.poesis.cloud;";
+          // Restore original — just reload after clearing
           location.reload();
         } else {
-          document.cookie = "googtrans=/en/" + lang + "; path=/;";
-          document.cookie = "googtrans=/en/" + lang + "; path=/; domain=.docs.poesis.cloud;";
+          document.cookie = "googtrans=/en/" + lang + "; path=/";
+          document.cookie = "googtrans=/en/" + lang + "; path=/; domain=.docs.poesis.cloud";
           location.reload();
         }
       });
