@@ -1,0 +1,32 @@
+title: Poesis Documentation
+description: User documentation for Poesis products — ITIP, SIE, GSM Sourcer
+url: "https://poesis-cloud.github.io"
+baseurl: "/documentation"
+
+remote_theme: just-the-docs/just-the-docs@v0.10.0
+
+color_scheme: light
+
+permalink: pretty
+
+nav_sort: case_insensitive
+
+aux_links:
+  "Poesis on GitHub":
+    - "https://github.com/poesis-cloud"
+
+footer_content: "&copy; 2026 Poesis. All rights reserved."
+
+search_enabled: true
+
+heading_anchors: true
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+exclude:
+  - LICENSE
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
