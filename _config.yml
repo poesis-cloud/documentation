@@ -12,6 +12,8 @@ permalink: pretty
 nav_sort: case_insensitive
 
 aux_links:
+  "Translate":
+    - "https://translate.google.com/translate?sl=en&u=https://docs.poesis.cloud"
   "Poesis on GitHub":
     - "https://github.com/poesis-cloud"
 
