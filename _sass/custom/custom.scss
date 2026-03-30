@@ -1,0 +1,21 @@
+// Narrower sidebar — reduce wasted space
+.side-bar {
+  width: 200px;
+  min-width: 200px;
+}
+
+@media (min-width: 50rem) {
+  .main {
+    margin-left: 200px;
+  }
+}
+
+@media (min-width: 66rem) {
+  .side-bar {
+    width: 220px;
+    min-width: 220px;
+  }
+  .main {
+    margin-left: 220px;
+  }
+}
