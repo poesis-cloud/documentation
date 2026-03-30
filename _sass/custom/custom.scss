@@ -1,21 +1,16 @@
-// Slightly narrower sidebar — reduce wasted space without clipping
+// Adaptive sidebar — fit content instead of fixed width
 .side-bar {
-  width: 232px;
-  min-width: 232px;
+  width: fit-content;
+  min-width: auto;
+  max-width: 280px;
+}
+
+.site-nav {
+  white-space: nowrap;
 }
 
 @media (min-width: 50rem) {
   .main {
-    margin-left: 232px;
-  }
-}
-
-@media (min-width: 66rem) {
-  .side-bar {
-    width: 248px;
-    min-width: 248px;
-  }
-  .main {
-    margin-left: 248px;
+    margin-left: auto;
   }
 }
