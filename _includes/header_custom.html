@@ -101,18 +101,11 @@
         var combo = document.querySelector("select.goog-te-combo");
 
         if (!lang) {
-          // Restore original — remove Google Translate cookies and reload
-          var expiry = "expires=Thu, 01 Jan 1970 00:00:00 UTC";
-          document.cookie = "googtrans=; " + expiry + "; path=/";
-          document.cookie = "googtrans=; " + expiry + "; path=/; domain=.docs.poesis.cloud";
-          document.cookie = "googtrans=; " + expiry + "; path=/; domain=docs.poesis.cloud";
-          // Also try clicking Google's own restore button if available
-          var restoreBtn = document.querySelector(".goog-te-banner-frame");
-          if (restoreBtn && restoreBtn.contentDocument) {
-            var showOrig = restoreBtn.contentDocument.querySelector(".goog-close-link");
-            if (showOrig) { showOrig.click(); return; }
+          // Restore original — switch back to English
+          if (combo) {
+            combo.value = "en";
+            combo.dispatchEvent(new Event("change"));
           }
-          location.reload();
         } else {
           // Trigger translation via Google's own select element
           if (combo) {
