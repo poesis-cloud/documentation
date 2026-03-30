@@ -1,13 +1,4 @@
 <!-- Google Translate widget -->
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-    }, 'google_translate_element');
-  }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <style>
   #google_translate_element {
     position: fixed;
@@ -63,52 +54,55 @@
 </style>
 
 <script>
-  (function() {
-    var saved = localStorage.getItem("jtd-theme") || "light";
-    document.documentElement.setAttribute("data-theme", saved);
-    jtdSetTheme(saved);
+  // Google Translate callback — called by the external script
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+    }, 'google_translate_element');
+  }
 
-    function jtdSetTheme(scheme) {
-      // just-the-docs uses a class on <body>: "light" or "dark"
-      // and exposes jtd.setTheme() in v0.10
-      if (typeof jtd !== "undefined" && jtd.setTheme) {
-        jtd.setTheme(scheme);
-      } else {
-        // Fallback: swap the <link> data-color-scheme or set attribute
-        document.documentElement.setAttribute("data-theme", scheme);
-      }
-    }
+  (function() {
+    var saved = localStorage.getItem("jtd-theme") || "teal";
 
     var moonSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>';
     var sunSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-5a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1zm9-9a1 1 0 0 1 0 2h-1a1 1 0 1 1 0-2h1zM4 11a1 1 0 0 1 0 2H3a1 1 0 1 1 0-2h1zm15.07-6.07a1 1 0 0 1 0 1.41l-.71.71a1 1 0 1 1-1.41-1.41l.71-.71a1 1 0 0 1 1.41 0zM7.05 17.66a1 1 0 0 1 0 1.41l-.71.71a1 1 0 1 1-1.41-1.41l.71-.71a1 1 0 0 1 1.41 0zm12.02 0a1 1 0 0 1-1.41 1.41l-.71-.71a1 1 0 1 1 1.41-1.41l.71.71zM7.05 6.34a1 1 0 0 1-1.41 0l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41z"/></svg>';
 
     document.addEventListener("DOMContentLoaded", function() {
-      var scheme = localStorage.getItem("jtd-theme") || "light";
+      var scheme = localStorage.getItem("jtd-theme") || "teal";
+      var isDark = scheme === "teal-dark";
 
-      // Apply saved scheme via jtd API if available
+      // Apply saved scheme via jtd API
       if (typeof jtd !== "undefined" && jtd.setTheme) {
         jtd.setTheme(scheme);
       }
+
+      // Create Google Translate container in body
+      var gtDiv = document.createElement("div");
+      gtDiv.id = "google_translate_element";
+      document.body.appendChild(gtDiv);
+
+      // Load Google Translate script
+      var gtScript = document.createElement("script");
+      gtScript.type = "text/javascript";
+      gtScript.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      document.body.appendChild(gtScript);
 
       // Create toggle button
       var btn = document.createElement("button");
       btn.className = "theme-toggle";
       btn.setAttribute("aria-label", "Toggle dark mode");
-      btn.innerHTML = scheme === "dark" ? sunSVG : moonSVG;
+      btn.innerHTML = isDark ? sunSVG : moonSVG;
       document.body.appendChild(btn);
 
       btn.addEventListener("click", function() {
-        var current = localStorage.getItem("jtd-theme") || "light";
-        var next = current === "dark" ? "light" : "dark";
+        var current = localStorage.getItem("jtd-theme") || "teal";
+        var next = current === "teal-dark" ? "teal" : "teal-dark";
         localStorage.setItem("jtd-theme", next);
-        btn.innerHTML = next === "dark" ? sunSVG : moonSVG;
+        btn.innerHTML = next === "teal-dark" ? sunSVG : moonSVG;
 
         if (typeof jtd !== "undefined" && jtd.setTheme) {
           jtd.setTheme(next);
-        } else {
-          // Hard fallback: reload with new scheme
-          document.documentElement.setAttribute("data-theme", next);
-          location.reload();
         }
       });
     });
