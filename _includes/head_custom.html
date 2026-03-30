@@ -14,9 +14,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     transition: background 0.2s;
+    padding: 0;
+    line-height: 0;
+  }
+  .theme-toggle svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    fill: currentColor;
+    color: var(--body-text-color);
   }
   .theme-toggle:hover {
     opacity: 0.8;
@@ -40,6 +47,9 @@
       }
     }
 
+    var moonSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>';
+    var sunSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-5a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1zm9-9a1 1 0 0 1 0 2h-1a1 1 0 1 1 0-2h1zM4 11a1 1 0 0 1 0 2H3a1 1 0 1 1 0-2h1zm15.07-6.07a1 1 0 0 1 0 1.41l-.71.71a1 1 0 1 1-1.41-1.41l.71-.71a1 1 0 0 1 1.41 0zM7.05 17.66a1 1 0 0 1 0 1.41l-.71.71a1 1 0 1 1-1.41-1.41l.71-.71a1 1 0 0 1 1.41 0zm12.02 0a1 1 0 0 1-1.41 1.41l-.71-.71a1 1 0 1 1 1.41-1.41l.71.71zM7.05 6.34a1 1 0 0 1-1.41 0l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41z"/></svg>';
+
     document.addEventListener("DOMContentLoaded", function() {
       var scheme = localStorage.getItem("jtd-theme") || "light";
 
@@ -52,14 +62,14 @@
       var btn = document.createElement("button");
       btn.className = "theme-toggle";
       btn.setAttribute("aria-label", "Toggle dark mode");
-      btn.textContent = scheme === "dark" ? "☀️" : "🌙";
+      btn.innerHTML = scheme === "dark" ? sunSVG : moonSVG;
       document.body.appendChild(btn);
 
       btn.addEventListener("click", function() {
         var current = localStorage.getItem("jtd-theme") || "light";
         var next = current === "dark" ? "light" : "dark";
         localStorage.setItem("jtd-theme", next);
-        btn.textContent = next === "dark" ? "☀️" : "🌙";
+        btn.innerHTML = next === "dark" ? sunSVG : moonSVG;
 
         if (typeof jtd !== "undefined" && jtd.setTheme) {
           jtd.setTheme(next);
