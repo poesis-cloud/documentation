@@ -1,1 +1,93 @@
+<div class="translate-wrapper" style="display:inline-block; position:relative; vertical-align:middle;">
+  <button id="translate-btn" class="btn-translate" aria-label="Translate this page">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="vertical-align:-2px; margin-right:4px;"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+    Translate
+  </button>
+  <div id="translate-dropdown" class="translate-dropdown" style="display:none;">
+    <a href="#" data-lang="fr">Français</a>
+    <a href="#" data-lang="de">Deutsch</a>
+    <a href="#" data-lang="es">Español</a>
+    <a href="#" data-lang="it">Italiano</a>
+    <a href="#" data-lang="pt">Português</a>
+    <a href="#" data-lang="nl">Nederlands</a>
+    <a href="#" data-lang="ja">日本語</a>
+    <a href="#" data-lang="zh-CN">中文</a>
+    <a href="#" data-lang="ko">한국어</a>
+    <a href="#" data-lang="ar">العربية</a>
+    <hr style="margin:4px 0; border:0; border-top:1px solid var(--border-color);">
+    <a href="#" data-lang="">Show original</a>
+  </div>
+</div>
 
+<style>
+  .btn-translate {
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--link-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .btn-translate:hover { text-decoration: underline; }
+  .translate-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 6px;
+    background: var(--body-background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    min-width: 140px;
+    z-index: 1001;
+    padding: 4px 0;
+  }
+  .translate-dropdown a {
+    display: block;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    color: var(--body-text-color);
+    text-decoration: none;
+  }
+  .translate-dropdown a:hover {
+    background: var(--sidebar-color, #f5f6fa);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var btn = document.getElementById("translate-btn");
+    var dd = document.getElementById("translate-dropdown");
+
+    btn.addEventListener("click", function(e) {
+      e.stopPropagation();
+      dd.style.display = dd.style.display === "none" ? "block" : "none";
+    });
+
+    document.addEventListener("click", function() { dd.style.display = "none"; });
+    dd.addEventListener("click", function(e) { e.stopPropagation(); });
+
+    dd.querySelectorAll("a[data-lang]").forEach(function(a) {
+      a.addEventListener("click", function(e) {
+        e.preventDefault();
+        dd.style.display = "none";
+        var lang = a.getAttribute("data-lang");
+        if (!lang) {
+          // Restore original
+          document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+          document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.docs.poesis.cloud;";
+          location.reload();
+        } else {
+          document.cookie = "googtrans=/en/" + lang + "; path=/;";
+          document.cookie = "googtrans=/en/" + lang + "; path=/; domain=.docs.poesis.cloud;";
+          location.reload();
+        }
+      });
+    });
+  });
+</script>
