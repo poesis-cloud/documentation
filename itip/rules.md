@@ -192,16 +192,16 @@ When an Effector or Receptor transitions to a degradation or terminal state, its
 
 Not all Archetypes serve the same role:
 
-| Archetype type | Has `allOf` chain to a GSM base? | Can type a definition? | Can qualify a Directive/Norm? |
+| Archetype type | Has `$ref` chain to a GSM base? | Can type a definition? | Can qualify a Directive/Norm? |
 |---|---|---|---|
-| **Structural** | Yes | Yes | Yes |
+| **Based** | Yes | Yes | Yes |
 | **Rootless** | No | No (qualifier/data roles only) | Yes |
 
-A structural Archetype determines what kind of definition it types (Structure, Mechanism, etc.). A rootless Archetype is a vocabulary concept — quality dimensions, domain classifications, data types — used as qualifiers in Directives/Norms or as data types in Effector/Receptor ports.
+A based Archetype determines what kind of definition it types (Structure, Mechanism, etc.) via its `$ref` chain to a GSM base. A rootless Archetype is a vocabulary concept — quality dimensions, domain classifications, data types — used as qualifiers in Directives/Norms or as data types in Effector/Receptor ports.
 
-### Tenant Archetypes extend base Archetypes via `allOf`
+### Tenant Archetypes extend base Archetypes via `$ref`
 
-You do not modify base Archetypes. Tenant Archetypes extend them using JSON Schema's `allOf` composition. The base Archetype chain is sealed — tenant schemas add properties but cannot override base constraints.
+You do not modify base Archetypes. Tenant Archetypes extend them using a top-level `$ref` to the GSM base. Additional facets (applicable property sets) can be composed via `allOf`. The base Archetype chain is sealed — tenant schemas add properties but cannot override base constraints.
 
 ### The `statement` field IS the JSON Schema
 
