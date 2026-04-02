@@ -6,11 +6,13 @@ nav_order: 3
 ---
 
 # Rules
+
 {: .no_toc }
 
 These are the rules that govern how definitions behave in ITIP. Understanding them prevents surprises when creating, updating, or deprecating governed definitions.
 
 ## Table of contents
+
 {: .no_toc .text-delta }
 
 1. TOC
@@ -90,6 +92,7 @@ A Norm without a corresponding Directive has no governance scope. The Directive 
 ### A Directive requires a governing Structure and a governed Structure
 
 A Directive is a constitutive act between two Structures:
+
 - The **governing Structure** (e.g., an architecture board) authors the Directive
 - The **governed Structure** (e.g., a payment gateway) is the target
 
@@ -220,6 +223,7 @@ ArchetypeName.property == "value" && ArchetypeName.otherProperty > 10
 ```
 
 Restrictions:
+
 - Only `&&` conjunction and `||` within a single axis
 - No function calls, no variable bindings, no negation of compound expressions
 - Default is `"true"` (unconditional — the Norm applies to all instances)
