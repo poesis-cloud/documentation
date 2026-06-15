@@ -8,7 +8,7 @@ nav_order: 2
 # ITIP Features
 {: .no_toc }
 
-ITIP's capabilities, organized exactly as the application's left-hand **menu** groups them. Each section below is a functional component of the product; the features under it are taken from the ITIP interface wireframes (the `v1` and `experimental` design mockups). The UI is in active design, so these describe intended screens, not delivered software.
+ITIP's capabilities, grouped by functional component. Each section is one component of the product; the entries under it are the capabilities it provides. ITIP is in active design.
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -20,7 +20,7 @@ ITIP's capabilities, organized exactly as the application's left-hand **menu** g
 
 ## Overview
 
-The landing area — governance posture at a glance.
+Governance posture at a glance.
 
 | Capability | What it does |
 |------------|--------------|
@@ -111,7 +111,7 @@ Connect external reality and keep the governed model in sync.
 
 ## Deliverables
 
-Generate governed artifacts from definitions. *(Called **Artifactory** in the `v1` wireframes.)*
+Generate governed artifacts from definitions.
 
 | Capability | What it does |
 |------------|--------------|
@@ -128,7 +128,7 @@ Generate governed artifacts from definitions. *(Called **Artifactory** in the `v
 
 ## Guided Workflows
 
-End-to-end walkthroughs that thread several menu areas together. They map onto the role-based **[Usage Scenarios]({% link itip/usage-scenarios/index.md %})**.
+End-to-end walkthroughs that thread several capability areas together. They map onto the role-based **[Usage Scenarios]({% link itip/usage-scenarios/index.md %})**.
 
 | Workflow | Threads together | Role |
 |----------|------------------|------|
