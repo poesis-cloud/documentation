@@ -97,7 +97,7 @@ This is why GSM is open by design. It is implemented today by **SIE (Systemic In
 GSM is young, and it is open. The model is implemented today by SIE and applied by ITIP, but the standard belongs to everyone who governs systems — and it sharpens with every domain that adopts it.
 
 - **See it applied.** Read how ITIP brings GSM to IT governance in the **[ITIP overview]({% link itip/index.md %})**.
-- **Express your governance in it.** Author your first Directive, Norm, and Ascription in **[Getting Started]({% link itip/getting-started.md %})**, then go deeper in **[General Usage]({% link itip/general-usage.md %})**.
+- **Express your governance in it.** Learn the DNA grammar — Directives, Norms, and Ascriptions — in **[General Usage]({% link itip/general-usage.md %})**, and see how each IT role works in **[Usage Scenarios]({% link itip/usage-scenarios/index.md %})**.
 - **Help refine it.** GSM grows by being sourced, stressed, and extended. Follow the work and contribute on **[GitHub](https://github.com/poesis-cloud)**.
 
 Define once. Govern continuously. In the open.

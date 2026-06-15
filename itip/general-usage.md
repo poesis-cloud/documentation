@@ -2,7 +2,7 @@
 layout: default
 title: General Usage
 parent: ITIP
-nav_order: 2
+nav_order: 3
 ---
 
 # DNA in Practice — Directives, Norms, Ascriptions
