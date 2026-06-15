@@ -8,7 +8,7 @@ nav_order: 2
 # ITIP Features
 {: .no_toc }
 
-The capabilities ITIP delivers, grouped by functional component. Each capability carries a **milestone**; where it is already exercised by a role workflow, the **Usage scenario** column links to that page.
+ITIP's capabilities, organized exactly as the application's left-hand **menu** groups them. Each section below is a functional component of the product; the features under it are taken from the ITIP interface wireframes (the `v1` and `experimental` design mockups). The UI is in active design, so these describe intended screens, not delivered software.
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -18,44 +18,125 @@ The capabilities ITIP delivers, grouped by functional component. Each capability
 
 ---
 
-## Milestones
+## Overview
 
-- **Foundation** — implemented in the SIE engine today (real service code).
-- **Near-term** — prioritized next (P0, feasibility now).
-- **Mid-term** — planned (P1, feasibility next).
-- **Future** — projected (P2–P3, later).
-- **Exploratory** — research-tier; may evolve substantially or not ship.
+The landing area — governance posture at a glance.
 
-Milestones express prioritization and the engine-versus-application reality — not delivery dates. ITIP's application UI is in active design; several areas already have an implemented engine substrate in **[SIE Definition]({% link sie-definition.md %})**.
+| Capability | What it does |
+|------------|--------------|
+| Dashboard | Governance posture overview: definition counts, evaluation health, and recent changes |
+| Activity | Chronological activity log / audit feed of governance events |
+
+## Definition
+
+The authoring core — create and manage the eight GSM primitives and drive the Ascription lifecycle.
+
+| Capability | What it does |
+|------------|--------------|
+| Dashboard | Definition activity and health overview |
+| Registry & Inventory | Browse, search, and filter every governed definition |
+| Structures | Create and inspect **Structures** (systems, services, teams, platform components) |
+| Archetypes | Create and inspect **Archetypes** — JSON-Schema-typed domain schemas |
+| Directives | Author **Directives** in the Governance Authoring Workspace; view a Directive's Norms, history, and impact |
+| Norms | Author and inspect **Norms** (CEL assertions) |
+| Mechanisms | Author and inspect **Mechanisms** (Starlark rules) |
+| Interactions | Wire and inspect **Interactions** (Effector ↔ Receptor coupling) |
+| Ascription lifecycle | Bring a definition under governance, diff versions, and drive status transitions (DRAFT → … → RETIRED) |
+
+## Evaluation
+
+Appraisal of the governed model — the bilateral appraisal-indicator system, organized by class and zone, plus regulatory compliance views.
+
+| Capability | What it does |
+|------------|--------------|
+| Dashboard | Aggregate appraisal posture across all indicator classes |
+| Findings | Browse findings, overall and per bilateral class |
+| AA · Source Fidelity | Ascription ↔ Ascription — sourced definitions stay faithful to their source |
+| AC · Comitology Compliance | Ascription ↔ Comitology — changes followed the required decision procedure |
+| DD · Directive Coherence | Directive ↔ Directive — Directives are mutually coherent |
+| DN · Operationalization Integrity | Directive ↔ Norm — every Directive is properly operationalized into Norms |
+| NN · Norm Coherence | Norm ↔ Norm — Norms are mutually coherent, with no conflicts |
+| NA · Definition Compliance | Norm ↔ Ascription — in both the meta-governance and governance zones |
+| NX · Execution Compliance | Norm ↔ eXecution — in both the meta-governance and governance zones |
+| Adherence matrix | Regulatory adherence matrix across frameworks and Structures |
+| Conformance | Conformance dashboard — drift of reality against governed intent |
+
+## Frameworks
+
+Browse and compose sourced governance frameworks.
+
+| Capability | What it does |
+|------------|--------------|
+| Catalog | Browse available frameworks — GDPR, NIS2, ISO 25000 (SQuaRE), TOGAF 9.2, SCAP, the ITIP framework, and org frameworks such as ACME Corp |
+| Framework detail | Inspect a framework's Directives, Norms, and vocabulary |
+| Stack Composer | Compose multiple frameworks into one coherent governance stack |
+
+## Lenses
+
+Saved, multi-dimensional views over the governed model.
+
+| Capability | What it does |
+|------------|--------------|
+| Browse | Browse saved lenses (named, filtered views) |
+| Edit Lens | Create and edit a lens — multi-dimensional filters over the model |
+| Diagram | Render a lens as a diagram (topology / governance overlay) |
+
+## Simulation
+
+Explore the consequences of a change before committing it.
+
+| Capability | What it does |
+|------------|--------------|
+| Impact Analysis | Cascade / blast-radius analysis across dependent definitions |
+
+## Review
+
+The human governance gates — the comitology of approving change.
+
+| Capability | What it does |
+|------------|--------------|
+| Review Board | Governance approvals board for pending lifecycle transitions |
+| Sessions | Conduct a governance review session |
+| History | Past review decisions and their rationale |
+
+## Truth Sourcing
+
+Connect external reality and keep the governed model in sync.
+
+| Capability | What it does |
+|------------|--------------|
+| Sources | Manage connected sources (repositories, API contracts, infrastructure) |
+| Source detail | Inspect a single source and what it contributes |
+| Sync Jobs | Track sourcing / sync runs and their outcomes |
+
+## Deliverables
+
+Generate governed artifacts from definitions. *(Called **Artifactory** in the `v1` wireframes.)*
+
+| Capability | What it does |
+|------------|--------------|
+| Templates | Catalog of deliverable templates (the artifact catalog) |
+| Template Editor | Author and edit deliverable templates |
+| Generated & Jobs | Generated deliverables and the generation jobs that produce them |
+
+## Admin
+
+| Capability | What it does |
+|------------|--------------|
+| Users | Users, roles, and permissions |
+| Integrations | External-system integration settings |
+
+## Guided Workflows
+
+End-to-end walkthroughs that thread several menu areas together. They map onto the role-based **[Usage Scenarios]({% link itip/usage-scenarios/index.md %})**.
+
+| Workflow | Threads together | Role |
+|----------|------------------|------|
+| Architect: Governance Authoring & Impact Analysis | Definition → Simulation | [Architect]({% link itip/usage-scenarios/architect.md %}) |
+| Security Officer: Framework Stack Composition | Frameworks → Evaluation | [Security Officer]({% link itip/usage-scenarios/security-officer.md %}) |
+| Governance Review Ceremony | Review → Definition | [Project Manager]({% link itip/usage-scenarios/project-manager.md %}) |
+| Evaluation Status Transition | Evaluation → Definition | [Operations]({% link itip/usage-scenarios/operations.md %}), [QA]({% link itip/usage-scenarios/qa-engineer.md %}) |
 
 ---
 
-## Capabilities
-
-| Functional component | Representative features | Milestone | Usage scenario |
-|----------------------|-------------------------|-----------|----------------|
-| Governance authoring | Create / edit Structures, Directives, Norms; Archetype-guided forms; approval workflow; lifecycle & Ascription version diff | Near-term | [Architect]({% link itip/usage-scenarios/architect.md %}), [Project Manager]({% link itip/usage-scenarios/project-manager.md %}) |
-| Copilot-assisted authoring | Natural language → Directive / Norm; CEL Norm assistance; framework suggestion; impact analysis; compliance-gap detection | Mid-term | [Architect]({% link itip/usage-scenarios/architect.md %}) |
-| Framework vocabulary & governance | Browse / compose framework stacks (TOGAF, ISO 25000-series, GDPR, NIS2, DORA); inspect framework Directives / Norms; regulatory coverage map; GSM → TOGAF / ArchiMate labels | Near-term | [Architect]({% link itip/usage-scenarios/architect.md %}), [Security Officer]({% link itip/usage-scenarios/security-officer.md %}), [Compliance Analyst]({% link itip/usage-scenarios/compliance-analyst.md %}) |
-| Architecture discovery & visualization | Code-sourced inventory; dependency-chain extraction; reconciliation (authored vs code-sourced); topology & governance-overlay diagrams; impact / blast-radius | Near-term | [Developer]({% link itip/usage-scenarios/developer.md %}), [Operations]({% link itip/usage-scenarios/operations.md %}) |
-| Views & diagram export | Multi-dimensional filtering; render UML / C4 / ArchiMate; export PlantUML and image (PNG / SVG / PDF) | Mid-term | [Developer]({% link itip/usage-scenarios/developer.md %}) |
-| Continuous compliance & conformance | Conformance dashboard; drift detection & alerting; code-vs-governance conformance; SLO / SLA governance; compliance posture & audit-evidence reporting | Mid-term | [Operations]({% link itip/usage-scenarios/operations.md %}), [Compliance Analyst]({% link itip/usage-scenarios/compliance-analyst.md %}), [QA]({% link itip/usage-scenarios/qa-engineer.md %}), [Security Officer]({% link itip/usage-scenarios/security-officer.md %}) |
-| Appraisal indicators (meta-governance) | Bilateral appraisal classes (AA, AC, DD, DN, NN) plus meta-governance zones (NA, NX); appraisal triggers, measures, and findings | Mid-term | [Compliance Analyst]({% link itip/usage-scenarios/compliance-analyst.md %}), [Security Officer]({% link itip/usage-scenarios/security-officer.md %}), [QA]({% link itip/usage-scenarios/qa-engineer.md %}) |
-| Deliverable production | Generate ADRs, solution-design docs, component specs; API contracts & data schemas from Archetypes; IS-book generation with GSM provenance | Future | [Architect]({% link itip/usage-scenarios/architect.md %}), [Project Manager]({% link itip/usage-scenarios/project-manager.md %}) |
-| External integrations | Jira (governance sync, gap → backlog); ServiceNow / CMDB; observability (Datadog / Grafana / Prometheus) ingest; Confluence; Backstage catalog | Future | [Developer]({% link itip/usage-scenarios/developer.md %}), [Operations]({% link itip/usage-scenarios/operations.md %}), [Project Manager]({% link itip/usage-scenarios/project-manager.md %}) |
-| Role-based workspaces | Tailored workspaces for architect, developer, operations / SRE, project manager, security officer, compliance analyst, QA — each backed by a usage scenario | Future | [Architect]({% link itip/usage-scenarios/architect.md %}), [Developer]({% link itip/usage-scenarios/developer.md %}), [Project Manager]({% link itip/usage-scenarios/project-manager.md %}), [Operations]({% link itip/usage-scenarios/operations.md %}), [Security Officer]({% link itip/usage-scenarios/security-officer.md %}), [Compliance Analyst]({% link itip/usage-scenarios/compliance-analyst.md %}), [QA]({% link itip/usage-scenarios/qa-engineer.md %}) |
-| Agentic governance substrate | GSM-as-MCP governed-context server; deterministic guardrail / offload API; agent identity & authorization as DNA; AI cost / efficiency governance; governed multi-agent workflows | Mid-term | — |
-
-### Projected — not yet covered by a usage scenario
-
-Several capability areas are on the roadmap but do not yet have a dedicated role page. They are projected and will gain usage scenarios as they mature:
-
-- **Agentic governance substrate** — the platform's forward differentiator: GSM exposed as a governed Model Context Protocol (MCP) context server, a deterministic guardrail / offload API, agent identity and authorization expressed as DNA, and AI cost / efficiency governance.
-- **The appraisal-indicator system by name** — the bilateral classes **AA, AC, DD, DN, NN** and the meta-governance zones **NA** and **NX**. The role pages touch appraisal results, but the indicator system itself has no dedicated scenario.
-- **Central non-coding chatbot orchestration** — a single conversational entry point that routes governance questions and authoring across the platform.
-- **Deliverable and IS-book generation** — assembling ADRs, solution-design documents, and a provenance-backed Information System book from governed definitions.
-- **Confluence, CMDB, and Backstage integrations** — among the external integrations, these specific connectors are projected and not yet exercised by any role workflow.
-
----
-
-For the concepts behind these capabilities, see the **[ITIP overview]({% link itip/index.md %})**; for hands-on workflows, the **[Usage Scenarios]({% link itip/usage-scenarios/index.md %})**.
+For the concepts behind these capabilities, see the **[ITIP overview]({% link itip/index.md %})**; for hands-on, role-by-role workflows, the **[Usage Scenarios]({% link itip/usage-scenarios/index.md %})**.
