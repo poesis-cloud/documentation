@@ -133,6 +133,8 @@ Structured, semantic definitions are not only for humans and downstream tools �
 
 **GSM and its sourcers are the logical evolution of a RAG.** Where a RAG *indexes* raw documentation and code for AI context, GSM's sourcers go one step further and *structure* it — parsing documentation, specs, and repositories into governed definitions once. The result is a **write-once, read-many (WORM)** corpus: the costly parse-and-structure work is paid a single time, then humans and agents consume those definitions repeatedly, with no re-parsing or re-interpretation on each call.
 
+This is where the economics tip. The AI does the expensive cognitive work — turning raw material into a structured definition — exactly **once**. Because the result is governed and structured, ITIP's **deterministic generators** (an artifact factory, a document renderer, a scaffolder) can then project that definition into concrete outputs — diagrams, reports, code skeletons, compliance evidence — any number of times, identically, at *zero marginal cost*. Without a structured definition to draw on, every one of those outputs means asking an LLM again: paying tokens each time, waiting each time, and accepting a slightly different answer each time. Define once with AI; regenerate forever for free.
+
 And because GSM's primitives encode **causality** — Mechanisms with their Effectors and Receptors, and the Interactions that couple them — a definition carries not just *what* a thing is but *what causes what*. That is what enables recursive causal reasoning — the why behind the why behind the why — which is precisely what intelligence *is*.
 
 Reasoning over a governed, causal model instead of retrieved text makes the payoff compound:
