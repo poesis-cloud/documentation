@@ -13,21 +13,13 @@ Poesis builds products that bring **systemic governance** to organizations — r
 
 ---
 
-## The GSM Manifesto
-
-Poesis products are built on the **Generative System Model (GSM)** — an open standard for the THINK side of IT: *defining and governing* systems, the way OpenTelemetry standardized *observing* them. GSM turns governance from prose that *describes* systems into definitions that *generate* them.
-
-**Read the [GSM Manifesto]({% link gsm-manifesto.md %})** — what GSM is, why it must exist, and the principles it commits to.
-
----
-
 ## Products
 
 Poesis is layered: the **GSM** standard, the **SIE** engine that implements it, and **ITIP** domain applications built on top. Below are the products tracked in our delivery workflow, together with the GSM standard they all implement.
 
-### [GSM — the open standard]({% link gsm-manifesto.md %})
+### [GSM — the open standard]({% link gsm/index.md %})
 
-The Generative System Model: the open governance standard every Poesis product implements. Start with the **[GSM Manifesto]({% link gsm-manifesto.md %})**.
+The **Generative System Model (GSM)** is the open standard for the THINK side of IT — *defining and governing* systems, the way OpenTelemetry standardized *observing* them. It turns governance from prose that *describes* systems into definitions that *generate* them, and every Poesis product implements it. Start with the **[GSM Manifesto]({% link gsm/manifesto.md %})** — what GSM is, why it must exist, and the principles it commits to.
 
 ### [SIE Definition]({% link sie-definition.md %})
 

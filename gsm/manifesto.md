@@ -1,6 +1,7 @@
 ---
 layout: default
-title: GSM Manifesto
+title: Manifesto
+parent: GSM
 nav_order: 1
 ---
 

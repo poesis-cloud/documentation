@@ -9,7 +9,7 @@ nav_order: 5
 
 > **In construction.** This product's documentation is being written. The capability catalogue below reflects the design-time backlog and the current engine reality.
 
-The **ITIP Blackboard Sourcer** ingests external IT artifacts — code, API contracts, infrastructure, and (later) legal and standards texts — and turns them into governed GSM definitions, posting them as contributions to the **[SIE Blackboard]({% link sie-blackboard.md %})**. Every sourced definition enters the model as a DRAFT, carrying its provenance, so a human remains the trust boundary. It is built on the open **[GSM standard]({% link gsm-manifesto.md %})**.
+The **ITIP Blackboard Sourcer** ingests external IT artifacts — code, API contracts, infrastructure, and (later) legal and standards texts — and turns them into governed GSM definitions, posting them as contributions to the **[SIE Blackboard]({% link sie-blackboard.md %})**. Every sourced definition enters the model as a DRAFT, carrying its provenance, so a human remains the trust boundary. It is built on the open **[GSM standard]({% link gsm/index.md %})**.
 
 ## Table of contents
 {: .no_toc .text-delta }
