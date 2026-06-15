@@ -2,7 +2,7 @@
 layout: default
 title: Usage Scenarios
 parent: ITIP
-nav_order: 2
+nav_order: 3
 has_children: true
 ---
 
@@ -12,6 +12,8 @@ has_children: true
 This section describes how each IT profile uses ITIP in practice. Each sub-page covers a specific role's workflows, organized around the governance frameworks and DNA grammar introduced in [General Usage]({% link itip/general-usage.md %}).
 
 Every profile interacts with the same governed definitions — the difference is *which* definitions they author, *which* they consult, and *which* views they use.
+
+For the full capability catalogue across products, see **[Features]({% link features.md %})**.
 
 ## Profiles covered
 
