@@ -102,6 +102,7 @@ When an incident happens, the technical failure is usually the symptom of a gove
 
 ## Where to next
 
+- **[GSM Manifesto]({% link gsm-manifesto.md %})** — ITIP is built on GSM, an open standard for defining and governing systems.
 - **[Getting Started]({% link itip/getting-started.md %})** — author your first Directive, Norm, and Ascription, step by step.
 - **[General Usage]({% link itip/general-usage.md %})** — the DNA primitives and Frameworks in depth, with worked examples.
 - **[Usage Scenarios]({% link itip/usage-scenarios/index.md %})** — role-specific workflows for each IT profile.
