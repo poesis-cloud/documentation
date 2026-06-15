@@ -93,6 +93,16 @@ ITIP is not a replacement for any of these. It is the **definition layer that co
 
 ---
 
+## GSM: the standard THINK has been missing
+
+RUN was not always well-served. A decade ago, observability looked much like THINK does today: every vendor shipped its own agent, its own format, its own semantics — a fragmented, lock-in-ridden mess. Then **OpenTelemetry** changed it: one open, vendor-neutral, semantic standard for telemetry that every tool could emit and every backend could consume. It became the lingua franca of RUN.
+
+THINK is still waiting for its OpenTelemetry. The definition of what systems *should be* — architecture, governance, compliance, quality — lives in incompatible, proprietary silos that nobody can compose or verify.
+
+**GSM is the intended standard.** What OpenTelemetry did for *running* systems — a shared semantic model that ended fragmentation — GSM does for *defining and governing* them: one open, structured grammar (DNA) for the **build** side of IT, the way OpenTelemetry is the open standard for the **run** side.
+
+---
+
 ## How ITIP works: DNA governance
 
 ITIP is built on **SIE (Systemic Intelligence Engine)**, which implements the **Generative System Model (GSM)** — a formal model for defining and governing systems.
@@ -101,11 +111,11 @@ At the heart of GSM is a governance grammar called **DNA**:
 
 | Letter | Primitive | What it does |
 |--------|-----------|-------------|
-| **D** | Directive | Declares governance intent — what a system *must* achieve or avoid |
-| **N** | Norm | Operationalizes a Directive into a measurable, enforceable constraint |
+| **D** | Directive | A **strategic operational intent** — declares what a system *must* achieve or avoid |
+| **N** | Norm | A **tactical assertion and measure** — operationalizes a Directive into an enforceable, machine-evaluable constraint |
 | **A** | Ascription | Binds any definition to its governed subject — the versioned, lifecycle-managed snapshot |
 
-DNA is ITIP's universal axis for defining IT systems. Every piece of governed information — from an enterprise architecture principle to a single service's latency threshold — is expressed as DNA.
+DNA is ITIP's universal axis for defining IT systems. It descends from strategy to measurement: a **Directive** sets the slow-changing strategic operational intent, a **Norm** makes it tactical — the assertions and measures that turn intent into something machines can enforce — and an **Ascription** versions every change. Every piece of governed information — from an enterprise architecture principle to a single service's latency threshold — is expressed as DNA.
 
 This is not metaphorical. DNA has a precise grammar:
 
@@ -114,6 +124,26 @@ This is not metaphorical. DNA has a precise grammar:
 - An **Ascription** binds these definitions to their subjects with a governed lifecycle (DRAFT → PROPOSED → APPROVED → ACTIVE → ... → RETIRED)
 
 The next section — [General Usage]({% link itip/general-usage.md %}) — walks through each DNA primitive in detail with practical examples.
+
+---
+
+## Grounding AI and agents in governed truth
+
+Structured, semantic definitions are not only for humans and downstream tools — they are an ideal substrate for **AI and agentic systems**. GSM gives generative models something they rarely have: a governed, machine-readable account of what a system *is*, what it *must* do, and *why*.
+
+Two GSM properties make this work:
+
+- **WORM definitions.** Every Ascription is write-once — you never edit an approved definition, you version it. The governed model is therefore an immutable, append-only, fully-versioned corpus (*write once, read many*): exactly the stable ground truth that retrieval depends on.
+- **Semantic structure.** DNA, Archetypes, and the GSM primitives give every fact a precise type and relationship, so retrieval returns *meaning*, not just matching text.
+
+Serve that corpus to an agent through **RAG (retrieval-augmented generation)** and the payoff compounds:
+
+- **Grounded** — generation is anchored in governed truth, not guessed from training priors, so hallucination drops.
+- **Deterministic** — output is harnessed by GSM's types and lifecycle instead of left to free-form invention.
+- **Higher quality** — authoritative, typed context yields verifiable results.
+- **Lower cost** — precise structured context shrinks the tokens, and the retries, that vague prompting wastes.
+
+This is what makes ITIP's Copilot more than a chatbot: it reasons over a *governed model*, not a pile of documents.
 
 ---
 
