@@ -99,7 +99,7 @@ RUN was not always well-served. A decade ago, observability looked much like THI
 
 THINK is still waiting for its OpenTelemetry. The definition of what systems *should be* — architecture, governance, compliance, quality — lives in incompatible, proprietary silos that nobody can compose or verify.
 
-**GSM is the intended standard.** What OpenTelemetry did for *running* systems — a shared semantic model that ended fragmentation — GSM does for *defining and governing* them: one open, structured grammar (DNA) for the **build** side of IT, the way OpenTelemetry is the open standard for the **run** side.
+**GSM is the intended standard.** What OpenTelemetry did for *running* systems — a shared semantic model that ended fragmentation — GSM does for *defining and governing* them: one open standard that pairs a governance **grammar** (DNA) with shared **semantics** (Archetypes) for the **build** side of IT, the way OpenTelemetry is the open standard for the **run** side.
 
 ---
 
@@ -123,13 +123,30 @@ This is not metaphorical. DNA has a precise grammar:
 - A **Norm** reads: *"The payment gateway ON availability: ASSERT availability30d >= 0.999 (SUSTAINED over 30d)"*
 - An **Ascription** binds these definitions to their subjects with a governed lifecycle (DRAFT → PROPOSED → APPROVED → ACTIVE → ... → RETIRED)
 
-The next section — [General Usage]({% link itip/general-usage.md %}) — walks through each DNA primitive in detail with practical examples.
+[General Usage]({% link itip/general-usage.md %}) walks through each DNA primitive in detail with practical examples.
+
+---
+
+## Frameworks — extending the standard
+
+GSM's core is deliberately minimal: eight primitives and the DNA grammar. That fixed core is small enough to stay coherent yet universal enough to describe any system — but a grammar alone doesn't know what *reliability*, *data confidentiality*, or *GDPR Article 32* mean. That **semantics** — the domain meaning a definition carries — comes from **Frameworks**.
+
+A Framework is an established body of knowledge — TOGAF, ISO 25010, ISO 25012, GDPR, NIS2, DORA, SOC 2 — **sourced into GSM**. Sourcing renders the framework in GSM's own terms: domain **Archetypes** that build on GSM's base schemas with new viability dimensions and structural types, plus ready-made **Directives** and **Norms** that encode the framework's requirements as governance you can actually enforce. An Archetype is all three layers at once — **vocabulary** (a named domain type), **grammar** (it slots into DNA as a qualifier or typing), and **semantics** (its schema fixes the properties, constraints, and relationships that give the type its meaning).
+
+So frameworks both **constitute** and **extend** the standard:
+
+- They **constitute** governance — filling the grammar with the real Directives and Norms an organization must honor, drawn straight from the authoritative source instead of reinvented project by project.
+- They **extend** the semantics — adding domain types, and the meaning they carry, on top of the fixed core, the way OpenTelemetry's semantic conventions extend its small core without changing it. The eight primitives never fork; the shared vocabulary grows.
+
+And because every framework speaks the same DNA, they compose. A regulatory standard, a quality model, and an architecture framework layer into one coherent governance fabric — no reconciliation, no silos. Adopt a framework and its governance is *already* expressed, versioned, and enforceable in your model.
+
+[General Usage]({% link itip/general-usage.md %}) covers the framework catalogue and how to compose framework stacks in practice.
 
 ---
 
 ## Grounding AI and agents in governed truth
 
-Structured, semantic definitions are not only for humans and downstream tools — they are an ideal substrate for **AI and agentic systems**. GSM gives generative models something they rarely have: a governed, machine-readable account of what a system *is*, what it *must* do, and *why*.
+Semantics is what lets anyone — human or machine — *act upon* a definition instead of merely reading it. Because every GSM definition is typed by an **Archetype**, its meaning is explicit and machine-readable, so humans and **AI and agentic systems** alike can reason and generate from it directly. That gives generative models something they rarely have: a governed, semantic account of what a system *is*, what it *must* do, and *why* — meaning to act on, not prose to reinterpret on every call.
 
 **GSM and its sourcers are the logical evolution of a RAG.** Where a RAG *indexes* raw documentation and code for AI context, GSM's sourcers go one step further and *structure* it — parsing documentation, specs, and repositories into governed definitions once. The result is a **write-once, read-many (WORM)** corpus: the costly parse-and-structure work is paid a single time, then humans and agents consume those definitions repeatedly, with no re-parsing or re-interpretation on each call.
 
