@@ -131,19 +131,14 @@ The next section — [General Usage]({% link itip/general-usage.md %}) — walks
 
 Structured, semantic definitions are not only for humans and downstream tools — they are an ideal substrate for **AI and agentic systems**. GSM gives generative models something they rarely have: a governed, machine-readable account of what a system *is*, what it *must* do, and *why*.
 
-**GSM extends a RAG; it doesn't just feed one.** A plain **RAG (retrieval-augmented generation)** retrieves chunks of unstructured text and drops them into a prompt — it matches *strings* and leaves the model to re-interpret raw material on every call. GSM goes one level deeper: where a RAG returns matching text, GSM returns governed, typed, causally-linked *definitions*. Retrieval still has its place — a GSM sourcing system can *use* RAG techniques to find the documentation, specs, or code it distills definitions from. There, a RAG is a **source** of GSM, upstream of the model — not the thing the model re-reads at generation time.
+**GSM and its sourcers are the logical evolution of a RAG.** Where a RAG *indexes* raw documentation and code for AI context, GSM's sourcers go one step further and *structure* it — parsing documentation, specs, and repositories into governed definitions once. The result is a **write-once, read-many (WORM)** corpus: the costly parse-and-structure work is paid a single time, then humans and agents consume those definitions repeatedly, with no re-parsing or re-interpretation on each call.
 
-This is **write-once, read-many (WORM)**, reframed for definitions:
-
-- **Write Once — autosourcing.** GSM *autosources*: sourcing systems read documentation, specifications, and repositories and structure that raw material into governed definitions *once*. The costly parse-and-structure work is paid a single time, at write time. (Definitions are write-once in the governance sense too: you never edit an approved Ascription, you version it — so the corpus stays immutable, append-only, and auditable.)
-- **Read Many — consume without re-parsing.** Humans, AIs, and agents then train on or consume those definitions as often as they like, *without re-parsing or re-structuring anything*. Nobody re-reads a repository to re-derive what a service does — GSM has already structured it ideally for read time.
-
-**Causal structure is what makes it intelligent.** GSM doesn't stop at typed facts. Its primitives encode causality — Mechanisms with their Effectors and Receptors, and the Interactions that couple them — so a definition carries not just *what* a thing is but *what causes what*. That is what lets a consumer ask the why behind the why behind the why: recursive causal reasoning — the capacity a pile of retrieved text can never support — is precisely what intelligence *is*.
+And because GSM's primitives encode **causality** — Mechanisms with their Effectors and Receptors, and the Interactions that couple them — a definition carries not just *what* a thing is but *what causes what*. That is what enables recursive causal reasoning — the why behind the why behind the why — which is precisely what intelligence *is*.
 
 Reasoning over a governed, causal model instead of retrieved text makes the payoff compound:
 
-- **Grounded** — generation is anchored in governed truth, not guessed from training priors, so hallucination drops.
-- **Deterministic** — output is harnessed by GSM's types and lifecycle instead of left to free-form invention.
+- **Grounded** — generation is anchored in governed truth, not training priors, so hallucination drops.
+- **Deterministic** — output is harnessed by GSM's types and lifecycle, not left to free-form invention.
 - **Higher quality** — authoritative, typed context yields verifiable results.
 - **Lower cost** — precise structured context shrinks the tokens, and the retries, that vague prompting wastes.
 
