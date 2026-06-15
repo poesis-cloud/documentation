@@ -13,6 +13,8 @@ This section describes how each IT profile uses ITIP in practice. Each sub-page 
 
 Every profile interacts with the same governed definitions — the difference is *which* definitions they author, *which* they consult, and *which* views they use.
 
+For the full capability catalogue across products, see **[Features]({% link features.md %})**.
+
 ## Profiles covered
 
 | Profile | Primary activity in ITIP |

@@ -32,3 +32,5 @@ The first domain application built on SIE. ITIP is where all IT profiles converg
 - [General Usage]({% link itip/general-usage.md %}) — Directives, Norms, Ascriptions, and Frameworks in practice
 - [Usage Scenarios]({% link itip/usage-scenarios/index.md %}) — Role-specific workflows per IT profile
 - [Rules]({% link itip/rules.md %}) — Governance rules every user must know
+
+Browse the full **[Features]({% link features.md %})** catalogue across all Poesis products, grouped by product and milestone.
