@@ -25,9 +25,13 @@ The **Generative System Model (GSM)** is the open standard for the THINK side of
 
 The engine that hosts GSM and enforces governance — Definition Manager, Operator rule runtime, and database. *Documentation in construction.*
 
+- [Features]({% link sie-definition/features.md %}) — the SIE Definition capability catalogue with milestones
+
 ### [SIE Blackboard]({% link sie-blackboard.md %})
 
 Collaborative definition-sourcing service with a sealed, byte-stable contribution lifecycle and an append-only audit ledger. *Documentation in construction.*
+
+- [Features]({% link sie-blackboard/features.md %}) — the SIE Blackboard capability catalogue with milestones
 
 ### [ITIP — IT Intelligence Platform]({% link itip/index.md %})
 
@@ -42,3 +46,5 @@ The first domain application built on SIE. ITIP is where all IT profiles converg
 ### [ITIP Blackboard Sourcer]({% link itip-blackboard-sourcer.md %})
 
 Client pipeline that sources IT artifacts — code, API contracts, infrastructure — into governed GSM definitions on the SIE Blackboard. *Documentation in construction.*
+
+- [Features]({% link itip-blackboard-sourcer/features.md %}) — the ITIP Blackboard Sourcer capability catalogue with milestones
