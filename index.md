@@ -15,7 +15,7 @@ Poesis builds products that bring **systemic governance** to organizations — r
 
 ## Products
 
-Poesis is layered: the **GSM** standard, the **SIE** engine that implements it, and **ITIP** domain applications built on top. Below are the products tracked in our delivery workflow, together with the GSM standard they all implement.
+Poesis is layered: the **GSM** standard, the **SIE** engine that implements it, and domain applications built on top, such as **ITIP** for the IT domain. Below are the products tracked in our delivery workflow, together with the GSM standard they all implement.
 
 ### [GSM — the open standard]({% link gsm/index.md %})
 
