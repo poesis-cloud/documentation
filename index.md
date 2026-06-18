@@ -48,3 +48,9 @@ The first domain application built on SIE. ITIP is where all IT profiles converg
 Client pipeline that sources IT artifacts — code, API contracts, infrastructure — into governed GSM definitions on the SIE Blackboard. *Documentation in construction.*
 
 - [Features]({% link itip-blackboard-sourcer/features.md %}) — the ITIP Blackboard Sourcer capability catalogue with milestones
+
+### [SDLC Agentic Framework]({% link sdlc-agentic-framework.md %})
+
+Multi-agent SDLC orchestration layer for VS Code / GitHub Copilot. Brings SAFe-shaped portfolio–program–iteration orchestration, a specialist bench, and deterministic model routing directly into your IDE — used to build and evolve Poesis products.
+
+- [Quickstart]({% link sdlc-agentic-framework/quickstart.md %}) — install and run your first orchestrated PR in under 30 minutes
