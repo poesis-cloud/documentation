@@ -54,5 +54,5 @@ Client pipeline that sources IT artifacts — code, API contracts, infrastructur
 The first **distributed agentic SAFe** engine — a governed, local-first, multi-agent way to *run SAFe* in VS Code / GitHub Copilot. Portfolio–program–iteration orchestration runs on your own machine, with a human gate at every layer; connected to the Poesis ecosystem, its agents build with full, governed knowledge of your organization.
 
 - [Overview]({% link safe-agentic-framework.md %}) — the vision, the model, and the Poesis ecosystem advantage
-- [Distributed Agentic SAFe]({% link safe-agentic-framework/distributed-agentic-sdlc.md %}) — orchestrators, layers, ceremonies, agents, and the filesystem ⇆ central-systems sync
+- [Distributed Agentic SAFe]({% link safe-agentic-framework/distributed-agentic-safe.md %}) — orchestrators, layers, ceremonies, agents, and the filesystem ⇆ central-systems sync
 - [Quickstart]({% link safe-agentic-framework/quickstart.md %}) — install and run your first orchestrated PR in under 30 minutes
