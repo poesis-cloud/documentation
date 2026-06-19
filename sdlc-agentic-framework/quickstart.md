@@ -6,12 +6,14 @@ nav_order: 1
 ---
 
 # Quickstart — SDLC Agentic Framework
+
 {: .no_toc }
 
 This guide takes you from a fresh install to your first successful orchestrated PR.
 Target: **under 30 minutes**.
 
 ## Table of contents
+
 {: .no_toc .text-delta }
 
 1. TOC
@@ -72,7 +74,23 @@ git checkout v0.1.0
 ```bash
 cd ~/.vscode/agent-plugins/github.com/poesis-cloud/sdlc-agentic-framework
 git pull
+# then reload VS Code: Ctrl+Shift+P → "Developer: Reload Window"
 ```
+
+> **There is no auto-update.** APM is a directory convention — VS Code reads whatever files are on
+> disk at startup. There is no background sync and no notification that a new version is available.
+> Updates are manual `git pull`s, applied when you choose.
+
+**Full plugin lifecycle:**
+
+| Operation | Command |
+|---|---|
+| Install | `git clone <url> ~/.vscode/agent-plugins/<publisher>/<repo>` |
+| Update to latest | `cd <apm-path> && git pull` |
+| Pin to a version | `cd <apm-path> && git fetch --tags && git checkout vX.Y.Z` |
+| Uninstall | `rm -rf ~/.vscode/agent-plugins/<publisher>/<repo>` |
+
+Reload VS Code after any of the above.
 
 ---
 
