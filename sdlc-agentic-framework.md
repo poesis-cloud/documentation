@@ -6,6 +6,7 @@ has_children: true
 ---
 
 # SDLC Agentic Framework
+
 {: .no_toc }
 
 **SDLC Agentic Framework** is the multi-agent SDLC orchestration layer for VS Code / GitHub Copilot.
@@ -17,7 +18,7 @@ Three orchestrator agents collaborate in a strict hierarchy:
 | Agent | SAFe layer | Responsibility |
 |---|---|---|
 | `@vmo-orchestrator` | Portfolio (VMO) | Strategic Themes, Epic intake, Portfolio Kanban |
-| `@rte-orchestrator` | Program / ART | Feature breakdown, PI Planning, ADR gate, PR merge |
+| `@rte-orchestrator` | Program / ART | Feature breakdown, PI Planning, Architecture gate, PR merge |
 | `@sm-orchestrator` | Team / Iteration | Story grooming, pair-programming micro-cycle, PR gate prep |
 
 All orchestrators are dispatched from a single entry point — `@vmo-orchestrator`.
