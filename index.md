@@ -51,6 +51,8 @@ Client pipeline that sources IT artifacts — code, API contracts, infrastructur
 
 ### [SDLC Agentic Framework]({% link sdlc-agentic-framework.md %})
 
-Multi-agent SDLC orchestration layer for VS Code / GitHub Copilot. Brings SAFe-shaped portfolio–program–iteration orchestration, a specialist bench, and deterministic model routing directly into your IDE — used to build and evolve Poesis products.
+The first **distributed agentic SDLC** — a governed, local-first, multi-agent software development lifecycle for VS Code / GitHub Copilot. SAFe-shaped portfolio–program–iteration orchestration runs on your own machine, with a human gate at every layer; connected to the Poesis ecosystem, its agents build with full, governed knowledge of your organization.
 
+- [Overview]({% link sdlc-agentic-framework.md %}) — the vision, the model, and the Poesis ecosystem advantage
+- [Distributed Agentic SDLC]({% link sdlc-agentic-framework/distributed-agentic-sdlc.md %}) — orchestrators, layers, ceremonies, agents, and the filesystem ⇆ repository sync
 - [Quickstart]({% link sdlc-agentic-framework/quickstart.md %}) — install and run your first orchestrated PR in under 30 minutes
