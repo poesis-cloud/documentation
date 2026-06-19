@@ -6,6 +6,7 @@ has_children: true
 ---
 
 # SAFe Agentic Framework
+
 {: .no_toc }
 
 ## What an agentic framework is — and why you need one

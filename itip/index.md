@@ -7,7 +7,6 @@ has_children: true
 
 # ITIP — IT Intelligence Platform
 
-The **product vision** and the **core concepts** behind it — why a THINK layer for IT must exist, and the governance model (DNA, Frameworks, and the socio-technical view) that makes it work. For what ITIP does, see **[Features]({% link itip/features.md %})**; for hands-on usage, **[General Usage]({% link itip/general-usage.md %})** and the **[Usage Scenarios]({% link itip/usage-scenarios/index.md %})**.
 {: .fs-5 .fw-300 }
 
 ## The missing piece: a THINK solution for IT
