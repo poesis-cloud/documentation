@@ -5,6 +5,9 @@ nav_order: 6
 has_children: true
 ---
 
+# SAFe Agentic Framework
+{: .no_toc }
+
 ## What an agentic framework is — and why you need one
 
 - **It is an *organization* of AI agents, not a single assistant.** A chatbot is one model in one conversation — brilliant for a question, hopeless for a project. A framework is many specialized agents, each with a role, coordinated by an orchestrator, passing work through defined handoffs and human checkpoints. *A team, not a clever individual.*
@@ -25,7 +28,17 @@ One idea carries the whole framework.
 - **A published standard is the strongest harness of all** — the AI already knows it, complies with it, and reasons in its vocabulary with no retraining. The method becomes a contract between human and machine.
 - **The more harness layers an end-to-end workflow passes through, the better the result** — a probabilistic system improves when its output is checked, sharpened, and re-bounded repeatedly as it moves from abstract strategy to tactical feature design to concrete technical implementation. **SAFe checks all those layers.** The portfolio layer tests the strategic bet; the program layer tests the feature shape and architecture; the iteration layer tests the code that actually ships. The point is not just that SAFe has many layers, but that it applies them **in sequence across the whole path from idea to commit**. More governed layers across the end-to-end workflow produce better outcomes than a method that implements only one slice.
 
-That is what this is: **a method, run by agents, as the harness that makes agentic delivery trustworthy.** The method it runs is **SAFe** — but you don't have to *be* a SAFe organization to get the harness. Three properties make it work:
+That is what this is: **a method, run by agents, as the harness that makes agentic delivery trustworthy.** The method it runs is **SAFe** — but you don't have to *be* a SAFe organization to get the harness.
+
+---
+
+*Why SAFe is the right harness, how to adopt it without a transformation program, and how the framework eliminates the bookkeeping that makes SAFe stall in practice — **[SAFe, run by agents →]({% link safe-agentic-framework/safe-as-the-harness.md %})**{: .fs-5 }*
+
+---
+
+## The framework's architecture
+
+Three properties make it work:
 
 1. **Local-first** — the agent loop runs on each developer's machine, in the IDE, against the real working tree. Your code and secrets never leave; only the artifacts you commit sync out.
 2. **Governed** — a portfolio → program → iteration hierarchy of role agents, with a human ★ gate at every layer. Not a flat swarm — an org chart with authority.
@@ -135,11 +148,6 @@ The framework occupies a corner that existing categories circle but never claim:
 | **SAFe Agentic Framework** | **local-first SAFe orchestration, per-layer human gates, repo sync, org-grounded** | **— the niche the others leave empty** |
 
 The crowded space is the *delegate* corner — cloud single-agent PR bots. The **local-first + governed-hierarchy + organization-grounded** corner was empty. That is where this lives.
-
----
-
-
-*Why SAFe is the right harness, how to adopt it without a transformation program, and how the framework eliminates the bookkeeping that makes SAFe stall in practice — **[SAFe, run by agents →]({% link safe-agentic-framework/safe-as-the-harness.md %})**{: .fs-5 }*
 
 ---
 
