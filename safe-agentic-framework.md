@@ -23,7 +23,7 @@ One idea carries the whole framework.
 - **Methods are how intuition becomes reliable.** The scientific method, peer review, Scrum, SAFe — each is a rational and empirist *cognitive harness* that pushes a biased mind's output through evidence, checks, and sequence until it comes out trustworthy. *Intuition proposes; the method disposes.*
 - **Agents need the same harness — and human methods fit them perfectly,** because those methods were engineered to tame the same probabilistic biases in us. You don't make an agent trustworthy by waiting for a smarter model; you make it **implement a method.**
 - **A published standard is the strongest harness of all** — the AI already knows it, complies with it, and reasons in its vocabulary with no retraining. The method becomes a contract between human and machine.
-- **The more harness layers an end-to-end workflow passes through, the better the result** — a probabilistic system improves when its output is checked, sharpened, and re-bounded repeatedly as it moves from abstract strategy to tactical feature design to concrete technical implementation. **SAFe checks all those layers.** The portfolio layer tests the strategic bet; the program layer tests the feature shape and architecture; the iteration layer tests the code that actually ships. The point is not just that SAFe has many layers, but that it applies them **in sequence across the whole path from idea to commit**. More governed layers across the end-to-end workflow produce better outcomes than a method that checks only one slice.
+- **The more harness layers an end-to-end workflow passes through, the better the result** — a probabilistic system improves when its output is checked, sharpened, and re-bounded repeatedly as it moves from abstract strategy to tactical feature design to concrete technical implementation. **SAFe checks all those layers.** The portfolio layer tests the strategic bet; the program layer tests the feature shape and architecture; the iteration layer tests the code that actually ships. The point is not just that SAFe has many layers, but that it applies them **in sequence across the whole path from idea to commit**. More governed layers across the end-to-end workflow produce better outcomes than a method that implements only one slice.
 
 That is what this is: **a method, run by agents, as the harness that makes agentic delivery trustworthy.** The method it runs is **SAFe** — but you don't have to *be* a SAFe organization to get the harness. Three properties make it work:
 
@@ -35,60 +35,60 @@ Three orchestrators, one per SAFe layer, run the show — dispatched from a sing
 
 ```mermaid
 flowchart LR
-    CS(["Central Supervisor — the human<br/>value authority · owns every ★ gate"])
+    CS["Central Supervisor<br/>human value authority<br/>owns every gate"]
 
-    subgraph FW["SAFe Agentic Framework — in your IDE (VS Code + Copilot)"]
+    subgraph FW["SAFe Agentic Framework in your IDE"]
       direction TB
-      subgraph PORT["Portfolio layer · @vmo-orchestrator"]
+      subgraph PORT["Portfolio layer - vmo-orchestrator"]
         direction LR
-        VMO{{"@vmo-orchestrator"}}
-        ELBC["Epic Lean Business Case<br/>Agents: BO · EA · Sec · RAI"]
-        AV["Architectural Vision<br/>Agents: EA · BO"]
-        SPR["Strategic Portfolio Review<br/>Agents: BO · EA"]
-        PB["Participatory Budgeting<br/>Agents: BO · EA"]
-        PS["Portfolio Sync<br/>Agents: VMO + Epic owners"]
+        VMO["vmo-orchestrator"]
+        ELBC["Epic Lean Business Case<br/>Agents: BO, EA, Sec, RAI"]
+        AV["Architectural Vision<br/>Agents: EA, BO"]
+        SPR["Strategic Portfolio Review<br/>Agents: BO, EA"]
+        PB["Participatory Budgeting<br/>Agents: BO, EA"]
+        PS["Portfolio Sync<br/>Agents: VMO, Epic owners"]
       end
-      subgraph PROG["Program / ART layer · @rte-orchestrator"]
+      subgraph PROG["Program or ART layer - rte-orchestrator"]
         direction LR
-        RTE{{"@rte-orchestrator"}}
-        FBR["Feature Backlog Refinement<br/>Agents: PM · Arch · Dev · QA · UX · Sec"]
-        ARE["Architectural Runway Extension<br/>Agents: SA · Sec · DevOps · Dev"]
+        RTE["rte-orchestrator"]
+        FBR["Feature Backlog Refinement<br/>Agents: PM, Arch, Dev, QA, UX, Sec"]
+        ARE["Architectural Runway Extension<br/>Agents: SA, Sec, DevOps, Dev"]
         PIP["PI Planning<br/>Agents: the ART"]
         SD["System Demo<br/>Agents: the ART"]
-        ASY["ART Sync<br/>Agents: Arch + leads"]
+        ASY["ART Sync<br/>Agents: Arch, leads"]
         IA["Inspect and Adapt<br/>Agents: the ART"]
       end
-      subgraph ITER["Team / Iteration layer · @sm-orchestrator"]
+      subgraph ITER["Team or Iteration layer - sm-orchestrator"]
         direction LR
-        SM{{"@sm-orchestrator"}}
-        IP["Iteration Planning<br/>Agents: PO + pairs"]
+        SM["sm-orchestrator"]
+        IP["Iteration Planning<br/>Agents: PO, pairs"]
         SBR["Story Backlog Refinement<br/>Agents: PO"]
-        PAIR["Pair micro-cycle<br/>Agents: Dev · Dev · Sec"]
-        VS["Verification and Sign-off<br/>Agents: QA · Sec"]
-        DSR["Daily · Review · Retro<br/>Agents: the team"]
+        PAIR["Pair micro-cycle<br/>Agents: Dev, Dev, Sec"]
+        VS["Verification and Sign-off<br/>Agents: QA, Sec"]
+        DSR["Daily, Review, Retro<br/>Agents: the team"]
       end
-      FSL[("local filesystem blackboard<br/>portfolio artifacts in Markdown")]
+      FSL["local filesystem blackboard<br/>portfolio artifacts in Markdown"]
     end
 
-    subgraph CENTRAL["Central systems — all synced from the git host"]
+    subgraph CENTRAL["Central systems synced from the git host"]
       direction TB
-      GH["Git host — GitHub / GitLab<br/>boards · issues · artifact files"]
-      JIRA["Ticketing — Jira<br/>SAFe Epics · Features · Stories · PIs"]
-      CONF["Knowledge base — Confluence<br/>ADRs · PRDs · reports"]
+      GH["Git host<br/>GitHub or GitLab<br/>boards, issues, artifact files"]
+      JIRA["Ticketing, Jira<br/>SAFe Epics, Features, Stories, PIs"]
+      CONF["Knowledge base, Confluence<br/>ADRs, PRDs, reports"]
       GH -->|"tickets"| JIRA
       GH -->|"knowledge"| CONF
     end
 
-    CS ==>|"use case: strategic intent to governed delivery"| VMO
-    VMO -.->|"dispatch · approved Epic to demoed Features"| RTE
-    RTE -.->|"dispatch · committed Feature to merged Stories"| SM
-    VMO -->|"returns ★ Epic gates"| CS
-    RTE -->|"returns ★ Architecture · Demo · PR gates"| CS
-    SM -->|"returns ★ Story · PR-packet gates"| CS
+    CS ==>|"strategic intent to governed delivery"| VMO
+    VMO -.->|"dispatch approved Epic to demoed Features"| RTE
+    RTE -.->|"dispatch committed Feature to merged Stories"| SM
+    VMO -->|"returns Epic gates"| CS
+    RTE -->|"returns Architecture, Demo, PR gates"| CS
+    SM -->|"returns Story, PR packet gates"| CS
     VMO --> FSL
     RTE --> FSL
     SM --> FSL
-    FSL -->|"sync · push/pull — the only external link"| GH
+    FSL -->|"sync push or pull, the only external link"| GH
 
     classDef orch fill:#10b981,stroke:#065f46,color:#ffffff;
     classDef fs fill:#e0e7ff,stroke:#6366f1,color:#1e1b4b;
