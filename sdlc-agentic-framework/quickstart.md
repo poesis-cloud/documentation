@@ -1,11 +1,11 @@
 ---
 layout: default
 title: Quickstart
-parent: SDLC Agentic Framework
+parent: SAFe Agentic Framework
 nav_order: 1
 ---
 
-# Quickstart — SDLC Agentic Framework
+# Quickstart — SAFe Agentic Framework
 
 {: .no_toc }
 

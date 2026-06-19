@@ -49,10 +49,10 @@ Client pipeline that sources IT artifacts — code, API contracts, infrastructur
 
 - [Features]({% link itip-blackboard-sourcer/features.md %}) — the ITIP Blackboard Sourcer capability catalogue with milestones
 
-### [SDLC Agentic Framework]({% link sdlc-agentic-framework.md %})
+### [SAFe Agentic Framework]({% link sdlc-agentic-framework.md %})
 
-The first **distributed agentic SDLC** — a governed, local-first, multi-agent software development lifecycle for VS Code / GitHub Copilot. SAFe-shaped portfolio–program–iteration orchestration runs on your own machine, with a human gate at every layer; connected to the Poesis ecosystem, its agents build with full, governed knowledge of your organization.
+The first **distributed agentic SAFe** engine — a governed, local-first, multi-agent way to *run SAFe* in VS Code / GitHub Copilot. Portfolio–program–iteration orchestration runs on your own machine, with a human gate at every layer; connected to the Poesis ecosystem, its agents build with full, governed knowledge of your organization.
 
 - [Overview]({% link sdlc-agentic-framework.md %}) — the vision, the model, and the Poesis ecosystem advantage
-- [Distributed Agentic SDLC]({% link sdlc-agentic-framework/distributed-agentic-sdlc.md %}) — orchestrators, layers, ceremonies, agents, and the filesystem ⇆ repository sync
+- [Distributed Agentic SAFe]({% link sdlc-agentic-framework/distributed-agentic-sdlc.md %}) — orchestrators, layers, ceremonies, agents, and the filesystem ⇆ central-systems sync
 - [Quickstart]({% link sdlc-agentic-framework/quickstart.md %}) — install and run your first orchestrated PR in under 30 minutes

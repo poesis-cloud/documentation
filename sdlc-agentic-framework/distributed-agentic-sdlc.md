@@ -1,18 +1,18 @@
 ---
 layout: default
-title: Distributed Agentic SDLC
-parent: SDLC Agentic Framework
+title: Distributed Agentic SAFe
+parent: SAFe Agentic Framework
 nav_order: 2
 ---
 
-# Distributed Agentic SDLC
+# Distributed Agentic SAFe
 {: .no_toc }
 
-The **SDLC Agentic Framework** is not one agent that "does Scrum." It is a *distributed*
-system: SDLC governance is split across specialized agents at three SAFe layers, the work
+The **SAFe Agentic Framework** is not one agent that "does Scrum." It is a *distributed*
+system: SAFe governance is split across specialized agents at three layers, the work
 state is externalized to a **filesystem blackboard**, and that blackboard is mirrored to
-your team's **repository central system** (GitHub or GitLab). We call this model the
-**Distributed Agentic SDLC** — to contrast it with *centralized* agentic, where a single
+your team's **central systems** (Git host, ticketing, knowledge base). We call this model
+**Distributed Agentic SAFe** — to contrast it with *centralized* agentic, where a single
 monolithic agent tries to hold the whole lifecycle in one context window.
 
 ## Table of contents
@@ -25,9 +25,9 @@ monolithic agent tries to hold the whole lifecycle in one context window.
 
 ## Centralized vs. distributed
 
-| Axis | Centralized agentic | **Distributed Agentic SDLC** |
+| Axis | Centralized agentic | **Distributed Agentic SAFe** |
 |---|---|---|
-| Orchestration | one monolithic agent owns the whole SDLC | decomposed across **3 layer-orchestrators** + a specialist bench |
+| Orchestration | one monolithic agent owns the whole lifecycle | decomposed across **3 layer-orchestrators** + a specialist bench |
 | Context | a single shared session memory | **no shared memory** — the filesystem blackboard is the bus |
 | State | implicit, in-session, lost on reset | **externalized** as committed Markdown; git history *is* the event log |
 | Surface | one chat / one app | **IDE ⇆ repository central system** (boards + issues) |
@@ -44,104 +44,84 @@ the whole picture — both surfaces, both filesystems, and the synchronization b
 
 ```mermaid
 flowchart LR
-    CS(["Central Supervisor<br/>(the human)<br/>value authority · owns every ★ gate"])
+    CS(["Central Supervisor — the human<br/>value authority · owns every ★ gate"])
 
-    subgraph DASDLC["⟦ Distributed Agentic SDLC ⟧"]
+    subgraph FW["SAFe Agentic Framework — in your IDE (VS Code + Copilot)"]
       direction TB
-
-      subgraph IDE["SDLC Agentic Framework — on your IDE · VS Code + GitHub Copilot"]
-        direction TB
-
-        subgraph PORT["Portfolio layer"]
-          direction LR
-          VMO{{"@vmo-orchestrator<br/>polices the portfolio"}}
-          UCV["use case:<br/>strategic intent →<br/>approved, funded Epics"]
-          ELBC("Epic Lean Business Case<br/>‹ BO · EA · Sec · RAI ›")
-          AV("Architectural Vision<br/>‹ EA · BO ›")
-          SPR("Strategic Portfolio Review<br/>‹ BO · EA ›")
-          PB("Participatory Budgeting<br/>‹ BO · EA ›")
-          PS("Portfolio Sync")
-          VMO -.- UCV
-        end
-
-        subgraph PROG["Program / ART layer"]
-          direction LR
-          RTE{{"@rte-orchestrator<br/>polices the ART"}}
-          UCR["use case:<br/>approved Epic →<br/>committed, demoed Features"]
-          FBR("Feature Backlog Refinement<br/>‹ PM · Arch · Dev · QA · UX · Sec ›")
-          ARE("Architectural Runway Extension<br/>‹ SA · Sec · DevOps · Dev ›")
-          PIP("PI Planning<br/>‹ the ART ›")
-          SD("System Demo → ★ Demo Gate")
-          ASY("ART Sync")
-          IA("Inspect & Adapt")
-          RTE -.- UCR
-        end
-
-        subgraph ITER["Team / Iteration layer"]
-          direction LR
-          SM{{"@sm-orchestrator<br/>polices the iteration"}}
-          UCS["use case:<br/>committed Feature →<br/>merged, QA-signed Stories"]
-          IP("Iteration Planning<br/>‹ PO ›")
-          SBR("Story Backlog Refinement<br/>‹ PO ›")
-          PAIR("Pair micro-cycle<br/>‹ Dev-Driver · Dev-Nav · Sec ›")
-          VS("Verification & Sign-off<br/>‹ QA · Sec ›")
-          DSR("Daily Sync · Review · Retro")
-          SM -.- UCS
-        end
-
-        FSL[("local filesystem blackboard<br/>portfolio/ · portfolio/&lt;slug&gt;/<br/>Epic · Feature · Story · ADR · kanban — .md")]
-      end
-
-      subgraph REPO["Central systems — code · tickets · knowledge"]
+      subgraph PORT["Portfolio layer · @vmo-orchestrator"]
         direction LR
-        subgraph GH["Git host — GitHub / GitLab"]
-          direction TB
-          BOARDS["Projects / Boards<br/>Portfolio · Program · Team"]
-          PLAN[("planning repos<br/>issues + artifact files")]
-          BOARDS --- PLAN
-        end
-        JIRA["Ticketing — Jira<br/>SAFe Epics · Features · Stories<br/>sprints · PI boards"]
-        CONF["Knowledge base — Confluence<br/>ADRs · PRDs · reports"]
-        PLAN -.->|"publish from git"| CONF
+        VMO{{"@vmo-orchestrator"}}
+        ELBC["Epic Lean Business Case<br/>Agents: BO · EA · Sec · RAI"]
+        AV["Architectural Vision<br/>Agents: EA · BO"]
+        SPR["Strategic Portfolio Review<br/>Agents: BO · EA"]
+        PB["Participatory Budgeting<br/>Agents: BO · EA"]
+        PS["Portfolio Sync<br/>Agents: VMO + Epic owners"]
       end
+      subgraph PROG["Program / ART layer · @rte-orchestrator"]
+        direction LR
+        RTE{{"@rte-orchestrator"}}
+        FBR["Feature Backlog Refinement<br/>Agents: PM · Arch · Dev · QA · UX · Sec"]
+        ARE["Architectural Runway Extension<br/>Agents: SA · Sec · DevOps · Dev"]
+        PIP["PI Planning<br/>Agents: the ART"]
+        SD["System Demo<br/>Agents: the ART"]
+        ASY["ART Sync<br/>Agents: Arch + leads"]
+        IA["Inspect and Adapt<br/>Agents: the ART"]
+      end
+      subgraph ITER["Team / Iteration layer · @sm-orchestrator"]
+        direction LR
+        SM{{"@sm-orchestrator"}}
+        IP["Iteration Planning<br/>Agents: PO + pairs"]
+        SBR["Story Backlog Refinement<br/>Agents: PO"]
+        PAIR["Pair micro-cycle<br/>Agents: Dev · Dev · Sec"]
+        VS["Verification and Sign-off<br/>Agents: QA · Sec"]
+        DSR["Daily · Review · Retro<br/>Agents: the team"]
+      end
+      FSL[("local filesystem blackboard<br/>portfolio artifacts in Markdown")]
     end
 
-    CS ==>|"single entry point"| VMO
-    CS -.->|"★ gate authority"| RTE
-    CS -.->|"★ gate authority"| SM
-    VMO -.->|"dispatch per ART"| RTE
-    RTE -.->|"dispatch per iteration"| SM
+    subgraph CENTRAL["Central systems — all synced from the git host"]
+      direction TB
+      GH["Git host — GitHub / GitLab<br/>boards · issues · artifact files"]
+      JIRA["Ticketing — Jira<br/>SAFe Epics · Features · Stories · PIs"]
+      CONF["Knowledge base — Confluence<br/>ADRs · PRDs · reports"]
+      GH -->|"tickets"| JIRA
+      GH -->|"knowledge"| CONF
+    end
+
+    CS ==>|"use case: strategic intent to governed delivery"| VMO
+    VMO -.->|"dispatch · approved Epic to demoed Features"| RTE
+    RTE -.->|"dispatch · committed Feature to merged Stories"| SM
+    VMO -->|"returns ★ Epic gates"| CS
+    RTE -->|"returns ★ Architecture · Demo · PR gates"| CS
+    SM -->|"returns ★ Story · PR-packet gates"| CS
     VMO --> FSL
     RTE --> FSL
     SM --> FSL
-    FSL <==>|"auto-shaped SAFe tickets"| JIRA
-    FSL <==>|"sync · templated artifacts<br/>push = content ▸  ◂ pull = status<br/>★ gates never auto-crossed"| BOARDS
+    FSL -->|"sync · push/pull — the only external link"| GH
 
     classDef orch fill:#10b981,stroke:#065f46,color:#ffffff;
-    classDef note fill:#fef9c3,stroke:#ca8a04,color:#3f3f00;
     classDef fs fill:#e0e7ff,stroke:#6366f1,color:#1e1b4b;
-    classDef cer fill:#f1f5f9,stroke:#64748b,color:#0f172a;
     classDef ext fill:#fde68a,stroke:#b45309,color:#3f2d00;
     class VMO,RTE,SM orch
-    class UCV,UCR,UCS note
-    class FSL,PLAN fs
-    class ELBC,AV,SPR,PB,PS,FBR,ARE,PIP,SD,ASY,IA,IP,SBR,PAIR,VS,DSR cer
-    class JIRA,CONF ext
+    class FSL fs
+    class GH,JIRA,CONF ext
 ```
 
 How to read it, from the outside in:
 
-- The **Central Supervisor** (you) sits *outside* the model. You are the value authority and
-  the owner of **every ★ gate** — no agent ever crosses a gate for you.
-- The outer box **⟦ Distributed Agentic SDLC ⟧** is the whole model: the framework *and* the
-  repository system *and* the sync between them.
-- Inside it, the **SDLC Agentic Framework** runs in your IDE. It stacks the three SAFe
-  layers vertically; each layer's **orchestrator is its left-hand entry point**.
-- Each layer *encapsulates* the **ceremonies & practices** it convenes; each ceremony
-  *encapsulates* the **agents** it sequences (shown in ‹ angle brackets ›).
-- Both surfaces persist to a **filesystem**: the framework writes Markdown artifacts to a
-  local blackboard; the repository system holds the mirrored issues and boards. The
-  **sync flow** moves *templated artifacts* between the two filesystems.
+- The **Central Supervisor** (you) sits *outside* the framework. You are the value authority
+  and the owner of **every ★ gate** — each orchestrator **returns its layer's gates to you**
+  for the decision and never crosses one on its own.
+- The **SAFe Agentic Framework** box runs in your IDE. The three SAFe layers stack
+  vertically; each layer's **orchestrator is its entry point** (carrying your use case for
+  that layer), and inside each layer the **ceremonies and practices** sit side by side, each
+  naming the **Agents** it convenes from the bench.
+- The framework writes everything to a **local filesystem blackboard** — the governed Markdown
+  artifacts (Epics, Features, Stories, ADRs, kanban).
+- **The framework's only external link is the Git host.** It syncs the blackboard to GitHub /
+  GitLab and nothing else; the **ticketing** system (Jira) and the **knowledge base**
+  (Confluence) are then synced *from the git host* — so SAFe tickets and a current wiki fall
+  out of one integration, not three.
 
 ### Legend — agent tokens
 
@@ -261,7 +241,7 @@ closes or deletes work as a side effect.
 
 ## Why "distributed"?
 
-The model distributes the SDLC along five independent axes — the opposite of folding everything
+The model distributes SAFe execution along five independent axes — the opposite of folding everything
 into one agent and one context:
 
 1. **Across agents** — three orchestrators + a ten-role specialist bench, each with a narrow
@@ -300,7 +280,7 @@ The model invites tooling. Four concrete, well-scoped builds:
 4. **Open blackboard protocol** — formalize the *read-committed-input → commit-output* contract
    as a small spec so third-party agents (other vendors, other models) can join the bench as
    first-class participants.
-5. **Organizational context over MCP** — an MCP server that streams governed organizational definitions into every agent, so the framework builds with full, governed knowledge of the organization (see the [SDLC Agentic Framework overview]({% link sdlc-agentic-framework.md %})).
+5. **Organizational context over MCP** — an MCP server that streams governed organizational definitions into every agent, so the framework builds with full, governed knowledge of the organization (see the [SAFe Agentic Framework overview]({% link sdlc-agentic-framework.md %})).
 
 **Start with #1.** It is the highest-leverage, cleanest-boundary build: it makes the
 "central system" pluggable, proves the model is not GitHub-specific, and leaves the

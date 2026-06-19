@@ -1,121 +1,111 @@
 ---
 layout: default
-title: SDLC Agentic Framework
+title: SAFe Agentic Framework
 nav_order: 6
 has_children: true
 ---
 
-# SDLC Agentic Framework — the Distributed Agentic SDLC
+# SAFe Agentic Framework
 
-The **product vision** and the model behind it — why software construction needs a *governed, local-first, multi-agent* SDLC, and how the Poesis ecosystem turns it from a coding assistant into an organization-aware engineering capability. To install and run it, see **[Quickstart]({% link sdlc-agentic-framework/quickstart.md %})**; for the full model, **[Distributed Agentic SDLC]({% link sdlc-agentic-framework/distributed-agentic-sdlc.md %})**.
+The **product vision** and the model behind it — why running SAFe well needs a *governed, local-first, multi-agent* engine, and how the Poesis ecosystem turns it from a coding assistant into an organization-aware engineering capability. To install and run it, see **[Quickstart]({% link sdlc-agentic-framework/quickstart.md %})**; for the full model, **[the distributed model]({% link sdlc-agentic-framework/distributed-agentic-sdlc.md %})**.
 {: .fs-5 .fw-300 }
 
-## The missing piece: orchestration that lives where you build
+## Running SAFe is hard. This runs it for you.
 
-Agentic coding has exploded — but it has split into two shapes, and **both give something up**:
+SAFe gives large organizations a genuine operating model for scaling agile — a **portfolio → program → iteration** hierarchy with defined roles, ceremonies, cadences, and artifacts. But *implementing* it is brutally heavy. The ceremonies need facilitation. The artifacts — Epics, Features, Stories, ADRs, PI objectives, kanbans — need authoring and constant upkeep. The boards, tickets, and wiki need feeding. And it all decays the moment people get busy. Most SAFe transformations end up paying the overhead without ever banking the value.
 
-| Shape | What it is | What it gives up |
-|---|---|---|
-| **Assist** | in-IDE single agent (Aider, Cline, Copilot) | one agent, one context — loses the thread at portfolio scale, no governance |
-| **Delegate** | cloud SWE bot (Codex, Devin, Copilot coding agent) | your code on someone's server, async, no human gate, no organizational context |
-| **Orchestrate** | *...a governed multi-agent SDLC on your own machine* | *...nothing coherent — until now* |
-
-Single agents are powerful but flat: no roles, no gates, no portfolio. Cloud bots are autonomous but exiled — they run in someone else's sandbox, divorced from your working tree, your toolchain, and your organization's governed truth.
-
-**The SDLC Agentic Framework is the first *distributed* agentic SDLC.** That is a deliberately strong claim, so let's be precise about what "distributed" means:
+The **SAFe Agentic Framework** puts a team of agents *inside your IDE* that actually **run SAFe**: they facilitate the ceremonies, author every artifact to a governed template, keep the human in command at each gate, and synchronize the boards, tickets, and knowledge base. Three properties make it work:
 
 1. **Local-first** — the agent loop runs on each developer's machine, in the IDE, against the real working tree. Your code and secrets never leave; only the artifacts you commit sync out.
-2. **Governed** — a SAFe-shaped portfolio→program→iteration hierarchy of role agents, with a human ★ gate at every layer. Not a flat swarm — an org chart with authority.
-3. **Sovereign state** — work state is externalized to a filesystem blackboard and mirrored to your Git host. The git history *is* the event log. Nothing is trapped in a session.
+2. **Governed** — a portfolio → program → iteration hierarchy of role agents, with a human ★ gate at every layer. Not a flat swarm — an org chart with authority.
+3. **Sovereign** — work state lives in your own files and git history (the event log), not a vendor's cloud. Nothing is trapped in a session.
+
+Three orchestrators, one per SAFe layer, run the show — dispatched from a single entry point, `@vmo-orchestrator`:
 
 ```mermaid
 flowchart LR
-    CS(["Central Supervisor<br/>(the human)<br/>value authority · owns every ★ gate"])
+    CS(["Central Supervisor — the human<br/>value authority · owns every ★ gate"])
 
-    subgraph DASDLC["⟦ Distributed Agentic SDLC ⟧"]
+    subgraph FW["SAFe Agentic Framework — in your IDE (VS Code + Copilot)"]
       direction TB
-
-      subgraph IDE["SDLC Agentic Framework — on your IDE · VS Code + GitHub Copilot"]
-        direction TB
-
-        subgraph PORT["Portfolio layer"]
-          direction LR
-          VMO{{"@vmo-orchestrator<br/>polices the portfolio"}}
-          UCV["use case:<br/>strategic intent →<br/>approved, funded Epics"]
-          ELBC("Epic Lean Business Case<br/>‹ BO · EA · Sec · RAI ›")
-          AV("Architectural Vision<br/>‹ EA · BO ›")
-          SPR("Strategic Portfolio Review<br/>‹ BO · EA ›")
-          PB("Participatory Budgeting<br/>‹ BO · EA ›")
-          PS("Portfolio Sync")
-          VMO -.- UCV
-        end
-
-        subgraph PROG["Program / ART layer"]
-          direction LR
-          RTE{{"@rte-orchestrator<br/>polices the ART"}}
-          UCR["use case:<br/>approved Epic →<br/>committed, demoed Features"]
-          FBR("Feature Backlog Refinement<br/>‹ PM · Arch · Dev · QA · UX · Sec ›")
-          ARE("Architectural Runway Extension<br/>‹ SA · Sec · DevOps · Dev ›")
-          PIP("PI Planning<br/>‹ the ART ›")
-          SD("System Demo → ★ Demo Gate")
-          ASY("ART Sync")
-          IA("Inspect & Adapt")
-          RTE -.- UCR
-        end
-
-        subgraph ITER["Team / Iteration layer"]
-          direction LR
-          SM{{"@sm-orchestrator<br/>polices the iteration"}}
-          UCS["use case:<br/>committed Feature →<br/>merged, QA-signed Stories"]
-          IP("Iteration Planning<br/>‹ PO ›")
-          SBR("Story Backlog Refinement<br/>‹ PO ›")
-          PAIR("Pair micro-cycle<br/>‹ Dev-Driver · Dev-Nav · Sec ›")
-          VS("Verification & Sign-off<br/>‹ QA · Sec ›")
-          DSR("Daily Sync · Review · Retro")
-          SM -.- UCS
-        end
-
-        FSL[("local filesystem blackboard<br/>portfolio/ · portfolio/&lt;slug&gt;/<br/>Epic · Feature · Story · ADR · kanban — .md")]
-      end
-
-      subgraph REPO["Central systems — code · tickets · knowledge"]
+      subgraph PORT["Portfolio layer · @vmo-orchestrator"]
         direction LR
-        subgraph GH["Git host — GitHub / GitLab"]
-          direction TB
-          BOARDS["Projects / Boards<br/>Portfolio · Program · Team"]
-          PLAN[("planning repos<br/>issues + artifact files")]
-          BOARDS --- PLAN
-        end
-        JIRA["Ticketing — Jira<br/>SAFe Epics · Features · Stories<br/>sprints · PI boards"]
-        CONF["Knowledge base — Confluence<br/>ADRs · PRDs · reports"]
-        PLAN -.->|"publish from git"| CONF
+        VMO{{"@vmo-orchestrator"}}
+        ELBC["Epic Lean Business Case<br/>Agents: BO · EA · Sec · RAI"]
+        AV["Architectural Vision<br/>Agents: EA · BO"]
+        SPR["Strategic Portfolio Review<br/>Agents: BO · EA"]
+        PB["Participatory Budgeting<br/>Agents: BO · EA"]
+        PS["Portfolio Sync<br/>Agents: VMO + Epic owners"]
       end
+      subgraph PROG["Program / ART layer · @rte-orchestrator"]
+        direction LR
+        RTE{{"@rte-orchestrator"}}
+        FBR["Feature Backlog Refinement<br/>Agents: PM · Arch · Dev · QA · UX · Sec"]
+        ARE["Architectural Runway Extension<br/>Agents: SA · Sec · DevOps · Dev"]
+        PIP["PI Planning<br/>Agents: the ART"]
+        SD["System Demo<br/>Agents: the ART"]
+        ASY["ART Sync<br/>Agents: Arch + leads"]
+        IA["Inspect and Adapt<br/>Agents: the ART"]
+      end
+      subgraph ITER["Team / Iteration layer · @sm-orchestrator"]
+        direction LR
+        SM{{"@sm-orchestrator"}}
+        IP["Iteration Planning<br/>Agents: PO + pairs"]
+        SBR["Story Backlog Refinement<br/>Agents: PO"]
+        PAIR["Pair micro-cycle<br/>Agents: Dev · Dev · Sec"]
+        VS["Verification and Sign-off<br/>Agents: QA · Sec"]
+        DSR["Daily · Review · Retro<br/>Agents: the team"]
+      end
+      FSL[("local filesystem blackboard<br/>portfolio artifacts in Markdown")]
     end
 
-    CS ==>|"single entry point"| VMO
-    CS -.->|"★ gate authority"| RTE
-    CS -.->|"★ gate authority"| SM
-    VMO -.->|"dispatch per ART"| RTE
-    RTE -.->|"dispatch per iteration"| SM
+    subgraph CENTRAL["Central systems — all synced from the git host"]
+      direction TB
+      GH["Git host — GitHub / GitLab<br/>boards · issues · artifact files"]
+      JIRA["Ticketing — Jira<br/>SAFe Epics · Features · Stories · PIs"]
+      CONF["Knowledge base — Confluence<br/>ADRs · PRDs · reports"]
+      GH -->|"tickets"| JIRA
+      GH -->|"knowledge"| CONF
+    end
+
+    CS ==>|"use case: strategic intent to governed delivery"| VMO
+    VMO -.->|"dispatch · approved Epic to demoed Features"| RTE
+    RTE -.->|"dispatch · committed Feature to merged Stories"| SM
+    VMO -->|"returns ★ Epic gates"| CS
+    RTE -->|"returns ★ Architecture · Demo · PR gates"| CS
+    SM -->|"returns ★ Story · PR-packet gates"| CS
     VMO --> FSL
     RTE --> FSL
     SM --> FSL
-    FSL <==>|"auto-shaped SAFe tickets"| JIRA
-    FSL <==>|"sync · templated artifacts<br/>push = content ▸  ◂ pull = status<br/>★ gates never auto-crossed"| BOARDS
+    FSL -->|"sync · push/pull — the only external link"| GH
 
     classDef orch fill:#10b981,stroke:#065f46,color:#ffffff;
-    classDef note fill:#fef9c3,stroke:#ca8a04,color:#3f3f00;
     classDef fs fill:#e0e7ff,stroke:#6366f1,color:#1e1b4b;
-    classDef cer fill:#f1f5f9,stroke:#64748b,color:#0f172a;
     classDef ext fill:#fde68a,stroke:#b45309,color:#3f2d00;
     class VMO,RTE,SM orch
-    class UCV,UCR,UCS note
-    class FSL,PLAN fs
-    class ELBC,AV,SPR,PB,PS,FBR,ARE,PIP,SD,ASY,IA,IP,SBR,PAIR,VS,DSR cer
-    class JIRA,CONF ext
+    class FSL fs
+    class GH,JIRA,CONF ext
 ```
 
-*Three orchestrators, one per SAFe layer, dispatched from a single entry point — `@vmo-orchestrator`. No orchestrator writes production code; they police the flow and delegate to the specialist bench. The full model — layers, ceremonies, agents, and the sync — is on the **[Distributed Agentic SDLC]({% link sdlc-agentic-framework/distributed-agentic-sdlc.md %})** page.*
+*Each orchestrator is an entry point carrying your use case for its layer, and **returns that layer's ★ gates to you**. The framework's only external link is the git host — Jira and Confluence sync from there. The full model is on the **[Distributed Agentic SAFe]({% link sdlc-agentic-framework/distributed-agentic-sdlc.md %})** page.*
+
+---
+
+## Why a method? Because intuition — human or artificial — needs a harness
+
+A lot of people dislike SAFe. Some are scared of it: the ceremonies, the acronyms, the feeling of process for its own sake. That reaction is fair — but it misses what a method is *for*.
+
+**Humans and AI run on the same engine.** Strip away the mystique and both are probabilistic. A person acts on pattern, feeling, and experience — hunches refined across thousands of past cases. A language model is that same machinery made explicit: it predicts the next move from patterns learned over a vast corpus. Neither is, at bottom, a logician. Both are *guessers* — astonishingly good ones, and biased in the same human ways.
+
+The only reason intuition can land planes and ship software is that we built **methods to harness it.** Rationalism and empiricism — the scientific method, peer review, the engineering review board, Scrum, SAFe — were never bureaucracy. They are *cognitive harnesses*: structures that take a brilliant, biased, probabilistic mind and push its output through evidence, checks, and sequence until it comes out **reliable.** Intuition proposes; the method disposes.
+
+**AI needs exactly this — for exactly the same reason.** An agent's failure modes are human failure modes amplified: confident guesses, skipped steps, plausible fabrication, dropped context. You don't cure that by waiting for a smarter model; you cure it the way we cured it for ourselves — by making the agent **implement a method.** And here is the part that's easy to miss: **human methods are unusually good at harnessing machine intuition, because they were engineered to harness the same probabilistic biases in us.** A discipline built to keep a distracted human honest keeps a distracted agent honest too.
+
+A **published standard** is the strongest harness of all. Because it is written down, widely taught, and consistently structured, an AI **already knows it** — it has read the standard, can comply with it, and can reason in its vocabulary with no retraining. The method becomes a shared contract between human and machine.
+
+**SAFe is that standard — the only one that governs development end to end, from portfolio strategy down to a single merged commit.** And the very thing critics resent — its *layers* — is its decisive advantage for AI: **every layer is a filter on agent output.** The portfolio layer catches the wrong bet before it is funded; the program layer catches the wrong architecture before it is built; the iteration layer catches the wrong code before it ships. The probabilistic engine is not checked once — it is harnessed at **every altitude**, each checkpoint owned by a human and shaped by an established practice.
+
+That is what this framework is: **SAFe, run by agents, as the harness that makes agentic delivery trustworthy.** And because it speaks nothing but standard SAFe, it does not compete with your transformation — **it drops into an existing SAFe organization** and, at last, makes the practice cheap to run.
 
 ---
 
@@ -135,11 +125,11 @@ If you've adopted agentic coding at any scale, you've hit these:
 
 - **Lock-in to a vendor runtime.** Your workflow lives inside a proprietary node graph or a hosted control plane you don't own. *Plain files, plain git, a standard IDE.*
 
-These are not tooling gaps. They are symptoms of one root cause: **agentic SDLC has been built as a product feature, not as a governed system.** The SDLC Agentic Framework makes it a governed system — local execution, a role hierarchy, per-layer gates, externalized state — and, connected to Poesis, grounded in your organization's own governed definitions.
+These are not tooling gaps. They are symptoms of one root cause: **agentic delivery has been built as a product feature, not as a governed system.** The SAFe Agentic Framework makes it a governed system — local execution, a role hierarchy, per-layer gates, externalized state — and, connected to Poesis, grounded in your organization's own governed definitions.
 
 ---
 
-## The agentic SDLC landscape
+## The agentic coding landscape
 
 The framework occupies a corner that existing categories circle but never claim:
 
@@ -149,7 +139,7 @@ The framework occupies a corner that existing categories circle but never claim:
 | **IDE single-agents** (Aider, Cline, Cursor, Continue) | fast local pairing, git-native | one agent — no roles, ceremonies, or portfolio; no governance |
 | **Multi-agent frameworks** (MetaGPT, ChatDev, CrewAI, AutoGen) | role-based collaboration | monolithic in-process, weak human gating, not IDE-native, no repo sync |
 | **Workflow orchestrators** (n8n, LangGraph, Temporal) | durable, event-driven automation | centralized execution — system-to-system, not human-supervised construction |
-| **SDLC Agentic Framework** | **local-first SAFe orchestration, per-layer human gates, repo sync, org-grounded** | **— the niche the others leave empty** |
+| **SAFe Agentic Framework** | **local-first SAFe orchestration, per-layer human gates, repo sync, org-grounded** | **— the niche the others leave empty** |
 
 The crowded space is the *delegate* corner — cloud single-agent PR bots. The **local-first + governed-hierarchy + organization-grounded** corner was empty. That is where this lives.
 
@@ -163,7 +153,7 @@ assigned to sprints and PIs, traceable end to end, and mirrored onto boards and 
 overhead is manual, and it decays the moment people get busy. Most "SAFe transformations" stall
 exactly there: the practice is sound, but nobody can sustain the administrative tax.
 
-The SDLC Agentic Framework **produces that bookkeeping as a byproduct of doing the work.** Because
+The SAFe Agentic Framework **produces that bookkeeping as a byproduct of doing the work.** Because
 every artifact is template-governed and SAFe-shaped from birth, syncing it out **creates textbook
 SAFe automatically**:
 
@@ -182,13 +172,13 @@ design.)*
 
 ---
 
-## The Poesis advantage: an SDLC that knows your organization
+## The Poesis advantage: a framework that knows your organization
 
-This is where the framework stops being "another coding agent" and becomes something no one else can ship. The same way **[ITIP]({% link itip/index.md %})** grounds AI in governed truth, the SDLC Agentic Framework is built to **consume that governed truth as it builds**.
+This is where the framework stops being "another coding agent" and becomes something no one else can ship. The same way **[ITIP]({% link itip/index.md %})** grounds AI in governed truth, the SAFe Agentic Framework is built to **consume that governed truth as it builds**.
 
 ### Templates become Archetypes
 
-The framework ships reference templates — Epic, Feature, Story, ADR, the kanban and gate records. On their own, they are disciplined Markdown. **Sourced into GSM, they become [Archetypes]({% link itip/index.md %})** — governed definition *types* in **SIE**, each carrying vocabulary (a named type), grammar (it slots into the DNA governance grammar), and semantics (a schema that fixes what every field *means*). Your SDLC artifacts stop being free text and become **typed, versioned, governed definitions** — drift-proof, composable with the frameworks you already govern (TOGAF, ISO, GDPR), and enforceable. An Epic is no longer a document each agent reinterprets; it is a definition the whole organization shares.
+The framework ships reference templates — Epic, Feature, Story, ADR, the kanban and gate records. On their own, they are disciplined Markdown. **Sourced into GSM, they become [Archetypes]({% link itip/index.md %})** — governed definition *types* in **SIE**, each carrying vocabulary (a named type), grammar (it slots into the DNA governance grammar), and semantics (a schema that fixes what every field *means*). Your SAFe artifacts stop being free text and become **typed, versioned, governed definitions** — drift-proof, composable with the frameworks you already govern (TOGAF, ISO, GDPR), and enforceable. An Epic is no longer a document each agent reinterprets; it is a definition the whole organization shares.
 
 ### Full organizational context, over MCP
 
@@ -200,7 +190,7 @@ The orchestrators and the specialist bench are optimized to **read and generate 
 
 ### The closed THINK → BUILD loop
 
-ITIP and SIE govern **what should be built** — the THINK layer, the generative definition of the system. The SDLC Agentic Framework **builds it** — the agentic arm of BUILD — reading those definitions as it goes and committing artifacts that feed back as evidence.
+ITIP and SIE govern **what should be built** — the THINK layer, the generative definition of the system. The SAFe Agentic Framework **builds it** — the agentic arm of BUILD — reading those definitions as it goes and committing artifacts that feed back as evidence.
 
 ```
    ┌──────────── THINK · ITIP / SIE ────────────┐
@@ -208,7 +198,7 @@ ITIP and SIE govern **what should be built** — the THINK layer, the generative
    └─────────────────────┬───────────────────────┘
                          │  consumed over MCP
                          ▼
-   ┌──────── BUILD · SDLC Agentic Framework ─────┐
+   ┌──────── BUILD · SAFe Agentic Framework ─────┐
    │   agents construct it — gated by humans      │
    └─────────────────────┬───────────────────────┘
                          │  commits = evidence
@@ -222,7 +212,7 @@ Definition generates execution; execution produces observation; observation refi
 
 ## Open framework, ecosystem superpowers
 
-The framework is **open source (Apache-2.0)** and runs standalone: install it, point it at any GitHub or GitLab repository, and you have a governed, local-first SDLC today. **Connected to the Poesis ecosystem, it gains a sense no other SDLC tool has — knowledge of your organization.** Templates governed as Archetypes; context streamed from SIE over MCP; agents fluent in GSM and ITIP. The open core gives you the orchestration; the ecosystem gives it *understanding*.
+The framework is **open source (Apache-2.0)** and runs standalone: install it, point it at any GitHub or GitLab repository, and you have a governed, local-first SAFe engine today. **Connected to the Poesis ecosystem, it gains a sense no other delivery tool has — knowledge of your organization.** Templates governed as Archetypes; context streamed from SIE over MCP; agents fluent in GSM and ITIP. The open core gives you the orchestration; the ecosystem gives it *understanding*.
 
 **Next: [Quickstart — your first orchestrated PR →]({% link sdlc-agentic-framework/quickstart.md %})**
 {: .fs-5 .fw-300 }
