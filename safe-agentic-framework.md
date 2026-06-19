@@ -7,7 +7,7 @@ has_children: true
 
 # SAFe Agentic Framework
 
-The **product vision** and the model behind it — why running SAFe well needs a *governed, local-first, multi-agent* engine, and how the Poesis ecosystem turns it from a coding assistant into an organization-aware engineering capability. To install and run it, see **[Quickstart]({% link sdlc-agentic-framework/quickstart.md %})**; for the full model, **[the distributed model]({% link sdlc-agentic-framework/distributed-agentic-sdlc.md %})**.
+The **product vision** and the model behind it — why running SAFe well needs a *governed, local-first, multi-agent* engine, and how the Poesis ecosystem turns it from a coding assistant into an organization-aware engineering capability. To install and run it, see **[Quickstart]({% link safe-agentic-framework/quickstart.md %})**; for the full model, **[the distributed model]({% link safe-agentic-framework/distributed-agentic-sdlc.md %})**.
 {: .fs-5 .fw-300 }
 
 ## Running SAFe is hard. This runs it for you.
@@ -87,7 +87,7 @@ flowchart LR
     class GH,JIRA,CONF ext
 ```
 
-*Each orchestrator is an entry point carrying your use case for its layer, and **returns that layer's ★ gates to you**. The framework's only external link is the git host — Jira and Confluence sync from there. The full model is on the **[Distributed Agentic SAFe]({% link sdlc-agentic-framework/distributed-agentic-sdlc.md %})** page.*
+*Each orchestrator is an entry point carrying your use case for its layer, and **returns that layer's ★ gates to you**. The framework's only external link is the git host — Jira and Confluence sync from there. The full model is on the **[Distributed Agentic SAFe]({% link safe-agentic-framework/distributed-agentic-sdlc.md %})** page.*
 
 ---
 
@@ -214,5 +214,5 @@ Definition generates execution; execution produces observation; observation refi
 
 The framework is **open source (Apache-2.0)** and runs standalone: install it, point it at any GitHub or GitLab repository, and you have a governed, local-first SAFe engine today. **Connected to the Poesis ecosystem, it gains a sense no other delivery tool has — knowledge of your organization.** Templates governed as Archetypes; context streamed from SIE over MCP; agents fluent in GSM and ITIP. The open core gives you the orchestration; the ecosystem gives it *understanding*.
 
-**Next: [Quickstart — your first orchestrated PR →]({% link sdlc-agentic-framework/quickstart.md %})**
+**Next: [Quickstart — your first orchestrated PR →]({% link safe-agentic-framework/quickstart.md %})**
 {: .fs-5 .fw-300 }

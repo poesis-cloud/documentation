@@ -35,8 +35,8 @@ Before you start, you need:
 | **SE:\* specialist bench agents** | `github.com/github/awesome-copilot` | Security, Architect, DevOps/CI, Tech Writer, UX, RAI agents |
 
 > These components are **not** bundled in this package and are **not** relicensed under Poesis Cloud's
-> Apache-2.0. See [NOTICE](https://github.com/poesis-cloud/sdlc-agentic-framework/blob/main/NOTICE)
-> and [CONTRIBUTING.md](https://github.com/poesis-cloud/sdlc-agentic-framework/blob/main/CONTRIBUTING.md).
+> Apache-2.0. See [NOTICE](https://github.com/poesis-cloud/safe-agentic-framework/blob/main/NOTICE)
+> and [CONTRIBUTING.md](https://github.com/poesis-cloud/safe-agentic-framework/blob/main/CONTRIBUTING.md).
 
 ---
 
@@ -50,8 +50,8 @@ This framework and its prerequisites all follow that convention:
 
 ```bash
 # This framework
-git clone https://github.com/poesis-cloud/sdlc-agentic-framework \
-  ~/.vscode/agent-plugins/github.com/poesis-cloud/sdlc-agentic-framework
+git clone https://github.com/poesis-cloud/safe-agentic-framework \
+  ~/.vscode/agent-plugins/github.com/poesis-cloud/safe-agentic-framework
 
 # SE:* specialist bench agents
 git clone https://github.com/github/awesome-copilot \
@@ -64,7 +64,7 @@ Reload VS Code. All three orchestrators (`@vmo-orchestrator`, `@rte-orchestrator
 **To pin to a specific version:**
 
 ```bash
-cd ~/.vscode/agent-plugins/github.com/poesis-cloud/sdlc-agentic-framework
+cd ~/.vscode/agent-plugins/github.com/poesis-cloud/safe-agentic-framework
 git fetch --tags
 git checkout v0.1.0
 ```
@@ -72,7 +72,7 @@ git checkout v0.1.0
 **To update to the latest:**
 
 ```bash
-cd ~/.vscode/agent-plugins/github.com/poesis-cloud/sdlc-agentic-framework
+cd ~/.vscode/agent-plugins/github.com/poesis-cloud/safe-agentic-framework
 git pull
 # then reload VS Code: Ctrl+Shift+P → "Developer: Reload Window"
 ```
@@ -152,16 +152,16 @@ You have completed the quickstart when:
 
 **Agents do not appear in the Copilot Chat `@` list**
 
-- Ensure the clone is at the exact path `~/.vscode/agent-plugins/github.com/poesis-cloud/sdlc-agentic-framework`.
+- Ensure the clone is at the exact path `~/.vscode/agent-plugins/github.com/poesis-cloud/safe-agentic-framework`.
   The `github.com/<org>/<repo>` path structure is required by the VS Code APM convention.
 - Reload VS Code window (`Ctrl+Shift+P` → "Developer: Reload Window").
 - Check that GitHub Copilot extension is up to date (v1.270 or later recommended).
-- Verify `plugins/poesis-sdlc-agentic-framework/agents/` contains `*.agent.md` files.
+- Verify `plugins/poesis-safe-agentic-framework/agents/` contains `*.agent.md` files.
 
 **Skills fail to load (agent says "skill not found")**
 
 - Confirm that the orchestration-core skill is present:
-  `ls ~/.vscode/agent-plugins/github.com/poesis-cloud/sdlc-agentic-framework/plugins/poesis-sdlc-agentic-framework/skills/`
+  `ls ~/.vscode/agent-plugins/github.com/poesis-cloud/safe-agentic-framework/plugins/poesis-safe-agentic-framework/skills/`
 
 **"SE:\* bench agents not found"**
 
@@ -173,6 +173,6 @@ You have completed the quickstart when:
 
 ## What's next
 
-- Read [CONTRIBUTING.md](https://github.com/poesis-cloud/sdlc-agentic-framework/blob/main/CONTRIBUTING.md) to understand how to contribute improvements.
-- Check [GitHub Releases](https://github.com/poesis-cloud/sdlc-agentic-framework/releases) for version history.
-- File issues at [github.com/poesis-cloud/sdlc-agentic-framework/issues](https://github.com/poesis-cloud/sdlc-agentic-framework/issues).
+- Read [CONTRIBUTING.md](https://github.com/poesis-cloud/safe-agentic-framework/blob/main/CONTRIBUTING.md) to understand how to contribute improvements.
+- Check [GitHub Releases](https://github.com/poesis-cloud/safe-agentic-framework/releases) for version history.
+- File issues at [github.com/poesis-cloud/safe-agentic-framework/issues](https://github.com/poesis-cloud/safe-agentic-framework/issues).
