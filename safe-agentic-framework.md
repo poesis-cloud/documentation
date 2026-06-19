@@ -96,6 +96,16 @@ flowchart LR
 
 ---
 
+## What an agentic framework is — and why you need one
+
+**An agentic framework is an *organization* of AI agents — not a single assistant.** A chatbot is one model in one conversation: brilliant for a question, hopeless for a project. An agentic framework is the opposite: many specialized agents, each with a role, coordinated by an orchestration layer, passing work through defined handoffs and human checkpoints. It is the difference between a *clever individual* and a *functioning team*.
+
+**Why a framework, rather than just a smarter agent?** Because real work is never one prompt. Building software is multi-role (someone shapes the goal, someone designs, someone codes, someone verifies), multi-step, and multi-layer (strategy → planning → execution). No lone agent — however capable — holds all those roles at once, carries the context across them, or reliably checks itself. A framework supplies what a single agent can't: **division of labor** (specialists, not one generalist), **coordination** (an orchestrator that routes and sequences the work), **governance** (roles, gates, and a human in command), and **persistence** (state that outlives any one session). Those are precisely the properties that make a team more than a person — and a probabilistic agent trustworthy.
+
+**For what?** For the work that is too large, too long, or too consequential for a single chat: carrying an intent from strategy down to merged, verified code — repeatably, with an audit trail, and under human authority. An agentic framework turns ad-hoc AI help into a **governed engineering capability** you can run a whole portfolio on.
+
+---
+
 ## What it solves that others don't
 
 If you've adopted agentic coding at any scale, you've hit these:
