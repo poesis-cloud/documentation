@@ -96,16 +96,6 @@ flowchart LR
 
 ---
 
-## What an agentic framework is — and why you need one
-
-**An agentic framework is an *organization* of AI agents — not a single assistant.** A chatbot is one model in one conversation: brilliant for a question, hopeless for a project. An agentic framework is the opposite: many specialized agents, each with a role, coordinated by an orchestration layer, passing work through defined handoffs and human checkpoints. It is the difference between a *clever individual* and a *functioning team*.
-
-**Why a framework, rather than just a smarter agent?** Because real work is never one prompt. Building software is multi-role (someone shapes the goal, someone designs, someone codes, someone verifies), multi-step, and multi-layer (strategy → planning → execution). No lone agent — however capable — holds all those roles at once, carries the context across them, or reliably checks itself. A framework supplies what a single agent can't: **division of labor** (specialists, not one generalist), **coordination** (an orchestrator that routes and sequences the work), **governance** (roles, gates, and a human in command), and **persistence** (state that outlives any one session). Those are precisely the properties that make a team more than a person — and a probabilistic agent trustworthy.
-
-**For what?** For the work that is too large, too long, or too consequential for a single chat: carrying an intent from strategy down to merged, verified code — repeatably, with an audit trail, and under human authority. An agentic framework turns ad-hoc AI help into a **governed engineering capability** you can run a whole portfolio on.
-
----
-
 ## What it solves that others don't
 
 If you've adopted agentic coding at any scale, you've hit these:
@@ -142,13 +132,23 @@ The crowded space is the *delegate* corner — cloud single-agent PR bots. The *
 
 ---
 
-## SAFe comes with it — if you want it
+## What an agentic framework is — and why you need one
+
+- **It is an *organization* of AI agents, not a single assistant.** A chatbot is one model in one conversation — brilliant for a question, hopeless for a project. A framework is many specialized agents, each with a role, coordinated by an orchestrator, passing work through defined handoffs and human checkpoints. *A team, not a clever individual.*
+- **Why a framework, not a smarter agent?** Real work is never one prompt — it is multi-role, multi-step, multi-layer. No lone agent holds every role, carries context across them, or checks itself. A framework supplies what one agent can't: **division of labor, coordination, governance, and persistence** — what makes a team more than a person, and a probabilistic agent trustworthy.
+- **For what?** Work too large, long, or consequential for a single chat: carrying intent from strategy to merged, verified code — repeatably, audited, under human authority. Ad-hoc AI help becomes a **governed engineering capability you can run a portfolio on.**
+
+**The principle underneath is divide & conquer — and it is *the* key to harnessing AI.** A probabilistic model is most reliable on a small, bounded, well-specified task and least reliable on a sprawling one; you make it trustworthy by splitting the work and recomposing the results. This isn't a framework opinion — it is where the whole field already points: **every durable prompt-engineering practice is a form of divide & conquer.** Chain-of-thought splits the *reasoning*; task decomposition splits the *goal*; few-shot splits by *example*; role prompting and multi-agent split by *responsibility*. An agentic framework simply makes that principle **structural** instead of hand-rolled per prompt — and a multi-layer method makes it **governed.**
+
+---
+
+## SAFe, run by agents, as the harness that makes agentic delivery trustworthy
 
 **You don't need to be a SAFe organization to use this framework.** The harness — trustworthy agentic delivery — is yours either way. But the method the agents run *is* **SAFe**: the one standard that governs delivery end to end, from portfolio strategy down to a single merged commit. So SAFe isn't a prerequisite — it's an option that ships in the box.
 
 **You become a SAFe organization the moment you adopt what the framework hands you.** Accept its delivered artifacts — Epics, Features, Stories, ADRs, PI objectives, kanbans — as your standard formats, and you are *running* SAFe: authored, hierarchized, estimated, and kept in sync by the agents, not by you. No transformation program, no army of consultants — you adopt the outputs, and the practice is simply there. Or don't, and keep just the trustworthy delivery. Your call.
 
-**Why SAFe makes such a good harness for AI:** its much-resented *layers* are exactly the point — **each one is a filter on agent output.** The portfolio layer catches the wrong bet before it is funded; the program layer catches the wrong architecture before it is built; the iteration layer catches the wrong code before it ships. The probabilistic engine isn't checked once — it is harnessed at **every altitude**, each checkpoint owned by a human.
+**Why SAFe is the harness — and why no other standard is.** Divide & conquer only becomes *trustworthy* when every altitude of the work is bounded and checked — and **SAFe is the only published standard that places a harness at every layer, end to end.** Its much-resented multi-layer architecture is precisely the point: the portfolio layer catches the wrong bet before it is funded; the program layer catches the wrong architecture before it is built; the iteration layer catches the wrong code before it ships. Other standards harness a *single* altitude — Scrum the team, ITIL operations, TOGAF architecture; **SAFe governs all of them, from portfolio strategy to a merged commit** — a multi-layer harness no other method brings. The probabilistic engine isn't filtered once; it is filtered at every level, each checkpoint owned by a human.
 
 And running all of it **by hand is brutal.** The framework is well-documented; the *bookkeeping* is
 relentless — keeping Epics, Features, and Stories correctly shaped, hierarchized, estimated (WSJF),
