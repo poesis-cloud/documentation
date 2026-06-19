@@ -5,12 +5,17 @@ nav_order: 6
 has_children: true
 ---
 
-# SAFe Agentic Framework
+## What an agentic framework is — and why you need one
 
-The **product vision** and the model behind it — **a method, run by agents, that makes agentic delivery trustworthy**, and how the Poesis ecosystem turns it from a coding assistant into an organization-aware engineering capability. To install and run it, see **[Quickstart]({% link safe-agentic-framework/quickstart.md %})**; for the full model, **[the distributed model]({% link safe-agentic-framework/distributed-agentic-safe.md %})**.
-{: .fs-5 .fw-300 }
+- **It is an *organization* of AI agents, not a single assistant.** A chatbot is one model in one conversation — brilliant for a question, hopeless for a project. A framework is many specialized agents, each with a role, coordinated by an orchestrator, passing work through defined handoffs and human checkpoints. *A team, not a clever individual.*
+- **Why a framework, not a smarter agent?** Real work is never one prompt — it is multi-role, multi-step, multi-layer. No lone agent holds every role, carries context across them, or checks itself. A framework supplies what one agent can't: **division of labor, coordination, governance, and persistence** — what makes a team more than a person, and a probabilistic agent trustworthy.
+- **For what?** Work too large, long, or consequential for a single chat: carrying intent from strategy to merged, verified code — repeatably, audited, under human authority. Ad-hoc AI help becomes a **governed engineering capability you can run a portfolio on.**
 
-## A method makes agentic delivery trustworthy
+**The principle underneath is divide & conquer — and it is *the* key to harnessing AI.** A probabilistic model is most reliable — and cheapest — on a small, bounded, well-specified task; it is least reliable, and most expensive, on a sprawling one: smaller scope burns fewer tokens, narrows context retrieval, and cuts retry loops, so reliability and cost move together. You make it trustworthy *and affordable* by splitting the work and recomposing the results. This isn't a framework opinion — it is where the whole field already points: **every durable prompt-engineering practice is a form of divide & conquer.** Chain-of-thought splits the *reasoning*; task decomposition splits the *goal*; few-shot splits by *example*; role prompting and multi-agent split by *responsibility*. An agentic framework simply makes that principle **structural** instead of hand-rolled per prompt — and a multi-layer method makes it **governed.**
+
+---
+
+## SAFe, run by agents, and as the harness that makes agentic delivery trustworthy
 
 One idea carries the whole framework.
 
@@ -132,15 +137,6 @@ The crowded space is the *delegate* corner — cloud single-agent PR bots. The *
 
 ---
 
-## What an agentic framework is — and why you need one
-
-- **It is an *organization* of AI agents, not a single assistant.** A chatbot is one model in one conversation — brilliant for a question, hopeless for a project. A framework is many specialized agents, each with a role, coordinated by an orchestrator, passing work through defined handoffs and human checkpoints. *A team, not a clever individual.*
-- **Why a framework, not a smarter agent?** Real work is never one prompt — it is multi-role, multi-step, multi-layer. No lone agent holds every role, carries context across them, or checks itself. A framework supplies what one agent can't: **division of labor, coordination, governance, and persistence** — what makes a team more than a person, and a probabilistic agent trustworthy.
-- **For what?** Work too large, long, or consequential for a single chat: carrying intent from strategy to merged, verified code — repeatably, audited, under human authority. Ad-hoc AI help becomes a **governed engineering capability you can run a portfolio on.**
-
-**The principle underneath is divide & conquer — and it is *the* key to harnessing AI.** A probabilistic model is most reliable on a small, bounded, well-specified task and least reliable on a sprawling one; you make it trustworthy by splitting the work and recomposing the results. This isn't a framework opinion — it is where the whole field already points: **every durable prompt-engineering practice is a form of divide & conquer.** Chain-of-thought splits the *reasoning*; task decomposition splits the *goal*; few-shot splits by *example*; role prompting and multi-agent split by *responsibility*. An agentic framework simply makes that principle **structural** instead of hand-rolled per prompt — and a multi-layer method makes it **governed.**
-
----
 
 ## SAFe, run by agents, as the harness that makes agentic delivery trustworthy
 
