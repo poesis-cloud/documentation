@@ -7,14 +7,19 @@ has_children: true
 
 # SAFe Agentic Framework
 
-The **product vision** and the model behind it — why running SAFe well needs a *governed, local-first, multi-agent* engine, and how the Poesis ecosystem turns it from a coding assistant into an organization-aware engineering capability. To install and run it, see **[Quickstart]({% link safe-agentic-framework/quickstart.md %})**; for the full model, **[the distributed model]({% link safe-agentic-framework/distributed-agentic-safe.md %})**.
+The **product vision** and the model behind it — **a method, run by agents, that makes agentic delivery trustworthy**, and how the Poesis ecosystem turns it from a coding assistant into an organization-aware engineering capability. To install and run it, see **[Quickstart]({% link safe-agentic-framework/quickstart.md %})**; for the full model, **[the distributed model]({% link safe-agentic-framework/distributed-agentic-safe.md %})**.
 {: .fs-5 .fw-300 }
 
-## Running SAFe is hard. This runs it for you.
+## A method makes agentic delivery trustworthy
 
-SAFe gives large organizations a genuine operating model for scaling agile — a **portfolio → program → iteration** hierarchy with defined roles, ceremonies, cadences, and artifacts. But *implementing* it is brutally heavy. The ceremonies need facilitation. The artifacts — Epics, Features, Stories, ADRs, PI objectives, kanbans — need authoring and constant upkeep. The boards, tickets, and wiki need feeding. And it all decays the moment people get busy. Most SAFe transformations end up paying the overhead without ever banking the value.
+One idea carries the whole framework.
 
-The **SAFe Agentic Framework** puts a team of agents *inside your IDE* that actually **run SAFe**: they facilitate the ceremonies, author every artifact to a governed template, keep the human in command at each gate, and synchronize the boards, tickets, and knowledge base. Three properties make it work:
+- **AI runs on intuition — exactly like we do.** An agent is a probabilistic guesser: brilliant, biased, predicting the next move from learned patterns. So is a person. Neither is, at bottom, a logician.
+- **Methods are how intuition becomes reliable.** The scientific method, peer review, Scrum, SAFe — each is a *cognitive harness* that pushes a biased mind's output through evidence, checks, and sequence until it comes out trustworthy. *Intuition proposes; the method disposes.*
+- **Agents need the same harness — and human methods fit them perfectly,** because those methods were engineered to tame the same probabilistic biases in us. You don't make an agent trustworthy by waiting for a smarter model; you make it **implement a method.**
+- **A published standard is the strongest harness of all** — the AI already knows it, complies with it, and reasons in its vocabulary with no retraining. The method becomes a contract between human and machine.
+
+That is what this is: **a method, run by agents, as the harness that makes agentic delivery trustworthy.** The method it runs is **SAFe** — but you don't have to *be* a SAFe organization to get the harness (more on that below). Three properties make it work:
 
 1. **Local-first** — the agent loop runs on each developer's machine, in the IDE, against the real working tree. Your code and secrets never leave; only the artifacts you commit sync out.
 2. **Governed** — a portfolio → program → iteration hierarchy of role agents, with a human ★ gate at every layer. Not a flat swarm — an org chart with authority.
@@ -91,24 +96,6 @@ flowchart LR
 
 ---
 
-## Why a method? Because intuition — human or artificial — needs a harness
-
-A lot of people dislike SAFe. Some are scared of it: the ceremonies, the acronyms, the feeling of process for its own sake. That reaction is fair — but it misses what a method is *for*.
-
-**Humans and AI run on the same engine.** Strip away the mystique and both are probabilistic. A person acts on pattern, feeling, and experience — hunches refined across thousands of past cases. A language model is that same machinery made explicit: it predicts the next move from patterns learned over a vast corpus. Neither is, at bottom, a logician. Both are *guessers* — astonishingly good ones, and biased in the same human ways.
-
-The only reason intuition can land planes and ship software is that we built **methods to harness it.** Rationalism and empiricism — the scientific method, peer review, the engineering review board, Scrum, SAFe — were never bureaucracy. They are *cognitive harnesses*: structures that take a brilliant, biased, probabilistic mind and push its output through evidence, checks, and sequence until it comes out **reliable.** Intuition proposes; the method disposes.
-
-**AI needs exactly this — for exactly the same reason.** An agent's failure modes are human failure modes amplified: confident guesses, skipped steps, plausible fabrication, dropped context. You don't cure that by waiting for a smarter model; you cure it the way we cured it for ourselves — by making the agent **implement a method.** And here is the part that's easy to miss: **human methods are unusually good at harnessing machine intuition, because they were engineered to harness the same probabilistic biases in us.** A discipline built to keep a distracted human honest keeps a distracted agent honest too.
-
-A **published standard** is the strongest harness of all. Because it is written down, widely taught, and consistently structured, an AI **already knows it** — it has read the standard, can comply with it, and can reason in its vocabulary with no retraining. The method becomes a shared contract between human and machine.
-
-**SAFe is that standard — the only one that governs development end to end, from portfolio strategy down to a single merged commit.** And the very thing critics resent — its *layers* — is its decisive advantage for AI: **every layer is a filter on agent output.** The portfolio layer catches the wrong bet before it is funded; the program layer catches the wrong architecture before it is built; the iteration layer catches the wrong code before it ships. The probabilistic engine is not checked once — it is harnessed at **every altitude**, each checkpoint owned by a human and shaped by an established practice.
-
-That is what this framework is: **SAFe, run by agents, as the harness that makes agentic delivery trustworthy.** And because it speaks nothing but standard SAFe, it does not compete with your transformation — **it drops into an existing SAFe organization** and, at last, makes the practice cheap to run.
-
----
-
 ## What it solves that others don't
 
 If you've adopted agentic coding at any scale, you've hit these:
@@ -145,9 +132,15 @@ The crowded space is the *delegate* corner — cloud single-agent PR bots. The *
 
 ---
 
-## SAFe best practice, implemented for you — almost for free
+## SAFe comes with it — if you want it
 
-Adopting SAFe is brutal in practice. The *framework* is well-documented; the *bookkeeping* is
+**You don't need to be a SAFe organization to use this framework.** The harness — trustworthy agentic delivery — is yours either way. But the method the agents run *is* **SAFe**: the one standard that governs delivery end to end, from portfolio strategy down to a single merged commit. So SAFe isn't a prerequisite — it's an option that ships in the box.
+
+**You become a SAFe organization the moment you adopt what the framework hands you.** Accept its delivered artifacts — Epics, Features, Stories, ADRs, PI objectives, kanbans — as your standard formats, and you are *running* SAFe: authored, hierarchized, estimated, and kept in sync by the agents, not by you. No transformation program, no army of consultants — you adopt the outputs, and the practice is simply there. Or don't, and keep just the trustworthy delivery. Your call.
+
+**Why SAFe makes such a good harness for AI:** its much-resented *layers* are exactly the point — **each one is a filter on agent output.** The portfolio layer catches the wrong bet before it is funded; the program layer catches the wrong architecture before it is built; the iteration layer catches the wrong code before it ships. The probabilistic engine isn't checked once — it is harnessed at **every altitude**, each checkpoint owned by a human.
+
+And running all of it **by hand is brutal.** The framework is well-documented; the *bookkeeping* is
 relentless — keeping Epics, Features, and Stories correctly shaped, hierarchized, estimated (WSJF),
 assigned to sprints and PIs, traceable end to end, and mirrored onto boards and into the wiki. That
 overhead is manual, and it decays the moment people get busy. Most "SAFe transformations" stall
