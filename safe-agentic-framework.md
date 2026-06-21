@@ -13,7 +13,7 @@ has_children: true
 
 - **It is an *organization* of AI agents, not a single assistant.** A chatbot is one model in one conversation — brilliant for a question, hopeless for a project. A framework is many specialized agents, each with a role, coordinated by an orchestrator, passing work through defined handoffs and human checkpoints. *A team, not a clever individual.*
 - **Why a framework, not a smarter agent?** Real work is never one prompt — it is multi-role, multi-step, multi-layer. No lone agent holds every role, carries context across them, or checks itself. A framework supplies what one agent can't: **division of labor, coordination, governance, and persistence** — what makes a team more than a person, and a probabilistic agent trustworthy.
-- **For what?** Work too large, long, or consequential for a single chat: carrying intent from strategy to merged, verified code — repeatably, audited, under human authority. Ad-hoc AI help becomes a **governed engineering capability you can run a portfolio on.**
+- **For what?** Work too large, long, or consequential for a single chat.
 
 **The principle underneath is divide & conquer — and it is *the* key to harnessing AI.** A probabilistic model is most reliable — and cheapest — when its task is small, bounded, and well-specified; it is least reliable, and most expensive, when the task is sprawling. Dividing the work *does* multiply the number of agents — but each one becomes small (minimal tokens, focused context) and specialized (most accurate for its role): **a pipeline of many cheap, focused agents outperforms a single sprawling one on both reliability and cost.** This isn't a framework opinion — it is where the whole field already points: **every durable prompt-engineering practice is a form of divide & conquer.** Chain-of-thought splits the *reasoning*; task decomposition splits the *goal*; few-shot splits by *example*; role prompting and multi-agent split by *responsibility*. An agentic framework simply makes that principle **structural** instead of hand-rolled per prompt — and a multi-layer method makes it **governed.**
 
@@ -24,10 +24,10 @@ has_children: true
 One idea carries the whole framework.
 
 - **AI runs on intuition — exactly like we do.** An agent is a probabilistic guesser: brilliant, biased, predicting the next move from learned patterns. So is a person. Neither is, at bottom, a logician.
-- **Methods are how intuition becomes reliable.** The scientific method, peer review, Scrum, SAFe — each is a rational and empirist *cognitive harness* that pushes a biased mind's output through evidence, checks, and sequence until it comes out trustworthy. *Intuition proposes; the method disposes.*
+- **Methods are how intuition becomes reliable.** The scientific methods applying on an hypothesis, Scrum and SAFe on projects' ambitions. Methods are rational and empiristic *cognitive harnesses* that pushes a biased mind's output through evidence, checks, and sequence until it comes out trustworthy. *Intuition proposes; the method disposes.*
 - **Agents need the same harness — and human methods fit them perfectly,** because those methods were engineered to tame the same probabilistic biases in us. You don't make an agent trustworthy by waiting for a smarter model; you make it **implement a method.**
-- **A published standard is the strongest harness of all** — the AI already knows it, complies with it, and reasons in its vocabulary with no retraining. The method becomes a contract between human and machine.
-- **The more harness layers an end-to-end workflow passes through, the better the result** — a probabilistic system improves when its output is checked, sharpened, and re-bounded repeatedly as it moves from abstract strategy to tactical feature design to concrete technical implementation. **SAFe checks all those layers.** The portfolio layer tests the strategic bet; the program layer tests the feature shape and architecture; the iteration layer tests the code that actually ships. The point is not just that SAFe has many layers, but that it applies them **in sequence across the whole path from idea to commit**. More governed layers across the end-to-end workflow produce better outcomes than a method that implements only one slice.
+- **A published standard is the strongest harness of all** — the AI already knows it, trained on it, complies with it, and reasons in its vocabulary with no retraining. The method becomes a contract between human and machine.
+- **The more harness layers an end-to-end workflow passes through, the better the result** — a probabilistic system improves when its output is checked, sharpened, and re-bounded repeatedly as it moves from abstract strategy to tactical feature design to concrete technical implementation. **SAFe structures and checks all those layers.** The portfolio layer tests the strategic bet; the program layer tests the feature shape and architecture; the iteration layer tests the code that actually ships. The point is not just that SAFe has many layers, but that it applies them **in sequence across the whole path from idea to commit**. More governed layers across the end-to-end workflow produce better outcomes than a method that implements only one slice.
 
 That is what this is: **a method, run by agents, as the harness that makes agentic delivery trustworthy.** The method it runs is **SAFe** — but you don't have to *be* a SAFe organization to get the harness.
 
@@ -41,9 +41,9 @@ That is what this is: **a method, run by agents, as the harness that makes agent
 
 Three properties make it work:
 
-1. **Local-first** — the agent loop runs on each developer's machine, in the IDE, against the real working tree. Your code and secrets never leave; only the artifacts you commit sync out.
-2. **Governed** — a portfolio → program → iteration hierarchy of role agents, with a human ★ gate at every layer. Not a flat swarm — an org chart with authority.
-3. **Sovereign** — work state lives in your own files and git history (the event log), not a vendor's cloud. Nothing is trapped in a session.
+1. **Local-first** — the agent loop runs on each user's machine, in the IDE, against the real working tree. Your sensitive informations never leave; only the artifacts you commit sync out transparently to your organization's git host.
+2. **Governed** — a portfolio → program → iteration hierarchy of role agents, with a human ★ gate at every layer. Not a flat swarm — an org chart with human authority.
+3. **Sovereign** — work state lives in your own files and git history (the event log), not a vendor's cloud. Nothing is trapped in an unmanaged session.
 
 Three orchestrators, one per SAFe layer, run the show — dispatched from a single entry point, `@vmo-orchestrator`:
 
