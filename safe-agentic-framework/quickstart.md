@@ -30,14 +30,6 @@ Before you start, you need:
 3. The following **external prerequisites**, each installed via the same APM convention
    (`git clone` into `~/.vscode/agent-plugins/<publisher>/<repo>`):
 
-| Prerequisite | APM install path | Purpose |
-|---|---|---|
-| **SE:\* specialist bench agents** | `github.com/github/awesome-copilot` | Security, Architect, DevOps/CI, Tech Writer, UX, RAI agents |
-
-> These components are **not** bundled in this package and are **not** relicensed under Poesis Cloud's
-> Apache-2.0. See [NOTICE](https://github.com/poesis-cloud/safe-agentic-framework/blob/main/NOTICE)
-> and [CONTRIBUTING.md](https://github.com/poesis-cloud/safe-agentic-framework/blob/main/CONTRIBUTING.md).
-
 ---
 
 ## Step 1 — Install (APM)
@@ -52,14 +44,10 @@ This framework and its prerequisites all follow that convention:
 # This framework
 git clone https://github.com/poesis-cloud/safe-agentic-framework \
   ~/.vscode/agent-plugins/github.com/poesis-cloud/safe-agentic-framework
-
-# SE:* specialist bench agents
-git clone https://github.com/github/awesome-copilot \
-  ~/.vscode/agent-plugins/github.com/github/awesome-copilot
 ```
 
 Reload VS Code. All three orchestrators (`@vmo-orchestrator`, `@rte-orchestrator`,
-`@sm-orchestrator`) and the SE:\* bench agents appear in your Copilot Chat `@` list automatically.
+`@sm-orchestrator`) agents appear in your Copilot Chat `@` list automatically.
 
 **To pin to a specific version:**
 
@@ -162,12 +150,6 @@ You have completed the quickstart when:
 
 - Confirm that the orchestration-core skill is present:
   `ls ~/.vscode/agent-plugins/github.com/poesis-cloud/safe-agentic-framework/plugins/poesis-safe-agentic-framework/skills/`
-
-**"SE:\* bench agents not found"**
-
-- The SE:\* bench is a prerequisite installed separately via APM.
-  Run the `git clone https://github.com/github/awesome-copilot` command from [Step 1](#step-1--install-apm),
-  then reload VS Code.
 
 ---
 
