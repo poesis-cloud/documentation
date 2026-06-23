@@ -21,5 +21,6 @@ GSM is to the **THINK** side of IT — *defining and governing* systems — what
 ## In this section
 
 - **[Manifesto]({% link gsm/manifesto.md %})** — what GSM is, why it must exist, and the ten principles it commits to.
+- **[Specification]({% link gsm/specification.md %})** — the normative open standard: the eight primitives, the DNA governance grammar, the Archetype type system, the Ascription lifecycle, the expression-language profiles, the canonical JSON interchange, and conformance. Prepared as a draft for contribution to the CNCF.
 
-GSM also has an academic-publication track (a paper and a book); that track is out of scope for this documentation site.
+GSM also has an academic-publication track (a paper and a book); that track is separate from this documentation site and from the normative Specification above.
