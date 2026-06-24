@@ -2,7 +2,7 @@
 layout: default
 title: Specification
 parent: GSM
-nav_order: 2
+nav_order: 3
 ---
 
 # Generative System Model (GSM) Specification
@@ -23,6 +23,8 @@ nav_order: 2
   <dt>Reference implementation</dt>
   <dd>SIE — the Systemic Intelligence Engine (Definition Manager). See <a href="{% link sie-definition.md %}">SIE</a>.</dd>
 </dl>
+
+> **Related documents.** This Specification is the normative core of the GSM document set: the non-normative [Primer]({% link gsm/primer.md %}), the [Conformance]({% link gsm/conformance.md %}) catalog (stable requirement IDs), the proposed [Charter]({% link gsm/charter.md %}), and the draft [CNCF Sandbox Proposal]({% link gsm/cncf-sandbox-proposal.md %}).
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -480,7 +482,7 @@ To preserve coherence, GSM deliberately does **not** model the following. Confor
 
 ## 16. Conformance
 
-This specification defines four conformance targets. An implementation MAY claim conformance to one or more.
+This specification defines four conformance targets. An implementation MAY claim conformance to one or more. The [Conformance]({% link gsm/conformance.md %}) catalog restates these requirements as individually-citable, ID-stable assertions for test suites and audits.
 
 ### 16.1 GSM Document
 

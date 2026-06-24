@@ -20,7 +20,13 @@ GSM is to the **THINK** side of IT — *defining and governing* systems — what
 
 ## In this section
 
+The GSM open standard is published as a CNCF-style document set:
+
 - **[Manifesto]({% link gsm/manifesto.md %})** — what GSM is, why it must exist, and the ten principles it commits to.
-- **[Specification]({% link gsm/specification.md %})** — the normative open standard: the eight primitives, the DNA governance grammar, the Archetype type system, the Ascription lifecycle, the expression-language profiles, the canonical JSON interchange, and conformance. Prepared as a draft for contribution to the CNCF.
+- **[Primer]({% link gsm/primer.md %})** — a non-normative introduction that builds intuition for the model with a running example, before the formal rules.
+- **[Specification]({% link gsm/specification.md %})** — the normative open standard: the eight primitives, the DNA governance grammar, the Archetype type system, the Ascription lifecycle, the expression-language profiles, the canonical JSON interchange, and conformance.
+- **[Conformance]({% link gsm/conformance.md %})** — the testable requirement catalog with stable assertion IDs and conformance profiles.
+- **[Charter]({% link gsm/charter.md %})** — the proposed project governance (mission, roles, decision-making, licensing).
+- **[CNCF Sandbox Proposal]({% link gsm/cncf-sandbox-proposal.md %})** — the draft application proposing GSM to the CNCF at the Sandbox maturity level.
 
 GSM also has an academic-publication track (a paper and a book); that track is separate from this documentation site and from the normative Specification above.
