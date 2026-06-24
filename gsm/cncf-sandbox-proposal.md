@@ -45,6 +45,16 @@ The CNCF fosters and sustains an ecosystem of open, vendor-neutral projects for 
 - **Alignment.** It composes with CNCF projects rather than competing: OpenTelemetry produces the descriptive evidence a GSM Norm is evaluated against; a GSM Effector's output may be carried as a CloudEvent; workload-identity and feature-flag standards realize definitions GSM governs.
 - **Gap it fills.** There is no open, vendor-neutral standard for the *definition/governance* (THINK) layer. Governance is fragmented across architecture wikis, compliance spreadsheets, and proprietary GRC tools whose models do not interoperate. GSM closes that gap.
 
+**Representative cloud-native use cases** (full detail: [Cloud-Native Use Cases]({% link gsm/cloud-native-use-cases.md %})):
+
+- **SLO governance** — Norms express SLOs; OpenTelemetry supplies the evidence.
+- **Admission & policy** — the Directive/Norm is the authoritative obligation; OPA/Gatekeeper and Kyverno enforce.
+- **Supply chain** — provenance/signing/SBOM obligations as DNA; sigstore, SLSA, in-toto, and TUF as evidence.
+- **Zero-trust / mesh** — service coupling as Interactions governed by Norms; SPIFFE/SPIRE, Istio, and Linkerd realize them.
+- **Progressive delivery** — rollout guardrails as Norms; Argo, Flux, and Flagger realize them.
+- **Continuous compliance & data protection** — GDPR/NIS2/DORA sourced into Archetypes; the `$gsm:dataProtection` vocabulary governs data handling.
+- **Platform & FinOps** — golden-path and cost obligations over application definitions; Backstage, Crossplane, and OpenCost realize/observe them.
+
 ## 6. Comparable / adjacent work (landscape)
 
 - **OpenTelemetry** — RUN layer (telemetry). Complementary, not overlapping.

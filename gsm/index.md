@@ -28,5 +28,7 @@ The GSM open standard is published as a CNCF-style document set:
 - **[Conformance]({% link gsm/conformance.md %})** — the testable requirement catalog with stable assertion IDs and conformance profiles.
 - **[Charter]({% link gsm/charter.md %})** — the proposed project governance (mission, roles, decision-making, licensing).
 - **[CNCF Sandbox Proposal]({% link gsm/cncf-sandbox-proposal.md %})** — the draft application proposing GSM to the CNCF at the Sandbox maturity level.
+- **[Cloud-Native Use Cases]({% link gsm/cloud-native-use-cases.md %})** — concrete cloud-native scenarios (SLOs, policy, supply chain, zero-trust, delivery, compliance, platform/FinOps) showing how GSM composes with OpenTelemetry, OPA, sigstore, SPIFFE, Argo, and more.
+- **[CNCF Submission Playbook]({% link gsm/cncf-submission-playbook.md %})** — how CNCF acceptance works and the path GSM follows to Sandbox.
 
 GSM also has an academic-publication track (a paper and a book); that track is separate from this documentation site and from the normative Specification above.
