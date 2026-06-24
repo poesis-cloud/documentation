@@ -7,7 +7,7 @@ nav_order: 1
 
 # The GSM Manifesto
 
-> Software has learned to **build** systems and to **run** them. It has never learned to **think** them — to govern, regulate, and align them as coherent wholes.
+> IT has learned to **build** systems and to **run** them. It has never learned to **think** them systematically — to govern, regulate, and align them as coherent wholes.
 >
 > The **Generative System Model (GSM)** exists to close that gap. It turns governance from prose that *describes* systems into definitions that *generate* them — typed, versioned, machine-evaluable, and open.
 >
