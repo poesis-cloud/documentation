@@ -178,4 +178,4 @@ Each use case maps GSM onto cloud-native projects and the CNCF Technical Advisor
 
 The throughline: **GSM is the definitional complement to CNCF's runtime standards.** OpenTelemetry gave the RUN layer a vendor-neutral home at CNCF; the THINK layer — the definitions those runtimes enforce and measure against — needs the same neutral home, for the same reason: portability instead of lock-in.
 
-> See also: the [Specification]({% link gsm/specification.md %}) (normative model), the [Primer]({% link gsm/primer.md %}) (intuition), and the [CNCF Sandbox Proposal]({% link gsm/cncf-sandbox-proposal.md %}).
+> See also: **[GSM and the Kubernetes Model]({% link gsm/gsm-and-kubernetes.md %})** (how GSM generalizes the Kubernetes pattern), the [Specification]({% link gsm/specification.md %}) (normative model), the [Primer]({% link gsm/primer.md %}) (intuition), and the [CNCF Sandbox Proposal]({% link gsm/cncf-sandbox-proposal.md %}).
