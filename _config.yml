@@ -30,6 +30,7 @@ mermaid:
 
 plugins:
   - jekyll-remote-theme
+  - jekyll-relative-links
 
 include:
   - CNAME
