@@ -2,7 +2,7 @@
 layout: default
 title: Charter
 parent: GSM
-nav_order: 5
+nav_order: 6
 ---
 
 # GSM Project Charter

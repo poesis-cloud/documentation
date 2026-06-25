@@ -2,7 +2,7 @@
 layout: default
 title: Conformance
 parent: GSM
-nav_order: 4
+nav_order: 5
 ---
 
 # GSM Conformance

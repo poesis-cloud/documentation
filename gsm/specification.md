@@ -2,7 +2,7 @@
 layout: default
 title: Specification
 parent: GSM
-nav_order: 3
+nav_order: 4
 ---
 
 # Generative System Model (GSM) Specification

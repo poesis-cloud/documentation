@@ -2,7 +2,7 @@
 layout: default
 title: CNCF Submission Playbook
 parent: GSM
-nav_order: 9
+nav_order: 10
 ---
 
 # GSM → CNCF Submission Playbook

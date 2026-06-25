@@ -2,7 +2,7 @@
 layout: default
 title: GSM and the Kubernetes Model
 parent: GSM
-nav_order: 8
+nav_order: 9
 ---
 
 # GSM and the Kubernetes Model

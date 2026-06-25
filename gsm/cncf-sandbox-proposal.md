@@ -2,7 +2,7 @@
 layout: default
 title: CNCF Sandbox Proposal
 parent: GSM
-nav_order: 6
+nav_order: 7
 ---
 
 # GSM — CNCF Sandbox Proposal (Draft)

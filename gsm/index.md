@@ -24,6 +24,7 @@ The GSM open standard is published as a CNCF-style document set:
 
 - **[Manifesto]({% link gsm/manifesto.md %})** — what GSM is, why it must exist, and the ten principles it commits to.
 - **[Primer]({% link gsm/primer.md %})** — a non-normative introduction that builds intuition for the model with a running example, before the formal rules.
+- **[Foundations & Rationale]({% link gsm/foundations.md %})** — the deeper *why* beneath the model: the Generative Inversion, the descriptive entanglement, the automation gap, and the design axioms (no free-form description, no classification, structural constancy / semantic variation).
 - **[Specification]({% link gsm/specification.md %})** — the normative open standard: the eight primitives, the DNA governance grammar, the Archetype type system, the Ascription lifecycle, the expression-language profiles, the canonical JSON interchange, and conformance.
 - **[Conformance]({% link gsm/conformance.md %})** — the testable requirement catalog with stable assertion IDs and conformance profiles.
 - **[Charter]({% link gsm/charter.md %})** — the proposed project governance (mission, roles, decision-making, licensing).
