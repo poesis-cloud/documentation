@@ -5,7 +5,7 @@ on:
     branches: ["main"]
   workflow_dispatch:
   schedule:
-    - cron: "0 6 * * *"   # daily rebuild to pick up gsm spec changes
+    - cron: "0 6 * * *" # daily rebuild to pick up gsm spec changes
 
 permissions:
   contents: read

@@ -6,6 +6,7 @@ has_children: true
 ---
 
 # GSM — the open standard
+
 {: .no_toc }
 
 The **Generative System Model (GSM)** is the open systemic standard at the foundation of Poesis. It is not a product you deploy — it is the shared model that every Poesis product implements: the **[SIE]({% link sie-definition.md %})** engine hosts and enforces it, and domain applications such as **[ITIP]({% link itip/index.md %})** translate it into their domain.
