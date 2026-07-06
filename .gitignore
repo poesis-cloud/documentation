@@ -7,4 +7,3 @@ vendor/
 # GSM spec pages are fetched from the gsm repo (poesis-cloud/gsm) at build time —
 # it is the single source of truth. Only the section landing stays in this repo.
 /gsm/*.md
-!/gsm/index.md
