@@ -19,7 +19,7 @@ Poesis is layered: the **GSM** standard, the **SIE** engine that implements it, 
 
 ### [GSM — the open standard]({% link gsm/index.md %})
 
-The **Generative System Model (GSM)** is the open standard for the THINK side of IT — *defining and governing* systems, the way OpenTelemetry standardized *observing* them. It turns governance from prose that *describes* systems into definitions that *generate* them, and every Poesis product implements it. Start with the **[GSM Manifesto]({% link gsm/manifesto.md %})** — what GSM is, why it must exist, and the principles it commits to.
+The **Generative System Model (GSM)** is the open standard for the THINK side of IT — *defining and governing* systems, the way OpenTelemetry standardized *observing* them. It turns governance from prose that *describes* systems into definitions that *generate* them, and every Poesis product implements it.
 
 ### [SIE Definition]({% link sie-definition.md %})
 
