@@ -39,11 +39,12 @@ That is what this is: **a method, run by agents, as the harness that makes agent
 
 ## The framework's architecture
 
-Three properties make it work:
+Four properties make it work:
 
 1. **Local-first** — the agent loop runs on each user's machine, in the IDE, against the real working tree. Your sensitive informations never leave; only the artifacts you commit sync out transparently to your organization's git host.
 2. **Governed** — a portfolio → program → iteration hierarchy of role agents, with a human ★ gate at every layer. Not a flat swarm — an org chart with human authority.
 3. **Sovereign** — work state lives in your own files and git history (the event log), not a vendor's cloud. Nothing is trapped in an unmanaged session.
+4. **Portable** — the harness is methodology- and host-agnostic: plain files, a stable CLI, host-specifics isolated behind a thin adapter. The same familiar agentic work method follows you from host to host — VS Code today, another IDE, CI runner, or agent host tomorrow — with no relearning and no lock-in.
 
 Three orchestrators, one per SAFe layer, run the show — dispatched from a single entry point, `@vmo-orchestrator`:
 
