@@ -61,11 +61,11 @@ ITIP provides the governed definitions that EA tools describe, that GRC platform
 
 ---
 
-## GSM: an open standard for governing systems
+## GSM: a standard for governing systems
 
 A decade ago, **RUN** looked like THINK does today: every vendor shipped its own agent, format, and semantics — fragmented and lock-in-ridden. **OpenTelemetry** changed that with one open, vendor-neutral standard for telemetry that every tool could emit and every backend could consume. It became the lingua franca of RUN.
 
-THINK is still waiting for its OpenTelemetry. ITIP is built on the **Generative System Model (GSM)** — an open standard that pairs a governance **grammar** (DNA: Directive, Norm, Ascription) with shared **semantics** (Archetypes). What OpenTelemetry did for *running* systems, GSM does for *defining and governing* them: one open standard that ends the fragmentation of the THINK layer.
+THINK is still waiting for its OpenTelemetry. ITIP is built on the **Generative System Model (GSM)** — a vendor-neutral standard that pairs a governance **grammar** (DNA: Directive, Norm, Ascription) with shared **semantics** (Archetypes). What OpenTelemetry did for *running* systems, GSM does for *defining and governing* them: one shared standard that ends the fragmentation of the THINK layer.
 
 ---
 
