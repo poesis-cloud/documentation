@@ -17,7 +17,7 @@ IT has mature tools to **build** software and to **run** it. The third activity 
 ## BUILD, RUN — and now THINK
 
 | Activity | What it does | Tooling today |
-|----------|--------------|---------------|
+| ---------- | -------------- | --------------- |
 | **BUILD** | Design, develop, deliver | CI/CD pipelines, IDEs, SCM, DevOps platforms |
 | **RUN** | Supervise, operate, maintain | Observability (Datadog, Grafana), incident management, ITSM |
 | **THINK** | Govern, regulate, align | *A patchwork of wikis, spreadsheets, and quarterly review boards* |
@@ -50,7 +50,7 @@ These aren't tooling gaps. They're symptoms of one root cause: **IT systems have
 ITIP doesn't replace your existing tools — it's the **definition layer that connects them**:
 
 | Tool category | What it does well | What it misses |
-|---------------|-------------------|----------------|
+| --------------- | ------------------- | ---------------- |
 | **EA tools** (LeanIX, Mega, Ardoq) | Architecture modeling, portfolio views | No continuous enforcement, no code-sourced truth, no compliance automation |
 | **GRC platforms** (ServiceNow GRC, Archer) | Risk registers, control frameworks | Disconnected from architecture reality, no definition-level governance |
 | **CMDB** (ServiceNow, BMC) | Asset inventory | Static snapshots, no governance intent or viability constraints |
@@ -85,10 +85,10 @@ After that, ITIP's deterministic generators project those definitions into concr
 
 > **TODO — populate before launch.** This section needs real, verifiable evidence. Do not ship with placeholders, and do not invent numbers, logos, or quotes.
 
-- **Customer case studies:** _TODO — 2–3 named cases with before/after outcomes._
-- **Logos:** _TODO — customer / design-partner logos, with permission._
-- **ROI / metrics:** _TODO — quantified results (audit-prep time saved, drift reduced, regeneration cost avoided). No fabricated figures._
-- **Testimonials:** _TODO — attributed quotes from architects, compliance leads, or CTOs._
+- **Customer case studies:** *TODO — 2–3 named cases with before/after outcomes.*
+- **Logos:** *TODO — customer / design-partner logos, with permission.*
+- **ROI / metrics:** *TODO — quantified results (audit-prep time saved, drift reduced, regeneration cost avoided). No fabricated figures.*
+- **Testimonials:** *TODO — attributed quotes from architects, compliance leads, or CTOs.*
 
 ---
 
