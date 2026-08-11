@@ -37,9 +37,9 @@ jobs:
       #  run: |
       #    set -e
       #    git clone --depth 1 https://github.com/poesis-cloud/gsm-specifications.git /tmp/gsm
-      #    cp /tmp/gsm/docs/*.md gsm/
-      #    n=$(ls gsm/*.md | wc -l)
-      #    echo "gsm/ now has $n markdown files"
+      #    cp /tmp/gsm/docs/*.md gsm/specifications/
+      #    n=$(ls gsm/specifications/*.md | wc -l)
+      #    echo "gsm/specifications/ now has $n markdown files"
       #    test "$n" -ge 5 || { echo "::error::GSM spec fetch failed (only $n files)"; exit 1; }
 
       - name: Build with Jekyll

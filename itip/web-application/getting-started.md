@@ -1,8 +1,11 @@
 ---
 layout: default
 title: Getting Started
-parent: ITIP
+parent: Web Application
+grand_parent: ITIP
 nav_order: 1
+redirect_from:
+  - /itip/getting-started/
 ---
 
 # Getting Started
@@ -12,6 +15,6 @@ nav_order: 1
 
 In the meantime:
 
-- **[ITIP overview]({% link itip/index.md %})** — the concepts behind ITIP and the DNA governance grammar.
-- **[General Usage]({% link itip/general-usage.md %})** — Directives, Norms, Ascriptions, and Frameworks in practice.
-- **[Usage Scenarios]({% link itip/usage-scenarios/index.md %})** — role-by-role workflows for each IT profile.
+- **[ITIP overview]({% link itip/web-application/index.md %})** — the concepts behind ITIP and the DNA governance grammar.
+- **[General Usage]({% link itip/web-application/general-usage.md %})** — Directives, Norms, Ascriptions, and Frameworks in practice.
+- **[Usage Scenarios]({% link itip/web-application/usage-scenarios/index.md %})** — role-by-role workflows for each IT profile.

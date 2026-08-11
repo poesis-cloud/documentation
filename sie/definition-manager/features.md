@@ -1,8 +1,11 @@
 ---
 layout: default
 title: Features
-parent: SIE Definition
+parent: Definition Manager
+grand_parent: SIE
 nav_order: 1
+redirect_from:
+  - /sie-definition/features/
 ---
 
 # SIE Definition Features

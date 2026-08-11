@@ -1,10 +1,14 @@
 ---
 layout: default
 title: Project / Product Manager
-parent: Usage Scenarios
-grand_parent: ITIP
 nav_order: 3
+nav_exclude: true
+redirect_from:
+  - /itip/usage-scenarios/project-manager/
 ---
+
+[← Usage Scenarios]({% link itip/web-application/usage-scenarios/index.md %})
+{: .fs-3 .fw-300 }
 
 # Project / Product Manager
 {: .no_toc }
@@ -35,7 +39,7 @@ Navigate to **Projects > [your project]**. ITIP shows all Structures in the proj
 | **Amber** | Some Directives still in DRAFT or PROPOSED; Norms pending operationalization |
 | **Red** | Missing required Directives, no regulatory presets, governance gaps unresolved |
 
-Each Structure's state follows the [Ascription lifecycle]({% link itip/general-usage.md %}#the-ascription-lifecycle): `DRAFT` → `PROPOSED` → `APPROVED` → `ACTIVE`.
+Each Structure's state follows the [Ascription lifecycle]({% link itip/web-application/general-usage.md %}#the-ascription-lifecycle): `DRAFT` → `PROPOSED` → `APPROVED` → `ACTIVE`.
 
 ### Track lifecycle progression
 

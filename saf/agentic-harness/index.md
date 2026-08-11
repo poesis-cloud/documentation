@@ -1,8 +1,10 @@
 ---
 layout: default
-title: SAFe as the agentic harness
-parent: SAFe Agentic Framework
-nav_order: 1
+title: Agentic Harness
+parent: SAF
+nav_order: 2
+redirect_from:
+  - /safe-agentic-framework/safe-as-the-harness/
 ---
 # SAFe, run by agents, as the harness that makes agentic delivery trustworthy
 {: .no_toc }

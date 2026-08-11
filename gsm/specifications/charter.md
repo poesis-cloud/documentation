@@ -1,8 +1,11 @@
 ---
 layout: default
 title: Charter
-parent: GSM
+parent: Specifications
+grand_parent: GSM
 nav_order: 6
+redirect_from:
+  - /gsm/charter/
 ---
 
 # GSM Project Charter

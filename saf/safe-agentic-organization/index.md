@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Distributed Agentic SAFe
-parent: SAFe Agentic Framework
-nav_order: 2
+title: SAFe Agentic Organization
+parent: SAF
+nav_order: 3
+redirect_from:
+  - /safe-agentic-framework/distributed-agentic-safe/
 ---
 
 # Distributed Agentic SAFe
@@ -280,7 +282,7 @@ The model invites tooling. Four concrete, well-scoped builds:
 4. **Open blackboard protocol** — formalize the *read-committed-input → commit-output* contract
    as a small spec so third-party agents (other vendors, other models) can join the bench as
    first-class participants.
-5. **Organizational context over MCP** — an MCP server that streams governed organizational definitions into every agent, so the framework builds with full, governed knowledge of the organization (see the [SAFe Agentic Framework overview]({% link safe-agentic-framework.md %})).
+5. **Organizational context over MCP** — an MCP server that streams governed organizational definitions into every agent, so the framework builds with full, governed knowledge of the organization (see the [SAFe Agentic Framework overview]({% link saf/index.md %})).
 
 **Start with #1.** It is the highest-leverage, cleanest-boundary build: it makes the
 "central system" pluggable, proves the model is not GitHub-specific, and leaves the
@@ -290,4 +292,4 @@ framework, the ceremonies, and the gates entirely untouched.
 
 ## See also
 
-- **[Quickstart]({% link safe-agentic-framework/quickstart.md %})** — install and run your first orchestrated PR.
+- **[Quickstart]({% link saf/quickstart.md %})** — install and run your first orchestrated PR.

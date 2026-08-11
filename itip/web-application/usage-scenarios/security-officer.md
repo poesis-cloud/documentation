@@ -1,10 +1,14 @@
 ---
 layout: default
 title: Security Officer
-parent: Usage Scenarios
-grand_parent: ITIP
 nav_order: 5
+nav_exclude: true
+redirect_from:
+  - /itip/usage-scenarios/security-officer/
 ---
+
+[← Usage Scenarios]({% link itip/web-application/usage-scenarios/index.md %})
+{: .fs-3 .fw-300 }
 
 # Security Officer
 {: .no_toc }
@@ -63,7 +67,7 @@ Security frameworks are sourced into ITIP as preset Directives and Norms:
 | **ISO 27001** | Information security management | `MUST PRESERVE confidentiality ON information-assets` |
 | **DORA** | Financial services ICT resilience | `MUST ENSURE operational-resilience ON financial-services-ict` |
 
-You compose these into layered stacks (see [framework composition]({% link itip/general-usage.md %}#frameworks-and-stacks)). Copilot resolves overlaps and flags where multiple frameworks assert equivalent constraints.
+You compose these into layered stacks (see [framework composition]({% link itip/web-application/general-usage.md %}#frameworks-and-stacks)). Copilot resolves overlaps and flags where multiple frameworks assert equivalent constraints.
 
 ### Review Norm violations with governance context
 

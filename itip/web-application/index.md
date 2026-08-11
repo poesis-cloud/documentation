@@ -1,7 +1,8 @@
 ---
 layout: default
-title: ITIP
-nav_order: 4
+title: Web Application
+parent: ITIP
+nav_order: 1
 has_children: true
 ---
 
@@ -125,7 +126,7 @@ This is not metaphorical. DNA has a precise grammar:
 - A **Norm** reads: *"The payment gateway ON availability: ASSERT availability30d >= 0.999 (SUSTAINED over 30d)"*
 - An **Ascription** binds these definitions to their subjects with a governed lifecycle (DRAFT → PROPOSED → APPROVED → ACTIVE → ... → RETIRED)
 
-[General Usage]({% link itip/general-usage.md %}) walks through each DNA primitive in detail with practical examples.
+[General Usage]({% link itip/web-application/general-usage.md %}) walks through each DNA primitive in detail with practical examples.
 
 ---
 
@@ -142,7 +143,7 @@ So frameworks both **constitute** and **extend** the standard:
 
 And because every framework speaks the same DNA, they compose. A regulatory standard, a quality model, and an architecture framework layer into one coherent governance fabric — no reconciliation, no silos. Adopt a framework and its governance is *already* expressed, versioned, and enforceable in your model.
 
-[General Usage]({% link itip/general-usage.md %}) covers the framework catalogue and how to compose framework stacks in practice.
+[General Usage]({% link itip/web-application/general-usage.md %}) covers the framework catalogue and how to compose framework stacks in practice.
 
 ---
 
@@ -191,5 +192,5 @@ The technical layer — code, infrastructure, networks — is a *medium*, not th
 
 DNA is the lever that makes this practical: a universal, machine-enforceable grammar for expressing human governance intent over technical systems. Every Directive is a human decision. Every Norm is a human constraint made measurable. Every Ascription is a governed snapshot of that decision at a point in time.
 
-**Next: [General Usage — DNA in Practice →]({% link itip/general-usage.md %})**
+**Next: [General Usage — DNA in Practice →]({% link itip/web-application/general-usage.md %})**
 {: .fs-5 .fw-300 }

@@ -1,11 +1,13 @@
 ---
 layout: default
-title: SAFe Agentic Framework
-nav_order: 6
+title: SAF
+nav_order: 4
 has_children: true
+redirect_from:
+  - /safe-agentic-framework/
 ---
 
-# SAFe Agentic Framework
+# SAF — the Systemic Agentic Framework
 
 {: .no_toc }
 
@@ -33,7 +35,7 @@ That is what this is: **a method, run by agents, as the harness that makes agent
 
 ---
 
-*Why SAFe is the right harness, how to adopt it without a transformation program, and how the framework eliminates the bookkeeping that makes SAFe stall in practice — **[SAFe, run by agents →]({% link safe-agentic-framework/safe-as-the-harness.md %})**{: .fs-5 }*
+*Why SAFe is the right harness, how to adopt it without a transformation program, and how the framework eliminates the bookkeeping that makes SAFe stall in practice — **[SAFe, run by agents →]({% link saf/agentic-harness/index.md %})**{: .fs-5 }*
 
 ---
 
@@ -113,7 +115,7 @@ flowchart LR
     class GH,JIRA,CONF ext
 ```
 
-*Each orchestrator is an entry point carrying your use case for its layer, and **returns that layer's ★ gates to you**. The framework's only external link is the git host — Jira and Confluence sync from there. The full model is on the **[Distributed Agentic SAFe]({% link safe-agentic-framework/distributed-agentic-safe.md %})** page.*
+*Each orchestrator is an entry point carrying your use case for its layer, and **returns that layer's ★ gates to you**. The framework's only external link is the git host — Jira and Confluence sync from there. The full model is on the **[Distributed Agentic SAFe]({% link saf/safe-agentic-organization/index.md %})** page.*
 
 ---
 
@@ -155,11 +157,11 @@ The crowded space is the *delegate* corner — cloud single-agent PR bots. The *
 
 ## The Poesis advantage: a framework that knows your organization
 
-This is where the framework stops being "another coding agent" and becomes something no one else can ship. The same way **[ITIP]({% link itip/index.md %})** grounds AI in governed truth, the SAFe Agentic Framework is built to **consume that governed truth as it builds**.
+This is where the framework stops being "another coding agent" and becomes something no one else can ship. The same way **[ITIP]({% link itip/web-application/index.md %})** grounds AI in governed truth, the SAFe Agentic Framework is built to **consume that governed truth as it builds**.
 
 ### Templates become Archetypes
 
-The framework ships reference templates — Epic, Feature, Story, ADR, the kanban and gate records. On their own, they are disciplined Markdown. **Sourced into GSM, they become [Archetypes]({% link itip/index.md %})** — governed definition *types* in **SIE**, each carrying vocabulary (a named type), grammar (it slots into the DNA governance grammar), and semantics (a schema that fixes what every field *means*). Your SAFe artifacts stop being free text and become **typed, versioned, governed definitions** — drift-proof, composable with the frameworks you already govern (TOGAF, ISO, GDPR), and enforceable. An Epic is no longer a document each agent reinterprets; it is a definition the whole organization shares.
+The framework ships reference templates — Epic, Feature, Story, ADR, the kanban and gate records. On their own, they are disciplined Markdown. **Sourced into GSM, they become [Archetypes]({% link itip/web-application/index.md %})** — governed definition *types* in **SIE**, each carrying vocabulary (a named type), grammar (it slots into the DNA governance grammar), and semantics (a schema that fixes what every field *means*). Your SAFe artifacts stop being free text and become **typed, versioned, governed definitions** — drift-proof, composable with the frameworks you already govern (TOGAF, ISO, GDPR), and enforceable. An Epic is no longer a document each agent reinterprets; it is a definition the whole organization shares.
 
 ### Full organizational context, over MCP
 
@@ -195,5 +197,13 @@ Definition generates execution; execution produces observation; observation refi
 
 The framework is **open source (Apache-2.0)** and runs standalone: install it, point it at any GitHub or GitLab repository, and you have a governed, local-first SAFe engine today. **Connected to the Poesis ecosystem, it gains a sense no other delivery tool has — knowledge of your organization.** Templates governed as Archetypes; context streamed from SIE over MCP; agents fluent in GSM and ITIP. The open core gives you the orchestration; the ecosystem gives it *understanding*.
 
-**Next: [Quickstart — your first orchestrated PR →]({% link safe-agentic-framework/quickstart.md %})**
+---
+
+## Products
+
+- **[Agentic Harness]({% link saf/agentic-harness/index.md %})** — deterministic resolution, validation, and traceability of agentic workflows, keeping probabilistic agents on rails.
+- **[SAFe Agentic Organization]({% link saf/safe-agentic-organization/index.md %})** — portfolio → program → iteration: a preset, IT-scaled agile org chart of agents, with a human ★ gate at every layer.
+- **[Agentic Workspace]({% link saf/agentic-workspace/index.md %})** — the shared remote workspace storing local agentic workflow artifacts. *Documentation in construction.*
+
+**Next: [Quickstart — your first orchestrated PR →]({% link saf/quickstart.md %})**
 {: .fs-5 .fw-300 }

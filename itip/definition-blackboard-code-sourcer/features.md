@@ -1,8 +1,11 @@
 ---
 layout: default
 title: Features
-parent: ITIP Blackboard Sourcer
+parent: Definition Blackboard Code Sourcer
+grand_parent: ITIP
 nav_order: 1
+redirect_from:
+  - /itip-blackboard-sourcer/features/
 ---
 
 # ITIP Blackboard Sourcer Features

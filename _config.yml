@@ -1,5 +1,5 @@
 title: Documentation
-description: User documentation for Poesis products — ITIP, SIE, GSM Sourcer
+description: User documentation for Poesis solutions and products — ITIP, SIE, GSM, SAF
 url: "https://docs.poesis.cloud"
 baseurl: ""
 
@@ -31,6 +31,7 @@ mermaid:
 plugins:
   - jekyll-remote-theme
   - jekyll-relative-links
+  - jekyll-redirect-from
 
 include:
   - CNAME

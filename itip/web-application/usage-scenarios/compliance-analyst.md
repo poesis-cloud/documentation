@@ -1,10 +1,14 @@
 ---
 layout: default
 title: Compliance Analyst
-parent: Usage Scenarios
-grand_parent: ITIP
 nav_order: 6
+nav_exclude: true
+redirect_from:
+  - /itip/usage-scenarios/compliance-analyst/
 ---
+
+[← Usage Scenarios]({% link itip/web-application/usage-scenarios/index.md %})
+{: .fs-3 .fw-300 }
 
 # Compliance Analyst
 {: .no_toc }

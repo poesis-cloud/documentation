@@ -1,8 +1,11 @@
 ---
 layout: default
 title: Features
-parent: SIE Blackboard
+parent: Definition Blackboard Manager
+grand_parent: SIE
 nav_order: 1
+redirect_from:
+  - /sie-blackboard/features/
 ---
 
 # SIE Blackboard Features

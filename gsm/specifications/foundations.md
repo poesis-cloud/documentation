@@ -1,8 +1,11 @@
 ---
 layout: default
 title: Foundations & Rationale
-parent: GSM
+parent: Specifications
+grand_parent: GSM
 nav_order: 3
+redirect_from:
+  - /gsm/foundations/
 ---
 
 # GSM Foundations & Rationale

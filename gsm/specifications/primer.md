@@ -1,8 +1,11 @@
 ---
 layout: default
 title: Primer
-parent: GSM
+parent: Specifications
+grand_parent: GSM
 nav_order: 2
+redirect_from:
+  - /gsm/primer/
 ---
 
 # GSM Primer

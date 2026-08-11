@@ -1,8 +1,11 @@
 ---
 layout: default
 title: CNCF Sandbox Proposal
-parent: GSM
+parent: Specifications
+grand_parent: GSM
 nav_order: 7
+redirect_from:
+  - /gsm/cncf-sandbox-proposal/
 ---
 
 # GSM — CNCF Sandbox Proposal (Draft)

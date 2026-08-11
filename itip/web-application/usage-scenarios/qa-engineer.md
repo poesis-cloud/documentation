@@ -1,10 +1,14 @@
 ---
 layout: default
 title: QA / Test Engineer
-parent: Usage Scenarios
-grand_parent: ITIP
 nav_order: 7
+nav_exclude: true
+redirect_from:
+  - /itip/usage-scenarios/qa-engineer/
 ---
+
+[← Usage Scenarios]({% link itip/web-application/usage-scenarios/index.md %})
+{: .fs-3 .fw-300 }
 
 # QA / Test Engineer
 {: .no_toc }

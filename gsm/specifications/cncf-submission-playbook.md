@@ -1,8 +1,11 @@
 ---
 layout: default
 title: CNCF Submission Playbook
-parent: GSM
+parent: Specifications
+grand_parent: GSM
 nav_order: 10
+redirect_from:
+  - /gsm/cncf-submission-playbook/
 ---
 
 # GSM → CNCF Submission Playbook

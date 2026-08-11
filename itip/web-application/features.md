@@ -1,8 +1,11 @@
 ---
 layout: default
 title: Features
-parent: ITIP
+parent: Web Application
+grand_parent: ITIP
 nav_order: 2
+redirect_from:
+  - /itip/features/
 ---
 
 # ITIP Features
@@ -130,15 +133,15 @@ Generate governed artifacts from definitions.
 
 ## Guided Workflows
 
-End-to-end walkthroughs that thread several capability areas together. They map onto the role-based **[Usage Scenarios]({% link itip/usage-scenarios/index.md %})**.
+End-to-end walkthroughs that thread several capability areas together. They map onto the role-based **[Usage Scenarios]({% link itip/web-application/usage-scenarios/index.md %})**.
 
 | Workflow | Threads together | Role | Version |
 |----------|------------------|------|---------|
-| Architect: Governance Authoring & Impact Analysis | Definition → Simulation | [Architect]({% link itip/usage-scenarios/architect.md %}) | v2 |
-| Security Officer: Framework Stack Composition | Frameworks → Evaluation | [Security Officer]({% link itip/usage-scenarios/security-officer.md %}) | v2 |
-| Governance Review Ceremony | Review → Definition | [Project Manager]({% link itip/usage-scenarios/project-manager.md %}) | v2 |
-| Evaluation Status Transition | Evaluation → Definition | [Operations]({% link itip/usage-scenarios/operations.md %}), [QA]({% link itip/usage-scenarios/qa-engineer.md %}) | v2 |
+| Architect: Governance Authoring & Impact Analysis | Definition → Simulation | [Architect]({% link itip/web-application/usage-scenarios/architect.md %}) | v2 |
+| Security Officer: Framework Stack Composition | Frameworks → Evaluation | [Security Officer]({% link itip/web-application/usage-scenarios/security-officer.md %}) | v2 |
+| Governance Review Ceremony | Review → Definition | [Project Manager]({% link itip/web-application/usage-scenarios/project-manager.md %}) | v2 |
+| Evaluation Status Transition | Evaluation → Definition | [Operations]({% link itip/web-application/usage-scenarios/operations.md %}), [QA]({% link itip/web-application/usage-scenarios/qa-engineer.md %}) | v2 |
 
 ---
 
-For the concepts behind these capabilities, see the **[ITIP overview]({% link itip/index.md %})**; for hands-on, role-by-role workflows, the **[Usage Scenarios]({% link itip/usage-scenarios/index.md %})**.
+For the concepts behind these capabilities, see the **[ITIP overview]({% link itip/web-application/index.md %})**; for hands-on, role-by-role workflows, the **[Usage Scenarios]({% link itip/web-application/usage-scenarios/index.md %})**.

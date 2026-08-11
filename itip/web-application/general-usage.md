@@ -1,8 +1,11 @@
 ---
 layout: default
 title: General Usage
-parent: ITIP
+parent: Web Application
+grand_parent: ITIP
 nav_order: 3
+redirect_from:
+  - /itip/general-usage/
 ---
 
 # DNA in Practice — Directives, Norms, Ascriptions
@@ -267,5 +270,5 @@ Beyond governance constraints, frameworks provide the **vocabulary** you use to 
 
 ITIP renders these vocabularies as browsable catalogs with framework-native labels. A TOGAF user sees "Application Component" where the underlying GSM model says "Structure". An ArchiMate user sees relationship types they recognize. The mapping is configurable per user profile.
 
-**Next: [Usage Scenarios — Per IT Profile →]({% link itip/usage-scenarios/index.md %})**
+**Next: [Usage Scenarios — Per IT Profile →]({% link itip/web-application/usage-scenarios/index.md %})**
 {: .fs-5 .fw-300 }

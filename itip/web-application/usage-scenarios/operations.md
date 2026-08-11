@@ -1,10 +1,14 @@
 ---
 layout: default
 title: Operations / SRE Engineer
-parent: Usage Scenarios
-grand_parent: ITIP
 nav_order: 4
+nav_exclude: true
+redirect_from:
+  - /itip/usage-scenarios/operations/
 ---
+
+[← Usage Scenarios]({% link itip/web-application/usage-scenarios/index.md %})
+{: .fs-3 .fw-300 }
 
 # Operations / SRE Engineer
 {: .no_toc }
@@ -27,7 +31,7 @@ ITIP connects your observability stack to the governance plane. You act on gover
 
 ### Monitor compliance drift
 
-Observability platforms (Datadog, Grafana, Prometheus) collect SLI/SLO metrics. ITIP ingests this telemetry and continuously evaluates [Norm assertions]({% link itip/general-usage.md %}#the-norm) against live data.
+Observability platforms (Datadog, Grafana, Prometheus) collect SLI/SLO metrics. ITIP ingests this telemetry and continuously evaluates [Norm assertions]({% link itip/web-application/general-usage.md %}#the-norm) against live data.
 
 When a Norm evaluation fails, ITIP flags a compliance drift:
 
@@ -69,7 +73,7 @@ The remediation workflow is governance-driven. The Norm defines *what* must be f
 
 ### Tolerance modes in practice
 
-The [three tolerance modes]({% link itip/general-usage.md %}#the-norm) determine how ITIP evaluates compliance:
+The [three tolerance modes]({% link itip/web-application/general-usage.md %}#the-norm) determine how ITIP evaluates compliance:
 
 | Mode | Ops meaning | Example |
 |------|------------|---------|

@@ -1,8 +1,11 @@
 ---
 layout: default
 title: Manifesto
-parent: GSM
+parent: Specifications
+grand_parent: GSM
 nav_order: 1
+redirect_from:
+  - /gsm/manifesto/
 ---
 
 # The GSM Manifesto
@@ -98,7 +101,7 @@ This is why GSM is open by design. It is implemented today by **SIE (Systemic In
 GSM is young, and it is open. The model is implemented today by SIE and applied by ITIP, but the standard belongs to everyone who governs systems — and it sharpens with every domain that adopts it.
 
 - **See it applied.** Read how ITIP brings GSM to IT governance in the **[ITIP overview](https://docs.poesis.cloud/itip/)**.
-- **Express your governance in it.** Learn the DNA grammar — Directives, Norms, and Ascriptions — in **[General Usage](https://docs.poesis.cloud/itip/general-usage/)**, and see how each IT role works in **[Usage Scenarios](https://docs.poesis.cloud/itip/usage-scenarios/)**.
+- **Express your governance in it.** Learn the DNA grammar — Directives, Norms, and Ascriptions — in **[General Usage](https://docs.poesis.cloud/itip/general-usage/)**, and see how each IT role works in **[Usage Scenarios](https://docs.poesis.cloud/itip/web-application/usage-scenarios/)**.
 - **Help refine it.** GSM grows by being sourced, stressed, and extended. Follow the work and contribute on **[GitHub](https://github.com/poesis-cloud)**.
 
 Define once. Govern continuously. In the open.

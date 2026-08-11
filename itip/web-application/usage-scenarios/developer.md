@@ -1,10 +1,14 @@
 ---
 layout: default
 title: Developer / Tech Lead
-parent: Usage Scenarios
-grand_parent: ITIP
 nav_order: 2
+nav_exclude: true
+redirect_from:
+  - /itip/usage-scenarios/developer/
 ---
+
+[← Usage Scenarios]({% link itip/web-application/usage-scenarios/index.md %})
+{: .fs-3 .fw-300 }
 
 # Developer / Tech Lead
 {: .no_toc }

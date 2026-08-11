@@ -1,10 +1,14 @@
 ---
 layout: default
 title: Enterprise / Solution Architect
-parent: Usage Scenarios
-grand_parent: ITIP
 nav_order: 1
+nav_exclude: true
+redirect_from:
+  - /itip/usage-scenarios/architect/
 ---
+
+[← Usage Scenarios]({% link itip/web-application/usage-scenarios/index.md %})
+{: .fs-3 .fw-300 }
 
 # Enterprise / Solution Architect
 {: .no_toc }
@@ -41,11 +45,11 @@ A Structure is any dynamic entity with causal behavior — an application, a ser
 }
 ```
 
-Every Structure starts in `DRAFT` and follows the [Ascription lifecycle]({% link itip/general-usage.md %}#the-ascription-lifecycle).
+Every Structure starts in `DRAFT` and follows the [Ascription lifecycle]({% link itip/web-application/general-usage.md %}#the-ascription-lifecycle).
 
 ### Author Directives
 
-Directives express governance intent. You write them using the [Directive grammar]({% link itip/general-usage.md %}#the-directive):
+Directives express governance intent. You write them using the [Directive grammar]({% link itip/web-application/general-usage.md %}#the-directive):
 
 ```
 enterprise-architecture-board MUST ENSURE availability ON payment-gateway
@@ -57,7 +61,7 @@ Each Directive is owned by a governing Structure (the architecture board, a doma
 
 ### Author Norms (Copilot-assisted)
 
-Each Directive is operationalized into one or more measurable Norms using the [Norm grammar]({% link itip/general-usage.md %}#the-norm):
+Each Directive is operationalized into one or more measurable Norms using the [Norm grammar]({% link itip/web-application/general-usage.md %}#the-norm):
 
 ```
 payment-gateway ON availability:

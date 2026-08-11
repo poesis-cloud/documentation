@@ -1,8 +1,11 @@
 ---
 layout: default
 title: Rules
-parent: ITIP
+parent: Web Application
+grand_parent: ITIP
 nav_order: 5
+redirect_from:
+  - /itip/rules/
 ---
 
 # Rules
