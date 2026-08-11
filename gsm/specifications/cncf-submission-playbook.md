@@ -60,7 +60,7 @@ Acceptance is built before the application is filed, in the open:
 | Cloud-native relevance | [Cloud-Native Use Cases](cloud-native-use-cases.md) |
 | Proposed governance | [Charter](charter.md) |
 | Draft application | [CNCF Sandbox Proposal](cncf-sandbox-proposal.md) |
-| Repo artifacts (`GOVERNANCE.md`, `MAINTAINERS.md`, `CODE_OF_CONDUCT.md`, ready-to-paste application) | [github.com/poesis-cloud/gsm](https://github.com/poesis-cloud/gsm) |
+| Repo artifacts (`GOVERNANCE.md`, `MAINTAINERS.md`, `CODE_OF_CONDUCT.md`, ready-to-paste application) | [github.com/poesis-cloud/gsm-specifications](https://github.com/poesis-cloud/gsm-specifications) |
 
 ## The remaining path, in brief
 

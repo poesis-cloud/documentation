@@ -33,10 +33,10 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      #- name: Fetch GSM spec from the gsm repo (single source)
+      #- name: Fetch GSM spec from the gsm-specifications repo (single source)
       #  run: |
       #    set -e
-      #    git clone --depth 1 https://github.com/poesis-cloud/gsm.git /tmp/gsm
+      #    git clone --depth 1 https://github.com/poesis-cloud/gsm-specifications.git /tmp/gsm
       #    cp /tmp/gsm/docs/*.md gsm/
       #    n=$(ls gsm/*.md | wc -l)
       #    echo "gsm/ now has $n markdown files"
