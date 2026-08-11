@@ -44,8 +44,8 @@ This framework and its prerequisites all follow that convention:
 
 ```bash
 # The SAFe Agentic Organization (the framework application)
-git clone https://github.com/poesis-cloud/saf-safe-agentic-organization \
-  ~/.vscode/agent-plugins/github.com/poesis-cloud/saf-safe-agentic-organization
+git clone https://github.com/poesis-cloud/saf-agentic-organization \
+  ~/.vscode/agent-plugins/github.com/poesis-cloud/saf-agentic-organization
 ```
 
 Reload VS Code. All three orchestrators (`@vmo-orchestrator`, `@rte-orchestrator`,
@@ -54,7 +54,7 @@ Reload VS Code. All three orchestrators (`@vmo-orchestrator`, `@rte-orchestrator
 **To pin to a specific version:**
 
 ```bash
-cd ~/.vscode/agent-plugins/github.com/poesis-cloud/saf-safe-agentic-organization
+cd ~/.vscode/agent-plugins/github.com/poesis-cloud/saf-agentic-organization
 git fetch --tags
 git checkout v0.1.0
 ```
@@ -62,7 +62,7 @@ git checkout v0.1.0
 **To update to the latest:**
 
 ```bash
-cd ~/.vscode/agent-plugins/github.com/poesis-cloud/saf-safe-agentic-organization
+cd ~/.vscode/agent-plugins/github.com/poesis-cloud/saf-agentic-organization
 git pull
 # then reload VS Code: Ctrl+Shift+P → "Developer: Reload Window"
 ```
@@ -142,21 +142,21 @@ You have completed the quickstart when:
 
 **Agents do not appear in the Copilot Chat `@` list**
 
-- Ensure the clone is at the exact path `~/.vscode/agent-plugins/github.com/poesis-cloud/saf-safe-agentic-organization`.
+- Ensure the clone is at the exact path `~/.vscode/agent-plugins/github.com/poesis-cloud/saf-agentic-organization`.
   The `github.com/<org>/<repo>` path structure is required by the VS Code APM convention.
 - Reload VS Code window (`Ctrl+Shift+P` → "Developer: Reload Window").
 - Check that GitHub Copilot extension is up to date (v1.270 or later recommended).
-- Verify `plugins/poesis-saf-safe-agentic-organization/agents/` contains `*.agent.md` files.
+- Verify `plugins/poesis-saf-agentic-organization/agents/` contains `*.agent.md` files.
 
 **Skills fail to load (agent says "skill not found")**
 
 - Confirm that the orchestration-core skill is present:
-  `ls ~/.vscode/agent-plugins/github.com/poesis-cloud/saf-safe-agentic-organization/plugins/poesis-saf-safe-agentic-organization/skills/`
+  `ls ~/.vscode/agent-plugins/github.com/poesis-cloud/saf-agentic-organization/plugins/poesis-saf-agentic-organization/skills/`
 
 ---
 
 ## What's next
 
-- Read [CONTRIBUTING.md](https://github.com/poesis-cloud/saf-safe-agentic-organization/blob/main/CONTRIBUTING.md) to understand how to contribute improvements.
-- Check [GitHub Releases](https://github.com/poesis-cloud/saf-safe-agentic-organization/releases) for version history.
-- File issues at [github.com/poesis-cloud/saf-safe-agentic-organization/issues](https://github.com/poesis-cloud/saf-safe-agentic-organization/issues).
+- Read [CONTRIBUTING.md](https://github.com/poesis-cloud/saf-agentic-organization/blob/main/CONTRIBUTING.md) to understand how to contribute improvements.
+- Check [GitHub Releases](https://github.com/poesis-cloud/saf-agentic-organization/releases) for version history.
+- File issues at [github.com/poesis-cloud/saf-agentic-organization/issues](https://github.com/poesis-cloud/saf-agentic-organization/issues).
