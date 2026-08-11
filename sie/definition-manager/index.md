@@ -9,6 +9,7 @@ redirect_from:
 ---
 
 # Definition Manager
+
 {: .no_toc }
 
 > **In construction.** This product's documentation is being written. The capability catalogue is in **[Features]({% link sie/definition-manager/features.md %})**, reflecting the design-time backlog and the current engine reality.
@@ -18,6 +19,3 @@ The **Definition Manager** is the core of the Systemic Intelligence Engine: the 
 ## In this section
 
 - **[Features]({% link sie/definition-manager/features.md %})** — the capability catalogue with milestones
-
-
-

@@ -9,6 +9,7 @@ redirect_from:
 ---
 
 # Definition Blackboard Code Sourcer
+
 {: .no_toc }
 
 > **In construction.** This product's documentation is being written. The capability catalogue is in **[Features]({% link itip/definition-blackboard-code-sourcer/features.md %})**, reflecting the design-time backlog and the current engine reality.
@@ -18,4 +19,3 @@ The **Definition Blackboard Code Sourcer** ingests external IT artifacts — cod
 ## In this section
 
 - **[Features]({% link itip/definition-blackboard-code-sourcer/features.md %})** — the capability catalogue with milestones
-

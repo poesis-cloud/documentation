@@ -9,6 +9,7 @@ redirect_from:
 ---
 
 # Definition Blackboard Manager
+
 {: .no_toc }
 
 > **In construction.** This product's documentation is being written. The capability catalogue is in **[Features]({% link sie/definition-blackboard-manager/features.md %})**, reflecting the design-time backlog and the current engine reality.
@@ -18,4 +19,3 @@ The **Definition Blackboard Manager** is the collaborative definition-sourcing s
 ## In this section
 
 - **[Features]({% link sie/definition-blackboard-manager/features.md %})** — the capability catalogue with milestones
-

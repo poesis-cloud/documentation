@@ -144,7 +144,7 @@ These are not tooling gaps. They are symptoms of one root cause: **agentic deliv
 The framework occupies a corner that existing categories circle but never claim:
 
 | Category | What it does well | What it misses |
-|---|---|---|
+| --- | --- | --- |
 | **Cloud SWE agents** (Codex, Devin, Copilot coding agent) | autonomous task→PR, run in parallel | remote execution, no human gate, no org context, code leaves the machine |
 | **IDE single-agents** (Aider, Cline, Cursor, Continue) | fast local pairing, git-native | one agent — no roles, ceremonies, or portfolio; no governance |
 | **Multi-agent frameworks** (MetaGPT, ChatDev, CrewAI, AutoGen) | role-based collaboration | monolithic in-process, weak human gating, not IDE-native, no repo sync |
