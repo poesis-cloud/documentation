@@ -9,7 +9,7 @@ nav_order: 11
 # GSM Specifications Features
 {: .no_toc }
 
-What the GSM specification document set defines. GSM is a pre-1.0 working draft: the constructs below are stable enough to implement against but may change before 1.0.
+What the GSM specification document set defines. GSM is a pre-1.0 working draft: the constructs below are stable enough to implement against but may change before 1.0 — see **[Milestones & Versions]({% link milestones.md %})** for the canonical version semantics and the delivery clause.
 
 | Construct | What it defines | Where |
 |-----------|-----------------|-------|

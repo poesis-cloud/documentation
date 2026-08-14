@@ -19,15 +19,7 @@ Capability catalogue for GSM Frameworks — the published, versioned catalogue o
 
 ---
 
-## Milestones
-
-- **Foundation** — sourced and published today (real schemas in the catalogue).
-- **Near-term** — prioritized next (P0, feasibility now).
-- **Mid-term** — planned (P1, feasibility next).
-- **Future** — projected (P2–P3, later).
-- **Exploratory** — research-tier; may evolve substantially or not ship.
-
-Milestones express prioritization and catalogue reality — not delivery commitments.
+{% include milestone_legend.md %}
 
 ---
 

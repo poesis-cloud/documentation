@@ -19,15 +19,7 @@ Capability catalogue for the Agentic Workspace.
 
 ---
 
-## Milestones
-
-- **Foundation** — implemented today.
-- **Near-term** — prioritized next (P0, feasibility now).
-- **Mid-term** — planned (P1, feasibility next).
-- **Future** — projected (P2–P3, later).
-- **Exploratory** — research-tier; may evolve substantially or not ship.
-
-Milestones express prioritization and engine reality — not delivery commitments.
+{% include milestone_legend.md %}
 
 ---
 

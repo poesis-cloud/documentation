@@ -13,7 +13,7 @@ redirect_from:
 
 The Web Application's capabilities, grouped by functional component. Each section is one component of the product; the entries under it are the capabilities it provides. ITIP is in active design.
 
-Each capability carries the ITIP **version** that delivers it: **v1** is the first delivery scope; **v2** is the planned next iteration.
+Each capability carries the ITIP **version** that delivers it: **v1** is the 1.0 (GA) scope; **v2** is the 1.x scope — see **[Milestones & Versions]({% link milestones.md %})** for the canonical version semantics and the delivery clause.
 
 ## Published feature catalogue
 

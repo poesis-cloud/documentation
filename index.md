@@ -15,7 +15,7 @@ Poesis builds products that bring **systemic governance** to organizations — r
 
 ## Solutions
 
-Poesis is layered: the **GSM** standard, the **SIE** engine that implements it, domain applications built on top such as **ITIP** for the IT domain, and **SAF** to build them. Each solution below groups the products it ships.
+Poesis is layered: the **GSM** standard, the **SIE** engine that implements it, domain applications built on top such as **ITIP** for the IT domain, and **SAF** to build them. Each solution below groups the products it ships. Delivery language across this site follows the canonical **[Milestones & Versions]({% link milestones.md %})** page.
 
 ### [ITIP — IT Intelligence Platform]({% link itip/index.md %})
 
