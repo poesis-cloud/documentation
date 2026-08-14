@@ -67,6 +67,7 @@ Versions are ordered, not scheduled. ✅ marks shipped.
 | Version | Milestone |
 | --- | --- |
 | **1.0 (MVP/GA)** ✅ | GSM Definitions management RESTful API · lifecycle enforcement · retention |
+| 1.x | Governed context serving (MCP) |
 
 **Operator** — current **v0.1**
 
@@ -74,7 +75,7 @@ Versions are ordered, not scheduled. ✅ marks shipped.
 | --- | --- |
 | 0.1 ✅ | Basic Mechanism runtime |
 | **1.0 (MVP/GA)** | GSM Norms evaluation API |
-| 1.x | GSM Mechanisms execution API |
+| 1.x | GSM Mechanisms execution API · derived effector/receptor topology |
 
 **Definition Blackboard Manager** — current **v1.0**
 
@@ -97,7 +98,7 @@ Versions are ordered, not scheduled. ✅ marks shipped.
 | --- | --- |
 | 0.1 ✅ | First frameworks sourced |
 | **1.0 (MVP/GA)** | HTTP, TOGAF, and ITIP domain archetypes complete & validated |
-| 1.x | Remaining protocol semantics · ISO 25010 · ISO 25012 · GDPR · NIS2 · SCAP · DORA · SAFe · ITIL (unordered) |
+| 1.x | Remaining protocol semantics · ISO 25010 · ISO 25012 · GDPR · NIS2 · SCAP · DORA · SAFe · ITIL · catalogue update stream (unordered) |
 
 ### SAF
 
@@ -120,7 +121,7 @@ Versions are ordered, not scheduled. ✅ marks shipped.
 | Version | Milestone |
 | --- | --- |
 | 0.1 ✅ | First pre-GA increment — workspace scaffold |
-| **1.0 (MVP/GA)** | Installer · CI/CD artifact pipelines |
+| **1.0 (MVP/GA)** | Workspace data plane · installer · CI/CD artifact pipelines |
 
 ## How versions depend on each other
 

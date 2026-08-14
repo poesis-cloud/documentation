@@ -27,6 +27,7 @@ The product's published features on [poesis.cloud](https://poesis.cloud/solution
 | GSM Definitions truth sourcing management | [Truth Sourcing](#truth-sourcing), [Review](#review) |
 | GSM Definitions management | [Definition](#definition), [Lenses](#lenses), [Overview](#overview) |
 | GSM Frameworks management | [Frameworks](#frameworks) |
+| Role-based workspaces | [Admin](#admin), role-specific [Usage Scenarios]({% link itip/web-application/usage-scenarios/index.md %}) |
 
 ## Table of contents
 {: .no_toc .text-delta }

@@ -39,3 +39,4 @@ Capability catalogue for GSM Frameworks — the published, versioned catalogue o
 | DORA | Regulation sourcing | v1.x |
 | SAFe | Scaled-agile framework sourcing | v1.x |
 | ITIL | IT service-management framework sourcing | v1.x |
+| Catalogue update stream | Continuous re-sourcing as standards, regulations, and legal texts evolve | v1.x |
