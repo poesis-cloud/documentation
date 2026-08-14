@@ -46,10 +46,11 @@ Versions are ordered, not scheduled. ✅ marks shipped.
 
 ### ITIP
 
-**Web Application** — current **v0.0** (active design)
+**Web Application** — current **v0.1**
 
 | Version | Milestone |
 | --- | --- |
+| 0.1 ✅ | First pre-GA increment — application & BFF foundation |
 | **1.0 (MVP/GA)** | GSM Definitions management + GSM Frameworks management, hardened |
 | 1.x | Truth sourcing management · IT artifact factory · IT compliance evaluation · IT impact simulation (unordered) |
 
@@ -61,26 +62,25 @@ Versions are ordered, not scheduled. ✅ marks shipped.
 
 ### SIE
 
-**Definition Manager** — current **v0.1**
+**Definition Manager** — current **v1.0**
 
 | Version | Milestone |
 | --- | --- |
-| 0.1 ✅ | GSM Definitions management RESTful API · lifecycle enforcement · retention |
-| **1.0 (GA)** | Production hardening; conformance to GSM 1.0 |
+| **1.0 (MVP/GA)** ✅ | GSM Definitions management RESTful API · lifecycle enforcement · retention |
 
-**Operator** — current **v0.0** (basic Mechanism runtime exists)
+**Operator** — current **v0.1**
 
 | Version | Milestone |
 | --- | --- |
+| 0.1 ✅ | Basic Mechanism runtime |
 | **1.0 (MVP/GA)** | GSM Norms evaluation API |
 | 1.x | GSM Mechanisms execution API |
 
-**Definition Blackboard Manager** — current **v0.1**
+**Definition Blackboard Manager** — current **v1.0**
 
 | Version | Milestone |
 | --- | --- |
-| 0.1 ✅ | KS Contributions management RESTful API · lifecycle enforcement · retention |
-| **1.0 (GA)** | Production hardening; stable client contract |
+| **1.0 (MVP/GA)** ✅ | KS Contributions management RESTful API · lifecycle enforcement · retention |
 
 ### GSM
 
@@ -89,33 +89,37 @@ Versions are ordered, not scheduled. ✅ marks shipped.
 | Version | Milestone |
 | --- | --- |
 | 1.0 ✅ | Eight primitives · DNA grammar · Archetyping · systemic lifecycle — frozen |
+| 1.1 | Enhanced Directives and Norms model |
 
 **Frameworks** — current **v0.1**
 
 | Version | Milestone |
 | --- | --- |
-| 0.1 ✅ | First frameworks sourced: TOGAF, ISO 25010/25012, GDPR, NIS2, SCAP, protocol semantics, ITIP archetypes |
-| **1.0 (MVP/GA)** | TOGAF, ITIP domain archetypes, and protocol semantics complete & validated |
-| 1.x | ISO 25010 · ISO 25012 · GDPR · NIS2 · SCAP · DORA · SAFe · ITIL (unordered) |
+| 0.1 ✅ | First frameworks sourced |
+| **1.0 (MVP/GA)** | HTTP, TOGAF, and ITIP domain archetypes complete & validated |
+| 1.x | Remaining protocol semantics · ISO 25010 · ISO 25012 · GDPR · NIS2 · SCAP · DORA · SAFe · ITIL (unordered) |
 
 ### SAF
 
-**Agentic Harness** — current **v0.0** (core in construction)
+**Agentic Harness** — current **v0.1**
 
 | Version | Milestone |
 | --- | --- |
+| 0.1 ✅ | First pre-GA increment — core scaffold |
 | **1.0 (MVP/GA)** | Workflow & step resolution · prompt injection · LLM resolution · artifact validation · authorization · logging |
 
-**SAFe Agentic Organization** — current **v0.0** (scaffold)
+**SAFe Agentic Organization** — current **v0.1**
 
 | Version | Milestone |
 | --- | --- |
+| 0.1 ✅ | First pre-GA increment — framework scaffold |
 | **1.0 (MVP/GA)** | Agents · skills · workflows · instructions · artifacts |
 
-**Agentic Workspace** — current **v0.0**
+**Agentic Workspace** — current **v0.1**
 
 | Version | Milestone |
 | --- | --- |
+| 0.1 ✅ | First pre-GA increment — workspace scaffold |
 | **1.0 (MVP/GA)** | Installer · CI/CD artifact pipelines |
 
 ## How versions depend on each other

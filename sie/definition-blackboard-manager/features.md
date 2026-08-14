@@ -29,6 +29,6 @@ Capability catalogue for the Definition Blackboard Manager.
 
 | Feature | Representative content | Milestone |
 |---------|------------------------|-----------|
-| KS Contributions management RESTful API | Panel declaration and schema-validated contribution posting | Shipped · v0.1 |
-| KS Contributions lifecycle enforcement | OPEN → SEALED → BYTE_STABLE; sealed boards immutable; byte-stable streams | Shipped · v0.1 |
-| KS Contributions retention | Append-only audit ledger; every contribution retained with its envelopes | Shipped · v0.1 |
+| KS Contributions management RESTful API | Panel declaration and schema-validated contribution posting | Shipped · v1.0 (MVP/GA) |
+| KS Contributions lifecycle enforcement | OPEN → SEALED → BYTE_STABLE; sealed boards immutable; byte-stable streams | Shipped · v1.0 (MVP/GA) |
+| KS Contributions retention | Append-only audit ledger; every contribution retained with its envelopes | Shipped · v1.0 (MVP/GA) |
