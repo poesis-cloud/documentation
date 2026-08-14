@@ -29,7 +29,7 @@ Capability catalogue for GSM Frameworks — the published, versioned catalogue o
 |---------|------------------------|-----------|
 | HTTP | HTTP interaction semantics sourced as typed Archetypes — methods, status, caching, content negotiation | v1.0 (MVP/GA) |
 | TOGAF | Enterprise-architecture vocabulary sourced as typed Archetypes | v1.0 (MVP/GA) |
-| ITIP domain archetypes | IT-domain vocabulary and semantics for ITIP | v1.0 (MVP/GA) |
+| ITIP | IT-domain vocabulary and semantics for ITIP | v1.0 (MVP/GA) |
 | Protocol semantics | gRPC, GraphQL, Kafka, AMQP, JDBC, WebSocket interaction vocabularies | v1.x |
 | ISO 25010 | Software quality model sourced as typed Archetypes | v1.x |
 | ISO 25012 | Data quality model sourced as typed Archetypes | v1.x |

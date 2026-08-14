@@ -51,7 +51,7 @@ Versions are ordered, not scheduled. ✅ marks shipped.
 | Version | Milestone |
 | --- | --- |
 | 0.1 ✅ | First pre-GA increment — application & BFF foundation |
-| **1.0 (MVP/GA)** | GSM Definitions management + GSM Frameworks management, hardened |
+| **1.0 (MVP/GA)** | GSM Definitions management + GSM Frameworks management + RBAC/ABAC, hardened |
 | 1.x | Truth sourcing management · IT artifact factory · IT compliance evaluation · IT impact simulation (unordered) |
 
 **Definition Blackboard Code Sourcer** — current **v0.0**
@@ -67,7 +67,7 @@ Versions are ordered, not scheduled. ✅ marks shipped.
 | Version | Milestone |
 | --- | --- |
 | **1.0 (MVP/GA)** ✅ | GSM Definitions management RESTful API · lifecycle enforcement · retention |
-| 1.x | Governed context serving (MCP) |
+| 1.x | GSM Definitions and tooling serving (MCP) |
 
 **Operator** — current **v0.1**
 
@@ -75,7 +75,7 @@ Versions are ordered, not scheduled. ✅ marks shipped.
 | --- | --- |
 | 0.1 ✅ | Basic Mechanism runtime |
 | **1.0 (MVP/GA)** | GSM Norms evaluation API |
-| 1.x | GSM Mechanisms execution API · derived effector/receptor topology |
+| 1.x | GSM Mechanisms execution API |
 
 **Definition Blackboard Manager** — current **v1.0**
 
@@ -97,7 +97,7 @@ Versions are ordered, not scheduled. ✅ marks shipped.
 | Version | Milestone |
 | --- | --- |
 | 0.1 ✅ | First frameworks sourced |
-| **1.0 (MVP/GA)** | HTTP, TOGAF, and ITIP domain archetypes complete & validated |
+| **1.0 (MVP/GA)** | HTTP, TOGAF, and ITIP complete & validated |
 | 1.x | Remaining protocol semantics · ISO 25010 · ISO 25012 · GDPR · NIS2 · SCAP · DORA · SAFe · ITIL · catalogue update stream (unordered) |
 
 ### SAF
