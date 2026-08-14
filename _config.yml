@@ -45,3 +45,5 @@ exclude:
   - Gemfile.lock
   - vendor/
   - _comsite/
+  # GSM specifications hidden until publication (strategy: publication target ~Oct 2026)
+  - gsm/specifications/

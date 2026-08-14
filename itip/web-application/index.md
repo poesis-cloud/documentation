@@ -102,7 +102,7 @@ RUN was not always well-served. A decade ago, observability looked much like THI
 
 THINK is still waiting for its OpenTelemetry. The definition of what systems *should be* — architecture, governance, compliance, quality — lives in incompatible, proprietary silos that nobody can compose or verify.
 
-**GSM is the intended standard.** What OpenTelemetry did for *running* systems — a shared semantic model that ended fragmentation — GSM does for *defining and governing* them: one open standard that pairs a governance **grammar** (DNA) with shared **semantics** (Archetypes) for the **build** side of IT, the way OpenTelemetry is the open standard for the **run** side.
+**GSM is the intended standard.** What OpenTelemetry did for *running* systems — a shared semantic model that ended fragmentation — GSM does for *defining and governing* them: one vendor-neutral standard (a candidate open standard) that pairs a governance **grammar** (DNA) with shared **semantics** (Archetypes) for the **build** side of IT, the way OpenTelemetry is the open standard for the **run** side.
 
 ---
 
