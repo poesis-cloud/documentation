@@ -27,9 +27,8 @@ Capability catalogue for the Definition Blackboard Manager.
 
 ## Capabilities
 
-| Functional component | Representative features | Milestone |
-|----------------------|-------------------------|-----------|
-| Blackboard lifecycle | Blackboard seal state machine (OPEN → SEALED → BYTE_STABLE); isolation invariant (sealed boards immutable) | Foundation |
-| Contribution validation | Contribution posting & schema validation against the referenced Panel; rejection of invalid contributions before persistence | Foundation |
-| Audit ledger | Append-only audit entries, transactional with each mutation; immutable record of every blackboard change | Foundation |
-| Panel & contribution model | Panel declaration; confidence / provenance envelopes; sealed byte-stable contribution streams | Foundation |
+| Feature | Representative content | Milestone |
+|---------|------------------------|-----------|
+| KS Contributions management RESTful API | Panel declaration and schema-validated contribution posting | Shipped · v0.1 |
+| KS Contributions lifecycle enforcement | OPEN → SEALED → BYTE_STABLE; sealed boards immutable; byte-stable streams | Shipped · v0.1 |
+| KS Contributions retention | Append-only audit ledger; every contribution retained with its envelopes | Shipped · v0.1 |

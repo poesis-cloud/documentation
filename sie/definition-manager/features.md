@@ -27,11 +27,8 @@ Capability catalogue for the Definition Manager, grouped by functional component
 
 ## Capabilities
 
-The Definition Manager is an implemented engine service — the substrate every domain application builds on.
-
-| Functional component | Representative features | Milestone |
-|----------------------|-------------------------|-----------|
-| GSM Definitions management RESTful API | Create, read, update, and query every governed GSM definition; live OpenAPI; structured problem responses; isolated tenant schemas | Foundation |
-| GSM core & governance grammar | Author the 8 GSM primitives; DNA authoring (Directive / Norm / Ascription); Archetype schema validation | Foundation |
-| GSM Definitions lifecycle enforcement | Ascription lifecycle as a validated state machine (DRAFT → … → RETIRED) with referee preconditions | Foundation |
-| GSM Definitions retention | Definitions and their history retained as versioned state transitions — nothing governed is silently overwritten or lost | Foundation |
+| Feature | Representative content | Milestone |
+|---------|------------------------|-----------|
+| GSM Definitions management RESTful API | Create, read, update, query every governed definition; live OpenAPI; isolated tenant schemas | Shipped · v0.1 |
+| GSM Definitions lifecycle enforcement | Ascription lifecycle as a validated state machine (DRAFT → … → RETIRED) with referee preconditions | Shipped · v0.1 |
+| GSM Definitions retention | Definitions and history retained as versioned state transitions | Shipped · v0.1 |

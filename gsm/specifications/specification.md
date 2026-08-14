@@ -11,12 +11,12 @@ redirect_from:
 # Generative System Model (GSM) Specification
 {: .no_toc }
 
-**Version:** 0.1 — Working Draft
+**Version:** 1.0
 {: .fs-5 .fw-300 }
 
 <dl>
   <dt>Status of this document</dt>
-  <dd><strong>Working Draft.</strong> This is a source-available pre-1.0 draft of GSM, prepared as a candidate for contribution as an open standard to the <a href="https://www.cncf.io/">Cloud Native Computing Foundation (CNCF)</a>. It has <em>not</em> been submitted to, reviewed by, or endorsed by the CNCF. Normative content is stable enough to implement against but MAY change before 1.0.</dd>
+  <dd><strong>1.0 — publication pending.</strong> This is the source-available 1.0 release of GSM, prepared as a candidate for contribution as an open standard to the <a href="https://www.cncf.io/">Cloud Native Computing Foundation (CNCF)</a>. It has <em>not</em> been submitted to, reviewed by, or endorsed by the CNCF. Normative content is frozen; changes now follow semantic versioning.</dd>
   <dt>Originating maintainer</dt>
   <dd>Poesis — <a href="https://github.com/poesis-cloud">github.com/poesis-cloud</a></dd>
   <dt>Editors</dt>

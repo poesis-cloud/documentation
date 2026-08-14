@@ -45,7 +45,7 @@ The reference implementation of GSM: the engine that hosts governed definitions,
 
 ### [GSM — the standard]({% link gsm/index.md %})
 
-The **Generative System Model (GSM)** is the vendor-neutral standard for the THINK side of IT — *defining and governing* systems, the way OpenTelemetry standardized *observing* them. It turns governance from prose that *describes* systems into definitions that *generate* them, and every Poesis product implements it. GSM is a pre-1.0 working draft, source-available under BUSL-1.1 and developed as a candidate for contribution as an open standard.
+The **Generative System Model (GSM)** is the vendor-neutral standard for the THINK side of IT — *defining and governing* systems, the way OpenTelemetry standardized *observing* them. It turns governance from prose that *describes* systems into definitions that *generate* them, and every Poesis product implements it. GSM is at v1.0 — normative content frozen, publication of the document set pending — source-available under BUSL-1.1 and developed as a candidate for contribution as an open standard.
 
 - **Specifications** — eight primitives, DNA grammar, Archetyping, and the systemic lifecycle. *Publication pending — the specification document set is being finalized for release.*
 - **[Frameworks]({% link gsm/frameworks/index.md %})** — domain, standard, and legal vocabularies sourced into GSM, ready to enforce. *Documentation in construction.*

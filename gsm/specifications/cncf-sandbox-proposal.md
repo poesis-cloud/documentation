@@ -72,7 +72,7 @@ The standard mandates no vendor, language, runtime, or storage technology. Confo
 ## 8. Why CNCF, and why Sandbox
 
 - **Why CNCF.** Neutral stewardship is what turns a model into a standard. The THINK layer needs the same neutral home the RUN layer found in CNCF for OpenTelemetry; CNCF's IP policy, governance scaffolding, and ecosystem are the right environment for vendor-neutral adoption.
-- **Why Sandbox.** GSM is young (pre-1.0). Sandbox is the appropriate entry maturity: it signals early-stage, invites community contribution, and sets expectations honestly. Incubation would be sought only after demonstrating multi-party adoption and a stable 1.0.
+- **Why Sandbox.** GSM is young (1.0 recently frozen, single-vendor). Sandbox is the appropriate entry maturity: it signals early-stage, invites community contribution, and sets expectations honestly. Incubation would be sought only after demonstrating multi-party adoption.
 
 ## 9. Roadmap (high level)
 

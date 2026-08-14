@@ -25,8 +25,7 @@ Capability catalogue for the Agentic Workspace.
 
 ## Capabilities
 
-| Functional component | Representative features | Milestone |
-|----------------------|-------------------------|-----------|
-| Workspace data plane | Committed state (`HEAD`) *is* workspace state; agents stage writes, the harness validates and commits them — one validated write = one commit, attributed to the acting session | Foundation |
-| Installer | Wires the harness, agents, skills, and workflows into a working tree | Near-term |
-| CI/CD artifact pipelines | Validate and publish the artifacts agents produce, with the same deterministic checks that run locally | Near-term |
+| Feature | Representative content | Milestone |
+|---------|------------------------|-----------|
+| Installer | Wires the harness, agents, skills, and workflows into a working tree | v1.0 (MVP/GA) |
+| CI/CD artifacts pipelines | Validate and publish agent-produced artifacts with the same local gates | v1.0 (MVP/GA) |

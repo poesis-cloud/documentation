@@ -13,7 +13,7 @@ The **Generative System Model (GSM)** is the vendor-neutral systemic standard at
 
 GSM is to the **THINK** side of IT — *defining and governing* systems — what OpenTelemetry is to the **RUN** side: one vendor-neutral standard, so governed definitions are portable across tools instead of trapped in proprietary silos. It turns governance from prose that *describes* systems into definitions that *generate* them: typed, versioned, and machine-evaluable.
 
-GSM is a pre-1.0 working draft, source-available under **BUSL-1.1** and developed as a candidate for contribution as an open standard. BUSL-1.1 is a source-available license, not an Open Source license.
+GSM is at **v1.0** — normative content frozen, publication of the document set pending — source-available under **BUSL-1.1** and developed as a candidate for contribution as an open standard. BUSL-1.1 is a source-available license, not an Open Source license.
 
 ## What GSM fixes
 

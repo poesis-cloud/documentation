@@ -27,10 +27,6 @@ Capability catalogue for the Definition Blackboard Code Sourcer.
 
 ## Capabilities
 
-| Functional component | Representative features | Milestone |
-|----------------------|-------------------------|-----------|
-| Collaborative contribution path | Blackboard contribution posting; confidence / provenance envelopes; sealed byte-stable streams | Foundation |
-| Core sourcing pipeline | Inventory & classification; deterministic + LLM extraction (hybrid); merge / deduplicate; GSM-JSON output with provenance (all output starts DRAFT) | Near-term |
-| IT-domain source adapters | Git repository (Java / Spring → Mechanism rules); API contracts (OpenAPI / gRPC / AsyncAPI); infrastructure (Helm / Dockerfile / Terraform) | Mid-term |
-| Legal & regulatory adapters | EUR-Lex legislation (article → Directive, obligation → Norm); regulation-as-system modeling; multi-language | Future |
-| Standards adapters | ISO/IEC, NIST CSF, CIS (SHALL / SHOULD → Directive, control → Norm); standard-as-system modeling | Future |
+| Feature | Representative content | Milestone |
+|---------|------------------------|-----------|
+| GSM Definitions automatic sourcing from code repos | Source repositories, API contracts, SBOMs, and infrastructure into governed GSM definitions posted as evidence-backed contributions (confidence + provenance envelopes) to the Definition Blackboard Manager | v1.0 (MVP/GA) |

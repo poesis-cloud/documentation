@@ -25,11 +25,10 @@ Capability catalogue for the SAFe Agentic Organization.
 
 ## Capabilities
 
-| Functional component | Representative features | Milestone |
-|----------------------|-------------------------|-----------|
-| Agents | Three orchestrators (`@value-management-officier`, `@release-train-engineer`, `@scrum-master`) plus a framework-owned specialist bench — author, architecture, development, QA, security, operator, docs, UX | Foundation |
-| Skills | SAFe ceremony, practice, authoring, and orchestration playbooks loaded on demand | Foundation |
-| Workflows | SAFe ceremonies as governed workflows — portfolio, program, and iteration — declared in the harness's external configuration | Foundation |
-| Instructions | Persistent conventions injected into agent sessions | Foundation |
-| Artifacts | JSON Schema contracts and Markdown templates for every artifact kind the workflows produce — Epics, Features, Stories, ADRs, kanbans, gate records | Foundation |
-| Host bundles | Bundle renderers per agent host (GitHub Copilot today) | Foundation |
+| Feature | Representative content | Milestone |
+|---------|------------------------|-----------|
+| Agents | Three orchestrators + framework-owned specialist bench | v1.0 (MVP/GA) |
+| Skills | SAFe ceremony, practice, authoring, and orchestration playbooks | v1.0 (MVP/GA) |
+| Workflows | SAFe ceremonies as governed workflows across the three layers | v1.0 (MVP/GA) |
+| Instructions | Persistent conventions injected into agent sessions | v1.0 (MVP/GA) |
+| Artifacts | JSON Schema contracts and templates for every artifact kind | v1.0 (MVP/GA) |

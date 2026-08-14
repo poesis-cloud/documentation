@@ -24,19 +24,19 @@ Engine-level capabilities planned across the SIE products — the analytical and
 
 ## Governance intelligence (analytics)
 
-The analytical layer SIE will expose over the governed model. None are implemented yet.
+The analytical layer SIE will expose over the governed model. None are implemented yet; all are post-GA (v1.x of the owning product) unless marked exploratory.
 
 | Functional component | Representative features | Milestone |
 |----------------------|-------------------------|-----------|
-| Descriptive analytics | State monitoring & audit trail; structural observation (coupling, critical path); temporal observation (trend / drift detection) | Near-term |
-| Diagnostic analytics | Causal attribution & root-cause; anomaly detection; constraint conflict / coherence / gap diagnostics | Mid-term |
-| Predictive analytics | Forecasting; blast-radius & risk propagation; what-if / Norm simulation | Mid-term |
-| Prescriptive analytics | Remediation recommendation; homeostasis (closed-loop); LLM-assisted DNA bootstrap | Near-term |
-| Assurance & safety | Provenance & lineage; uncertainty / confidence; LLM-output assurance; automation guardrails | Near-term |
-| Emergence & cross-domain inference | Emergence detection; code → business cross-domain impact | Exploratory |
+| Descriptive analytics | State monitoring & audit trail; structural observation (coupling, critical path); temporal observation (trend / drift detection) | v1.x |
+| Diagnostic analytics | Causal attribution & root-cause; anomaly detection; constraint conflict / coherence / gap diagnostics | v1.x |
+| Predictive analytics | Forecasting; blast-radius & risk propagation; what-if / Norm simulation | v1.x |
+| Prescriptive analytics | Remediation recommendation; homeostasis (closed-loop); LLM-assisted DNA bootstrap | v1.x |
+| Assurance & safety | Provenance & lineage; uncertainty / confidence; LLM-output assurance; automation guardrails | v1.x |
+| Emergence & cross-domain inference | Emergence detection; code → business cross-domain impact | Unversioned (exploratory) |
 
 ## Environmental context and system presets
 
 | Functional component | Representative features | Milestone |
 |----------------------|-------------------------|-----------|
-| System presets | Regulatory / geopolitical / industry-standard presets; preset import & instantiation; preset composition & conflict detection | Near-term |
+| System presets | Regulatory / geopolitical / industry-standard presets; preset import & instantiation; preset composition & conflict detection | v1.x |
