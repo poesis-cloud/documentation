@@ -1,7 +1,6 @@
 ---
 layout: default
 title: QA / Test Engineer
-nav_order: 7
 nav_exclude: true
 redirect_from:
   - /itip/usage-scenarios/qa-engineer/

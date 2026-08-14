@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Project / Product Manager
-nav_order: 3
 nav_exclude: true
 redirect_from:
   - /itip/usage-scenarios/project-manager/

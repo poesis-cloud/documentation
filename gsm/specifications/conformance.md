@@ -14,7 +14,7 @@ redirect_from:
 **Status:** Normative where it restates the [Specification](specification.md); adds stable assertion IDs
 {: .fs-5 .fw-300 }
 
-This document catalogs the **testable conformance requirements** of GSM. Each requirement has a stable identifier (e.g. `GSM-PROC-17`) so test suites, audits, and conformance claims can cite it. The requirement levels (MUST / SHOULD / MAY) and their meaning are defined in [Specification §3](https://docs.poesis.cloud/gsm/specification/#3-notational-conventions). Where this document and the Specification differ, the **Specification prevails**.
+This document catalogs the **testable conformance requirements** of GSM. Each requirement has a stable identifier (e.g. `GSM-PROC-17`) so test suites, audits, and conformance claims can cite it. The requirement levels (MUST / SHOULD / MAY) and their meaning are defined in [Specification §3](https://docs.poesis.cloud/gsm/specifications/specification/#3-notational-conventions). Where this document and the Specification differ, the **Specification prevails**.
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -26,7 +26,7 @@ This document catalogs the **testable conformance requirements** of GSM. Each re
 
 ## 1. Conformance targets
 
-GSM defines four targets (see [Specification §16](https://docs.poesis.cloud/gsm/specification/#16-conformance)):
+GSM defines four targets (see [Specification §16](https://docs.poesis.cloud/gsm/specifications/specification/#16-conformance)):
 
 | Target | What it is |
 |---|---|
@@ -170,4 +170,4 @@ Requirement IDs are **stable**: once published, an ID is never reassigned to a d
 
 ## 10. Self-certification checklist
 
-The condensed checklist lives in [Specification Appendix A](https://docs.poesis.cloud/gsm/specification/#appendix-a-conformance-checklist-informative). The catalog above is its authoritative, ID-stable expansion.
+The condensed checklist lives in [Specification Appendix A](https://docs.poesis.cloud/gsm/specifications/specification/#appendix-a-conformance-checklist-informative). The catalog above is its authoritative, ID-stable expansion.

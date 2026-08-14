@@ -23,9 +23,10 @@ The first domain application built on SIE. ITIP is where all IT profiles converg
 
 - **[Web Application]({% link itip/web-application/index.md %})** — the application every IT profile works in
   - [Overview]({% link itip/web-application/index.md %}) — the THINK gap, the Definition–Execution–Observation triad, and DNA governance grammar
+  - [Getting Started]({% link itip/web-application/getting-started.md %}) — first steps in the application
+  - [Features]({% link itip/web-application/features.md %}) — the capability catalogue
   - [General Usage]({% link itip/web-application/general-usage.md %}) — Directives, Norms, Ascriptions, and Frameworks in practice
   - [Usage Scenarios]({% link itip/web-application/usage-scenarios/index.md %}) — role-specific workflows per IT profile
-  - [Features]({% link itip/web-application/features.md %}) — the capability catalogue with milestones
   - [Rules]({% link itip/web-application/rules.md %}) — governance rules every user must know
 - **[Definition Blackboard Code Sourcer]({% link itip/definition-blackboard-code-sourcer/index.md %})** — client pipeline that sources IT artifacts — code, API contracts, infrastructure — into governed GSM definitions on the Definition Blackboard Manager. *Documentation in construction.*
   - [Features]({% link itip/definition-blackboard-code-sourcer/features.md %}) — the capability catalogue with milestones
@@ -37,8 +38,10 @@ The reference implementation of GSM: the engine that hosts governed definitions,
 - **[Definition Manager]({% link sie/definition-manager/index.md %})** — the authoritative API, lifecycle enforcer, and store of every governed GSM Definition. *Documentation in construction.*
   - [Features]({% link sie/definition-manager/features.md %}) — the capability catalogue with milestones
 - **[Operator]({% link sie/operator/index.md %})** — the GSM Definition runtime for Norms and Mechanisms. *Documentation in construction.*
+  - [Features]({% link sie/operator/features.md %}) — the capability catalogue with milestones
 - **[Definition Blackboard Manager]({% link sie/definition-blackboard-manager/index.md %})** — collaborative definition-sourcing service with a sealed, byte-stable contribution lifecycle and an append-only audit ledger. *Documentation in construction.*
   - [Features]({% link sie/definition-blackboard-manager/features.md %}) — the capability catalogue with milestones
+- [Roadmap]({% link sie/roadmap.md %}) — engine-level capabilities planned across the SIE products
 
 ### [GSM — the standard]({% link gsm/index.md %})
 
@@ -46,13 +49,17 @@ The **Generative System Model (GSM)** is the vendor-neutral standard for the THI
 
 - **Specifications** — eight primitives, DNA grammar, Archetyping, and the systemic lifecycle. *Publication pending — the specification document set is being finalized for release.*
 - **[Frameworks]({% link gsm/frameworks/index.md %})** — domain, standard, and legal vocabularies sourced into GSM, ready to enforce. *Documentation in construction.*
+  - [Features]({% link gsm/frameworks/features.md %}) — the capability catalogue with milestones
 
 ### [SAF — Systemic Agentic Framework]({% link saf/index.md %})
 
-The first **distributed agentic SAFe** engine — a governed, local-first, multi-agent way to *run SAFe*, today in VS Code / GitHub Copilot and portable to any host the harness adapts to next. Portfolio–program–iteration orchestration runs on your own machine, with a human gate at every layer; connected to the Poesis ecosystem, its agents build with full, governed knowledge of your organization.
+A governed, local-first, multi-agent way to run SAFe — today in VS Code / GitHub Copilot, portable to any host the harness adapts to. Portfolio–program–iteration orchestration runs on your own machine, with a human gate at every layer, producing standard SAFe artifacts synchronized through your own git host.
 
-- [Overview]({% link saf/index.md %}) — the vision, the model, and the Poesis ecosystem advantage
+- [Overview]({% link saf/index.md %}) — the solution, its architecture, and its products
 - [Quickstart]({% link saf/quickstart.md %}) — install and run your first orchestrated PR in under 30 minutes
-- **[Agentic Harness]({% link saf/agentic-harness/index.md %})** — deterministic resolution, validation, and traceability that keep probabilistic agents on rails
+- **[Agentic Harness]({% link saf/agentic-harness/index.md %})** — the deterministic execution core: step resolution, condition checks, artifact validation, journaling
+  - [Features]({% link saf/agentic-harness/features.md %}) — the capability catalogue with milestones
 - **[SAFe Agentic Organization]({% link saf/safe-agentic-organization/index.md %})** — orchestrators, layers, ceremonies, agents, and the filesystem ⇆ central-systems sync
+  - [Features]({% link saf/safe-agentic-organization/features.md %}) — the capability catalogue with milestones
 - **[Agentic Workspace]({% link saf/agentic-workspace/index.md %})** — the shared remote workspace for agentic workflow artifacts. *Documentation in construction.*
+  - [Features]({% link saf/agentic-workspace/features.md %}) — the capability catalogue with milestones

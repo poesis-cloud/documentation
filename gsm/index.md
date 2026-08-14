@@ -25,5 +25,6 @@ GSM is a pre-1.0 working draft, source-available under **BUSL-1.1** and develope
 
 - **Specifications** — the core spec: eight primitives, DNA grammar, Archetyping, and the systemic lifecycle, prepared as a CNCF-style document set. *Publication pending — the specification document set is being finalized for release.*
 - **[Frameworks]({% link gsm/frameworks/index.md %})** — domain, standard, and legal vocabularies sourced into GSM, ready to enforce. *Documentation in construction.*
+  - [Features]({% link gsm/frameworks/features.md %}) — the capability catalogue with milestones
 
 GSM also has an academic-publication track (a paper and a book); that track is separate from this documentation site and from the normative Specification above.

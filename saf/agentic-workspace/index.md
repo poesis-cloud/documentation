@@ -3,6 +3,7 @@ layout: default
 title: Agentic Workspace
 parent: SAF
 nav_order: 4
+has_children: true
 ---
 
 # Agentic Workspace
@@ -15,5 +16,6 @@ The **Agentic Workspace** is the shared remote workspace of the Systemic Agentic
 
 ## In this section
 
+- **[Features]({% link saf/agentic-workspace/features.md %})** — the capability catalogue with milestones
 - Installer — *in construction*
 - CI/CD artifact pipelines — *in construction*

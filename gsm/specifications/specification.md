@@ -22,9 +22,9 @@ redirect_from:
   <dt>Editors</dt>
   <dd><em>TBD</em></dd>
   <dt>Latest published version</dt>
-  <dd><a href="https://docs.poesis.cloud/gsm/specification/">docs.poesis.cloud/gsm/specification</a></dd>
+  <dd><a href="https://docs.poesis.cloud/gsm/specifications/specification/">docs.poesis.cloud/gsm/specification</a></dd>
   <dt>Reference implementation</dt>
-  <dd>SIE — the Systemic Intelligence Engine (Definition Manager). See <a href="https://docs.poesis.cloud/sie-definition/">SIE</a>.</dd>
+  <dd>SIE — the Systemic Intelligence Engine (Definition Manager). See <a href="https://docs.poesis.cloud/sie/definition-manager/">SIE</a>.</dd>
 </dl>
 
 > **Related documents.** This Specification is the normative core of the GSM document set: the non-normative [Primer](primer.md), the [Conformance](conformance.md) catalog (stable requirement IDs), the proposed [Charter](charter.md), and the draft [CNCF Sandbox Proposal](cncf-sandbox-proposal.md).
@@ -651,7 +651,7 @@ A GSM Document is a JSON object with a `definitions` array. Each entry pairs a D
 ### 21.2 Informative
 
 - [Manifesto](manifesto.md) — The GSM Manifesto (design intent and principles).
-- [SIE](https://docs.poesis.cloud/sie-definition/) — Reference implementation overview.
+- [SIE](https://docs.poesis.cloud/sie/definition-manager/) — Reference implementation overview.
 - OpenTelemetry; CloudEvents — complementary CNCF specifications.
 
 ---

@@ -8,12 +8,25 @@ redirect_from:
   - /itip/features/
 ---
 
-# ITIP Features
+# Web Application Features
 {: .no_toc }
 
-ITIP's capabilities, grouped by functional component. Each section is one component of the product; the entries under it are the capabilities it provides. ITIP is in active design.
+The Web Application's capabilities, grouped by functional component. Each section is one component of the product; the entries under it are the capabilities it provides. ITIP is in active design.
 
 Each capability carries the ITIP **version** that delivers it: **v1** is the first delivery scope; **v2** is the planned next iteration.
+
+## Published feature catalogue
+
+The product's published features on [poesis.cloud](https://poesis.cloud/solutions/itip/products/web-application) map onto the functional components below:
+
+| Published feature | Functional component(s) |
+|-------------------|-------------------------|
+| IT artifact factory | [Deliverables](#deliverables) |
+| IT compliance evaluation | [Evaluation](#evaluation) |
+| IT impact simulation | [Simulation](#simulation) |
+| GSM Definitions truth sourcing management | [Truth Sourcing](#truth-sourcing), [Review](#review) |
+| GSM Definitions management | [Definition](#definition), [Lenses](#lenses), [Overview](#overview) |
+| GSM Frameworks management | [Frameworks](#frameworks) |
 
 ## Table of contents
 {: .no_toc .text-delta }

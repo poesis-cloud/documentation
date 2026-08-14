@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Developer / Tech Lead
-nav_order: 2
 nav_exclude: true
 redirect_from:
   - /itip/usage-scenarios/developer/

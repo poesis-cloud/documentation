@@ -11,44 +11,20 @@ redirect_from:
 
 {: .no_toc }
 
-## What an agentic framework is — and why you need one
+The **Systemic Agentic Framework (SAF)** is a governed, local-first way to run **SAFe** with AI agents. Multi-agent orchestrations — portfolio, program, and iteration — run on your own machine inside your agent host (VS Code / GitHub Copilot today; the harness is host-agnostic), producing standard, schema-validated SAFe artifacts — Epics, Features, Stories, ADRs, kanbans, gate records — synchronized through your organization's own git host. A human ★ gate closes every layer: agents propose through evidence and sequence; the decision stays with you.
 
-- **It is an *organization* of AI agents, not a single assistant.** A chatbot is one model in one conversation — brilliant for a question, hopeless for a project. A framework is many specialized agents, each with a role, coordinated by an orchestrator, passing work through defined handoffs and human checkpoints. *A team, not a clever individual.*
-- **Why a framework, not a smarter agent?** Real work is never one prompt — it is multi-role, multi-step, multi-layer. No lone agent holds every role, carries context across them, or checks itself. A framework supplies what one agent can't: **division of labor, coordination, governance, and persistence** — what makes a team more than a person, and a probabilistic agent trustworthy.
-- **For what?** Work too large, long, or consequential for a single chat.
-
-**The principle underneath is divide & conquer — and it is *the* key to harnessing AI.** A probabilistic model is most reliable — and cheapest — when its task is small, bounded, and well-specified; it is least reliable, and most expensive, when the task is sprawling. Dividing the work *does* multiply the number of agents — but each one becomes small (minimal tokens, focused context) and specialized (most accurate for its role): **a pipeline of many cheap, focused agents outperforms a single sprawling one on both reliability and cost.** This isn't a framework opinion — it is where the whole field already points: **every durable prompt-engineering practice is a form of divide & conquer.** Chain-of-thought splits the *reasoning*; task decomposition splits the *goal*; few-shot splits by *example*; role prompting and multi-agent split by *responsibility*. An agentic framework simply makes that principle **structural** instead of hand-rolled per prompt — and a multi-layer method makes it **governed.**
-
----
-
-## SAFe, run by agents, as the harness that makes agentic delivery trustworthy
-
-One idea carries the whole framework.
-
-- **AI runs on intuition — exactly like we do.** An agent is a probabilistic guesser: brilliant, biased, predicting the next move from learned patterns. So is a person. Neither is, at bottom, a logician.
-- **Methods are how intuition becomes reliable.** The scientific methods applying on an hypothesis, Scrum and SAFe on projects' ambitions. Methods are rational and empiristic *cognitive harnesses* that pushes a biased mind's output through evidence, checks, and sequence until it comes out trustworthy. *Intuition proposes; the method disposes.*
-- **Agents need the same harness — and human methods fit them perfectly,** because those methods were engineered to tame the same probabilistic biases in us. You don't make an agent trustworthy by waiting for a smarter model; you make it **implement a method.**
-- **A published standard is the strongest harness of all** — the AI already knows it, trained on it, complies with it, and reasons in its vocabulary with no retraining. The method becomes a contract between human and machine.
-- **The more harness layers an end-to-end workflow passes through, the better the result** — a probabilistic system improves when its output is checked, sharpened, and re-bounded repeatedly as it moves from abstract strategy to tactical feature design to concrete technical implementation. **SAFe structures and checks all those layers.** The portfolio layer tests the strategic bet; the program layer tests the feature shape and architecture; the iteration layer tests the code that actually ships. The point is not just that SAFe has many layers, but that it applies them **in sequence across the whole path from idea to commit**. More governed layers across the end-to-end workflow produce better outcomes than a method that implements only one slice.
-
-That is what this is: **a method, run by agents, as the harness that makes agentic delivery trustworthy.** The method it runs is **SAFe** — but you don't have to *be* a SAFe organization to get the harness.
-
----
-
-*Why SAFe is the right harness, how to adopt it without a transformation program, and how the framework eliminates the bookkeeping that makes SAFe stall in practice — **[SAFe, run by agents →]({% link saf/agentic-harness/index.md %})**{: .fs-5 }*
-
----
+SAF complements **[ITIP]({% link itip/index.md %})** and integrates with **[SIE]({% link sie/index.md %})**: its artifact templates can be sourced as GSM Archetypes, and its agents can consume the organization's governed definitions as context while they work.
 
 ## The framework's architecture
 
 Four properties make it work:
 
-1. **Local-first** — the agent loop runs on each user's machine, in the IDE, against the real working tree. Your sensitive informations never leave; only the artifacts you commit sync out transparently to your organization's git host.
-2. **Governed** — a portfolio → program → iteration hierarchy of role agents, with a human ★ gate at every layer. Not a flat swarm — an org chart with human authority.
+1. **Local-first** — the agent loop runs on each user's machine, in the IDE, against the real working tree. Sensitive information never leaves the machine; only the artifacts you commit sync out transparently to your organization's git host.
+2. **Governed** — a portfolio → program → iteration hierarchy of role agents, with a human ★ gate at every layer. An org chart with human authority, not a flat swarm.
 3. **Sovereign** — work state lives in your own files and git history (the event log), not a vendor's cloud. Nothing is trapped in an unmanaged session.
-4. **Portable** — the harness is methodology- and host-agnostic: plain files, a stable CLI, host-specifics isolated behind a thin adapter. The same familiar agentic work method follows you from host to host — VS Code today, another IDE, CI runner, or agent host tomorrow — with no relearning and no lock-in.
+4. **Portable** — the harness is methodology- and host-agnostic: plain files, a stable CLI, host-specifics isolated behind a thin adapter. The same familiar agentic work method follows you from host to host — VS Code today, another IDE, CI runner, or agent host tomorrow — with no relearning.
 
-Three orchestrators, one per SAFe layer, run the show — dispatched from a single entry point, `@vmo-orchestrator`:
+Three orchestrators, one per SAFe layer, drive the model — dispatched from a single entry point, `@vmo-orchestrator`:
 
 ```mermaid
 flowchart LR
@@ -115,95 +91,18 @@ flowchart LR
     class GH,JIRA,CONF ext
 ```
 
-*Each orchestrator is an entry point carrying your use case for its layer, and **returns that layer's ★ gates to you**. The framework's only external link is the git host — Jira and Confluence sync from there. The full model is on the **[Distributed Agentic SAFe]({% link saf/safe-agentic-organization/index.md %})** page.*
-
----
-
-## What it solves that others don't
-
-If you've adopted agentic coding at any scale, you've hit these:
-
-- **Your code on someone else's server.** Cloud agents need your repository inside their sandbox. For IP-sensitive or regulated organizations, that alone is disqualifying. *Local-first execution keeps the code on the machine.*
-
-- **One agent that loses the thread.** A single assistant has no portfolio, no roles, and no memory of why a decision was made three features ago. Scale breaks it. *A role hierarchy carries the context the way an organization does.*
-
-- **No gate, no authority.** Autonomous bots open pull requests nobody scoped; you review after the fact. The human stops being the value authority. *A ★ gate at every layer keeps the human in command.*
-
-- **State trapped in a chat.** Close the session and the plan evaporates — no event log, no recovery, no audit trail. *State lives in committed Markdown; git history is the event log.*
-
-- **No idea what the organization already decided.** Every agent starts from zero. It cannot see your architecture, your standards, or your compliance obligations, so it re-derives — and re-hallucinates — context on every task. *Grounding in governed truth ends the guessing (below).*
-
-- **Lock-in to a vendor runtime.** Your workflow lives inside a proprietary node graph or a hosted control plane you don't own. *Plain files, plain git, a standard IDE.*
-
-These are not tooling gaps. They are symptoms of one root cause: **agentic delivery has been built as a product feature, not as a governed system.** The SAFe Agentic Framework makes it a governed system — local execution, a role hierarchy, per-layer gates, externalized state — and, connected to Poesis, grounded in your organization's own governed definitions.
-
----
-
-## The agentic coding landscape
-
-The framework occupies a corner that existing categories circle but never claim:
-
-| Category | What it does well | What it misses |
-| --- | --- | --- |
-| **Cloud SWE agents** (Codex, Devin, Copilot coding agent) | autonomous task→PR, run in parallel | remote execution, no human gate, no org context, code leaves the machine |
-| **IDE single-agents** (Aider, Cline, Cursor, Continue) | fast local pairing, git-native | one agent — no roles, ceremonies, or portfolio; no governance |
-| **Multi-agent frameworks** (MetaGPT, ChatDev, CrewAI, AutoGen) | role-based collaboration | monolithic in-process, weak human gating, not IDE-native, no repo sync |
-| **Workflow orchestrators** (n8n, LangGraph, Temporal) | durable, event-driven automation | centralized execution — system-to-system, not human-supervised construction |
-| **SAFe Agentic Framework** | **local-first SAFe orchestration, per-layer human gates, repo sync, org-grounded** | **— the niche the others leave empty** |
-
-The crowded space is the *delegate* corner — cloud single-agent PR bots. The **local-first + governed-hierarchy + organization-grounded** corner was empty. That is where this lives.
-
----
-
-## The Poesis advantage: a framework that knows your organization
-
-This is where the framework stops being "another coding agent" and becomes something no one else can ship. The same way **[ITIP]({% link itip/web-application/index.md %})** grounds AI in governed truth, the SAFe Agentic Framework is built to **consume that governed truth as it builds**.
-
-### Templates become Archetypes
-
-The framework ships reference templates — Epic, Feature, Story, ADR, the kanban and gate records. On their own, they are disciplined Markdown. **Sourced into GSM, they become [Archetypes]({% link itip/web-application/index.md %})** — governed definition *types* in **SIE**, each carrying vocabulary (a named type), grammar (it slots into the DNA governance grammar), and semantics (a schema that fixes what every field *means*). Your SAFe artifacts stop being free text and become **typed, versioned, governed definitions** — drift-proof, composable with the frameworks you already govern (TOGAF, ISO, GDPR), and enforceable. An Epic is no longer a document each agent reinterprets; it is a definition the whole organization shares.
-
-### Full organizational context, over MCP
-
-Every agent in the framework can consume **SIE over MCP** (Model Context Protocol) — reading your organization's **governed, causal model** directly: its Structures and Mechanisms, its Directives and Norms, the ITIP-sourced frameworks it must honor. Instead of starting cold and re-deriving context on every task, an orchestrator dispatches agents that already *know* the architecture they are extending and the constraints they must respect. This is ITIP's *grounding-in-governed-truth* principle applied to construction: agents reason over a **write-once, read-many** corpus of definitions — parsed once, consumed forever — so generation is **grounded** (anchored in governed truth, not training priors), **deterministic** (harnessed by GSM types and lifecycle), and **cheaper** (precise structured context instead of token-burning retrieval).
-
-### Agents tuned for GSM and ITIP
-
-The orchestrators and the specialist bench are optimized to **read and generate GSM definitions and ITIP governance data**. A Feature refined against the organization's governed architecture; an ADR that cites the actual Directives it satisfies; a Story whose acceptance criteria trace to enforceable Norms; a pull request that lands **already aligned** to compliance obligations — because the agents that wrote it could see them. Governance stops being a gate you fail at the end and becomes context the agents carry from the start.
-
-### The closed THINK → BUILD loop
-
-ITIP and SIE govern **what should be built** — the THINK layer, the generative definition of the system. The SAFe Agentic Framework **builds it** — the agentic arm of BUILD — reading those definitions as it goes and committing artifacts that feed back as evidence.
-
-```
-   ┌──────────── THINK · ITIP / SIE ────────────┐
-   │   governed definitions: what to build       │
-   └─────────────────────┬───────────────────────┘
-                         │  consumed over MCP
-                         ▼
-   ┌──────── BUILD · SAFe Agentic Framework ─────┐
-   │   agents construct it — gated by humans      │
-   └─────────────────────┬───────────────────────┘
-                         │  commits = evidence
-                         ▼
-              artifacts feed back as observation
-```
-
-Definition generates execution; execution produces observation; observation refines definition. The framework closes the **Definition → Execution** half of the Poesis triad with agents — so the gap between *what the organization decided* and *what actually ships* collapses toward zero.
-
----
-
-## Open framework, ecosystem superpowers
-
-The framework is **open source (Apache-2.0)** and runs standalone: install it, point it at any GitHub or GitLab repository, and you have a governed, local-first SAFe engine today. **Connected to the Poesis ecosystem, it gains a sense no other delivery tool has — knowledge of your organization.** Templates governed as Archetypes; context streamed from SIE over MCP; agents fluent in GSM and ITIP. The open core gives you the orchestration; the ecosystem gives it *understanding*.
+*Each orchestrator is an entry point carrying your use case for its layer, and **returns that layer's ★ gates to you**. The framework's only external link is the git host — Jira and Confluence sync from there. The full model is on the **[SAFe Agentic Organization]({% link saf/safe-agentic-organization/index.md %})** page.*
 
 ---
 
 ## Products
 
-- **[Agentic Harness]({% link saf/agentic-harness/index.md %})** — deterministic resolution, validation, and traceability of agentic workflows, keeping probabilistic agents on rails.
-- **[SAFe Agentic Organization]({% link saf/safe-agentic-organization/index.md %})** — portfolio → program → iteration: a preset, IT-scaled agile org chart of agents, with a human ★ gate at every layer.
-- **[Agentic Workspace]({% link saf/agentic-workspace/index.md %})** — the shared remote workspace storing local agentic workflow artifacts. *Documentation in construction.*
+- **[Agentic Harness]({% link saf/agentic-harness/index.md %})** — the deterministic execution core: it resolves workflows, steps, models, and session context, checks conditions, authorization, and artifacts, and journals every step.
+  - [Features]({% link saf/agentic-harness/features.md %}) — the capability catalogue with milestones
+- **[SAFe Agentic Organization]({% link saf/safe-agentic-organization/index.md %})** — the SAFe-shaped framework application the harness executes: orchestrators, the specialist agent bench, skills, workflows, instructions, and artifact schemas.
+  - [Features]({% link saf/safe-agentic-organization/features.md %}) — the capability catalogue with milestones
+- **[Agentic Workspace]({% link saf/agentic-workspace/index.md %})** — the shared data plane storing the artifacts local agentic workflows produce. *Documentation in construction.*
+  - [Features]({% link saf/agentic-workspace/features.md %}) — the capability catalogue with milestones
 
 **Next: [Quickstart — your first orchestrated PR →]({% link saf/quickstart.md %})**
 {: .fs-5 .fw-300 }

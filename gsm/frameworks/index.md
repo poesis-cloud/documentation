@@ -3,6 +3,7 @@ layout: default
 title: Frameworks
 parent: GSM
 nav_order: 2
+has_children: true
 ---
 
 # GSM Frameworks
@@ -17,5 +18,6 @@ Sourced framework families include enterprise-architecture models (TOGAF), quali
 
 ## In this section
 
+- **[Features]({% link gsm/frameworks/features.md %})** — the capability catalogue with milestones
 - Framework catalogue — *in construction*
 - Sourcing method and provenance rules — *in construction*

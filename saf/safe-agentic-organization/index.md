@@ -3,14 +3,15 @@ layout: default
 title: SAFe Agentic Organization
 parent: SAF
 nav_order: 3
+has_children: true
 redirect_from:
   - /safe-agentic-framework/distributed-agentic-safe/
 ---
 
-# Distributed Agentic SAFe
+# SAFe Agentic Organization
 {: .no_toc }
 
-The **SAFe Agentic Framework** is not one agent that "does Scrum." It is a *distributed*
+The **SAFe Agentic Organization** is the SAFe-shaped framework application the [Agentic Harness]({% link saf/agentic-harness/index.md %}) executes. It is not one agent that "does Scrum." It is a *distributed*
 system: SAFe governance is split across specialized agents at three layers, the work
 state is externalized to a **filesystem blackboard**, and that blackboard is mirrored to
 your team's **central systems** (Git host, ticketing, knowledge base). We call this model
@@ -282,7 +283,7 @@ The model invites tooling. Four concrete, well-scoped builds:
 4. **Open blackboard protocol** — formalize the *read-committed-input → commit-output* contract
    as a small spec so third-party agents (other vendors, other models) can join the bench as
    first-class participants.
-5. **Organizational context over MCP** — an MCP server that streams governed organizational definitions into every agent, so the framework builds with full, governed knowledge of the organization (see the [SAFe Agentic Framework overview]({% link saf/index.md %})).
+5. **Organizational context over MCP** — an MCP server that streams governed organizational definitions into every agent, so the framework builds with full, governed knowledge of the organization (see the [SAF overview]({% link saf/index.md %})).
 
 **Start with #1.** It is the highest-leverage, cleanest-boundary build: it makes the
 "central system" pluggable, proves the model is not GitHub-specific, and leaves the

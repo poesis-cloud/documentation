@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Enterprise / Solution Architect
-nav_order: 1
 nav_exclude: true
 redirect_from:
   - /itip/usage-scenarios/architect/

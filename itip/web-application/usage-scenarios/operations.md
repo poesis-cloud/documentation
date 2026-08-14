@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Operations / SRE Engineer
-nav_order: 4
 nav_exclude: true
 redirect_from:
   - /itip/usage-scenarios/operations/

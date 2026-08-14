@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Security Officer
-nav_order: 5
 nav_exclude: true
 redirect_from:
   - /itip/usage-scenarios/security-officer/

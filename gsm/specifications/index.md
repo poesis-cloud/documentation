@@ -10,7 +10,7 @@ has_children: true
 
 {: .no_toc }
 
-The **Specifications** are the core of GSM: eight primitives, the DNA governance grammar, the Archetype type system, and the systemic lifecycle. They are published as a CNCF-style document set — normative documents (Specification, Conformance) alongside the non-normative material that makes them approachable.
+The **Specifications** are the core of GSM: eight primitives, the DNA governance grammar, the Archetype type system, and the systemic lifecycle. They are published as a CNCF-style document set — normative documents (Specification, Conformance) alongside the non-normative material that makes them approachable. The **[Features]({% link gsm/specifications/features.md %})** page summarizes what the document set defines.
 
 ## In this section
 

@@ -3,6 +3,7 @@ layout: default
 title: Operator
 parent: SIE
 nav_order: 2
+has_children: true
 ---
 
 # Operator
@@ -15,5 +16,6 @@ The **Operator** is the GSM Definition runtime: it evaluates and executes govern
 
 ## In this section
 
+- **[Features]({% link sie/operator/features.md %})** — the capability catalogue with milestones
 - Norms evaluation API — *in construction*
 - Mechanisms execution API — *in construction*

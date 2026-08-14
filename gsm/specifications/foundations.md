@@ -56,7 +56,7 @@ GSM primitives **do not** carry free-form `description` text. Human-facing expla
 
 GSM deliberately excludes **all** classification or labeling primitives — whether for entities (a `Type`) or for organizing governance into subsets (`Domain`, `Category`, `Tag`). Classification is *descriptive opinion*, not *definition*: a label like "WebApp" produces no governance, closes no loop, and auto-defines nothing. What makes a system *this* system is its purpose and its DNA — those are definitional; classification adds nothing.
 
-Classification belongs to the **descriptive plane**, not to GSM. This is the rationale behind several of the Specification's deliberate exclusions ([§15](https://docs.poesis.cloud/gsm/specification/#15-eliminated-constructs)).
+Classification belongs to the **descriptive plane**, not to GSM. This is the rationale behind several of the Specification's deliberate exclusions ([§15](https://docs.poesis.cloud/gsm/specifications/specification/#15-eliminated-constructs)).
 
 ## 7. Structural constancy with semantic variation
 

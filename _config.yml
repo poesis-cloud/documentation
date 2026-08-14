@@ -1,4 +1,4 @@
-title: Documentation
+title: Poesis Documentation
 description: User documentation for Poesis solutions and products — ITIP, SIE, GSM, SAF
 url: "https://docs.poesis.cloud"
 baseurl: ""
@@ -11,11 +11,17 @@ permalink: pretty
 
 nav_sort: case_insensitive
 
+# GA4 — same web stream as poesis.cloud (subdomains share the .poesis.cloud cookie,
+# so corporate → docs journeys are one session; split reporting by hostname).
+ga_tracking: G-KZGGY5D9GW
+
 aux_links:
+  "poesis.cloud":
+    - "https://poesis.cloud"
   "Poesis on GitHub":
     - "https://github.com/poesis-cloud"
 
-footer_content: "&copy; 2026 Poesis. All rights reserved."
+footer_content: '&copy; 2026 <a href="https://poesis.cloud">Poesis</a>. All rights reserved.'
 
 search_enabled: true
 
@@ -32,6 +38,14 @@ plugins:
   - jekyll-remote-theme
   - jekyll-relative-links
   - jekyll-redirect-from
+  - jekyll-sitemap
+
+# Default social-sharing image for every page (consumed by jekyll-seo-tag).
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/og-default.png
 
 include:
   - CNAME
@@ -44,6 +58,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor/
-  - _comsite/
   # GSM specifications hidden until publication (strategy: publication target ~Oct 2026)
   - gsm/specifications/

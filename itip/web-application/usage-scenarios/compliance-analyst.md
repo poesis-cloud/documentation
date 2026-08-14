@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Compliance Analyst
-nav_order: 6
 nav_exclude: true
 redirect_from:
   - /itip/usage-scenarios/compliance-analyst/

@@ -18,3 +18,7 @@ What Kubernetes is to software infrastructures, the Systemic Intelligence Engine
 - **[Definition Manager]({% link sie/definition-manager/index.md %})** — the authoritative API, lifecycle enforcer, and store of every governed GSM Definition; the heart of the engine.
 - **[Operator]({% link sie/operator/index.md %})** — the GSM Definition runtime, evaluating Norms and executing Mechanisms. *Documentation in construction.*
 - **[Definition Blackboard Manager]({% link sie/definition-blackboard-manager/index.md %})** — the collaborative agentic Definition-sourcing pipeline, with a sealed, byte-stable contribution lifecycle and an append-only audit ledger. *Documentation in construction.*
+
+## Roadmap
+
+Engine-level capabilities planned across the SIE products — analytics over the governed model and environmental presets — are catalogued in the **[SIE Roadmap]({% link sie/roadmap.md %})**.
