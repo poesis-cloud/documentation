@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Features
-parent: Web Application
-grand_parent: ITIP
+title: "Web Application Features"
+parent: ITIP Web Application
+grand_parent: ITIP — the IT Intelligence Platform
 nav_order: 2
 redirect_from:
   - /itip/features/

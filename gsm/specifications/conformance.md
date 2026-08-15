@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Conformance
-parent: Specifications
-grand_parent: GSM
+title: "GSM Conformance"
+parent: GSM Specifications
+grand_parent: GSM — the standard
 nav_order: 5
 redirect_from:
   - /gsm/conformance/

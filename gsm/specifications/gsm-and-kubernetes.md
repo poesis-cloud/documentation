@@ -1,8 +1,8 @@
 ---
 layout: default
 title: GSM and the Kubernetes Model
-parent: Specifications
-grand_parent: GSM
+parent: GSM Specifications
+grand_parent: GSM — the standard
 nav_order: 9
 redirect_from:
   - /gsm/gsm-and-kubernetes/

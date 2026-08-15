@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Charter
-parent: Specifications
-grand_parent: GSM
+title: "GSM Project Charter"
+parent: GSM Specifications
+grand_parent: GSM — the standard
 nav_order: 6
 redirect_from:
   - /gsm/charter/

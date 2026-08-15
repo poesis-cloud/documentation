@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Features
+title: "Agentic Workspace Features"
 parent: Agentic Workspace
-grand_parent: SAF
+grand_parent: SAF — the Systemic Agentic Framework
 nav_order: 1
 ---
 

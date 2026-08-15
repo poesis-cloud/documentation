@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ITIP
+title: "ITIP — the IT Intelligence Platform"
 nav_order: 1
 has_children: true
 ---

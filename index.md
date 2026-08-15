@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: "Poesis Documentation"
 nav_exclude: true
 permalink: /
 ---

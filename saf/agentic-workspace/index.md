@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Agentic Workspace
-parent: SAF
+parent: SAF — the Systemic Agentic Framework
 nav_order: 4
 has_children: true
 ---

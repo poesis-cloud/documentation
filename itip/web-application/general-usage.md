@@ -1,8 +1,8 @@
 ---
 layout: default
-title: General Usage
-parent: Web Application
-grand_parent: ITIP
+title: "DNA in Practice — Directives, Norms, Ascriptions"
+parent: ITIP Web Application
+grand_parent: ITIP — the IT Intelligence Platform
 nav_order: 3
 redirect_from:
   - /itip/general-usage/

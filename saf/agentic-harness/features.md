@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Features
+title: "Agentic Harness Features"
 parent: Agentic Harness
-grand_parent: SAF
+grand_parent: SAF — the Systemic Agentic Framework
 nav_order: 1
 ---
 

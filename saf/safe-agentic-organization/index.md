@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SAFe Agentic Organization
-parent: SAF
+parent: SAF — the Systemic Agentic Framework
 nav_order: 3
 has_children: true
 redirect_from:

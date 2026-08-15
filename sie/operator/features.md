@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Features
+title: "Operator Features"
 parent: Operator
-grand_parent: SIE
+grand_parent: SIE — the Systemic Intelligence Engine
 nav_order: 1
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Features
+title: "SAFe Agentic Organization Features"
 parent: SAFe Agentic Organization
-grand_parent: SAF
+grand_parent: SAF — the Systemic Agentic Framework
 nav_order: 1
 ---
 

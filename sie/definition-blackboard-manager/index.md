@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Definition Blackboard Manager
-parent: SIE
+parent: SIE — the Systemic Intelligence Engine
 nav_order: 3
 has_children: true
 redirect_from:

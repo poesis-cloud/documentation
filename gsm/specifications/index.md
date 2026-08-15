@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Specifications
-parent: GSM
+title: "GSM Specifications"
+parent: GSM — the standard
 nav_order: 1
 has_children: true
 ---

@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Features
+title: "Definition Blackboard Manager Features"
 parent: Definition Blackboard Manager
-grand_parent: SIE
+grand_parent: SIE — the Systemic Intelligence Engine
 nav_order: 1
 redirect_from:
   - /sie-blackboard/features/

@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Usage Scenarios
-parent: Web Application
-grand_parent: ITIP
+parent: ITIP Web Application
+grand_parent: ITIP — the IT Intelligence Platform
 nav_order: 4
 redirect_from:
   - /itip/usage-scenarios/

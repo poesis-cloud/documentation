@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Definition Manager
-parent: SIE
+parent: SIE — the Systemic Intelligence Engine
 nav_order: 1
 has_children: true
 redirect_from:

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Definition Blackboard Code Sourcer
-parent: ITIP
+parent: ITIP — the IT Intelligence Platform
 nav_order: 2
 has_children: true
 redirect_from:

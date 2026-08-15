@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Rules
-parent: Web Application
-grand_parent: ITIP
+parent: ITIP Web Application
+grand_parent: ITIP — the IT Intelligence Platform
 nav_order: 5
 redirect_from:
   - /itip/rules/

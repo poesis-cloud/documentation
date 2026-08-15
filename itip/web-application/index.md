@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Web Application
-parent: ITIP
+title: "ITIP Web Application"
+parent: ITIP — the IT Intelligence Platform
 nav_order: 1
 has_children: true
 ---
 
-# ITIP — IT Intelligence Platform
+# ITIP Web Application
 
 {: .fs-5 .fw-300 }
 

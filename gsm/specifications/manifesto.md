@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Manifesto
-parent: Specifications
-grand_parent: GSM
+title: "The GSM Manifesto"
+parent: GSM Specifications
+grand_parent: GSM — the standard
 nav_order: 1
 redirect_from:
   - /gsm/manifesto/

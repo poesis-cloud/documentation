@@ -1,6 +1,6 @@
 ---
 layout: default
-title: GSM
+title: "GSM — the standard"
 nav_order: 3
 has_children: true
 ---

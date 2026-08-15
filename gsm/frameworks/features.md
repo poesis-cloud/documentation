@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Features
-parent: Frameworks
-grand_parent: GSM
+title: "GSM Frameworks Features"
+parent: GSM Frameworks
+grand_parent: GSM — the standard
 nav_order: 1
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Features
+title: "Definition Blackboard Code Sourcer Features"
 parent: Definition Blackboard Code Sourcer
-grand_parent: ITIP
+grand_parent: ITIP — the IT Intelligence Platform
 nav_order: 1
 redirect_from:
   - /itip-blackboard-sourcer/features/

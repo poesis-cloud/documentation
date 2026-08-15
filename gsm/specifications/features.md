@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Features
-parent: Specifications
-grand_parent: GSM
+title: "GSM Specifications Features"
+parent: GSM Specifications
+grand_parent: GSM — the standard
 nav_order: 11
 ---
 

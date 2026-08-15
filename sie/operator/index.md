@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Operator
-parent: SIE
+parent: SIE — the Systemic Intelligence Engine
 nav_order: 2
 has_children: true
 ---

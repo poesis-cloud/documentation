@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Agentic Harness
-parent: SAF
+parent: SAF — the Systemic Agentic Framework
 nav_order: 2
 has_children: true
 redirect_from:

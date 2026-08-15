@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Foundations & Rationale
-parent: Specifications
-grand_parent: GSM
+title: "GSM Foundations & Rationale"
+parent: GSM Specifications
+grand_parent: GSM — the standard
 nav_order: 3
 redirect_from:
   - /gsm/foundations/

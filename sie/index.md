@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SIE
+title: "SIE — the Systemic Intelligence Engine"
 nav_order: 2
 has_children: true
 ---

@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Quickstart
-parent: SAF
+title: "Quickstart — the Systemic Agentic Framework"
+parent: SAF — the Systemic Agentic Framework
 nav_order: 1
 redirect_from:
   - /safe-agentic-framework/quickstart/
 ---
 
-# Quickstart — SAFe Agentic Framework
+# Quickstart — the Systemic Agentic Framework
 
 {: .no_toc }
 

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Roadmap
-parent: SIE
+title: "SIE Roadmap"
+parent: SIE — the Systemic Intelligence Engine
 nav_order: 4
 ---
 

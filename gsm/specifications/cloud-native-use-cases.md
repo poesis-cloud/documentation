@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Cloud-Native Use Cases
-parent: Specifications
-grand_parent: GSM
+title: "GSM Cloud-Native Use Cases"
+parent: GSM Specifications
+grand_parent: GSM — the standard
 nav_order: 8
 redirect_from:
   - /gsm/cloud-native-use-cases/
