@@ -3,8 +3,10 @@
 <link rel="icon" href="{{ '/assets/images/favicon-16.png' | relative_url }}" type="image/png" sizes="16x16">
 <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
 
-<!-- Consent mode default — must run BEFORE gtag.js so no analytics cookies are
-     set until the user grants consent (GDPR/ePrivacy). -->
+<!-- Consent mode default + dataLayer stub. The gtag.js script itself is NOT
+     loaded here — it is injected only after the user grants analytics consent.
+     Consent mode alone does NOT stop gtag.js from writing the _ga cookie on
+     load, so we gate the script tag itself ("reject = zero GA cookies"). -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -12,16 +14,25 @@
     analytics_storage: 'denied',
     ad_storage: 'denied',
     ad_user_data: 'denied',
-    ad_personalization: 'denied',
-    wait_for_update: 500
+    ad_personalization: 'denied'
   });
-</script>
-<!-- Google tag (gtag.js) — GA4 measurement G-KZGGY5D9GW, stays in consent-denied
-     cookieless mode until the consent banner grants 'analytics_storage'. -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KZGGY5D9GW"></script>
-<script>
-  gtag('js', new Date());
-  gtag('config', 'G-KZGGY5D9GW', { anonymize_ip: true });
+  // Lazily inject the GA4 script + config. Called by the consent banner on grant.
+  window.poesisLoadGA4 = function () {
+    if (window.__poesisGA4Loaded) return;
+    window.__poesisGA4Loaded = true;
+    gtag('consent', 'update', {
+      analytics_storage: 'granted',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KZGGY5D9GW';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-KZGGY5D9GW', { anonymize_ip: true });
+  };
 </script>
 
 <!-- Google Translate (hidden widget — triggered by header button). Loaded ONLY
@@ -145,17 +156,30 @@
 
     function applyConsent(value) {
       try { localStorage.setItem(KEY, value); } catch (e) { /* ignore */ }
-      if (typeof gtag === 'function') {
-        gtag('consent', 'update', {
-          analytics_storage: value,
-          ad_storage: 'denied',
-          ad_user_data: 'denied',
-          ad_personalization: 'denied',
-        });
+      if (value === 'granted') {
+        // Load GA4 + Google Translate now (neither is on the page until consent).
+        if (typeof window.poesisLoadGA4 === 'function') window.poesisLoadGA4();
+        if (typeof window.poesisLoadGoogleTranslate === 'function') window.poesisLoadGoogleTranslate();
+      } else {
+        // Reject: ensure no GA cookie persists (defensive — GA4 isn't loaded, but
+        // clear any _ga cookie a previous version/third party may have set).
+        deleteGACookies();
       }
-      if (value === 'granted' && typeof window.poesisLoadGoogleTranslate === 'function') {
-        window.poesisLoadGoogleTranslate();
-      }
+    }
+
+    function deleteGACookies() {
+      var hosts = [location.hostname, '.' + location.hostname];
+      var parts = location.hostname.split('.');
+      if (parts.length > 2) hosts.push('.' + parts.slice(-2).join('.'));
+      document.cookie.split(';').forEach(function (c) {
+        var name = c.split('=')[0].trim();
+        if (name === '_ga' || name.indexOf('_ga_') === 0) {
+          hosts.forEach(function (h) {
+            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + h;
+          });
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+        }
+      });
     }
 
     var banner = document.getElementById('consent-banner');
@@ -202,8 +226,10 @@
     });
 
     var stored = readConsent();
-    if (stored === 'granted' || stored === 'denied') {
-      applyConsent(stored);
+    if (stored === 'granted') {
+      applyConsent('granted');
+    } else if (stored === 'denied') {
+      deleteGACookies();
     } else {
       show();
     }
