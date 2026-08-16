@@ -81,14 +81,36 @@
 </div>
 <script>
   (function () {
-    var KEY = 'poesis-consent-v1';
+    var KEY = 'poesis_consent_v1';
+    var LEGACY_KEY = 'poesis-consent-v1';
+
+    // Cookie is scoped to the registrable domain so subdomains share the choice.
+    function consentDomain() {
+      var parts = location.hostname.split('.');
+      return parts.length > 2 ? '.' + parts.slice(-2).join('.') : null;
+    }
 
     function readConsent() {
-      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+      var match = document.cookie.split(';').map(function (c) { return c.trim(); })
+        .filter(function (c) { return c.indexOf(KEY + '=') === 0; })[0];
+      if (match) return match.split('=')[1];
+      // Migrate a pre-cookie choice made on this origin.
+      try {
+        var legacy = localStorage.getItem(LEGACY_KEY);
+        if (legacy) { storeConsent(legacy); return legacy; }
+      } catch (e) { /* ignore */ }
+      return null;
+    }
+
+    function storeConsent(value) {
+      var domain = consentDomain();
+      var attrs = '; path=/; max-age=15552000; SameSite=Lax';
+      if (location.protocol === 'https:') attrs += '; Secure';
+      document.cookie = KEY + '=' + value + attrs + (domain ? '; domain=' + domain : '');
     }
 
     function applyConsent(value, clearStale) {
-      try { localStorage.setItem(KEY, value); } catch (e) { /* ignore */ }
+      storeConsent(value);
       if (value === 'granted') {
         // Only on an explicit accept click: clearing on every stored-consent page
         // load would wipe the valid cookie and force a new client ID each visit.
