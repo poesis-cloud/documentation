@@ -62,6 +62,9 @@
 </script>
 
 <!-- Consent banner (GA4 + Google Translate gating) -->
+<!-- JTD compiles to hardcoded colors (no CSS custom properties at runtime), so
+     we use the real compiled hexes per scheme. The JS below toggles
+     .consent-banner--dark by watching the jtd stylesheet href. -->
 <style>
   .consent-banner {
     position: fixed;
@@ -75,30 +78,42 @@
     flex-wrap: wrap;
     width: min(56rem, calc(100vw - 2rem));
     padding: .9rem 1.1rem;
-    background: var(--body-background-color);
-    border: 1px solid var(--border-color);
+    /* teal (light) scheme: sidebar bg #f5f6fa, border #eeebee, text #5c5962, link #0fa3a3 */
+    background: #ffffff;
+    border: 1px solid #eeebee;
     border-radius: 8px;
-    box-shadow: 0 8px 28px rgba(0, 0, 0, .25);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, .18);
     font-size: .85rem;
   }
   .consent-banner[hidden] { display: none; }
-  .consent-banner-text { flex: 1 1 26rem; margin: 0; color: var(--body-text-color); }
+  .consent-banner-text { flex: 1 1 26rem; margin: 0; color: #5c5962; }
+  .consent-banner-text a { color: #0fa3a3; }
   .consent-banner-actions { display: flex; gap: .55rem; flex: none; }
   .consent-banner .btn-consent {
     padding: .4rem .85rem;
     border-radius: 6px;
-    border: 1px solid var(--border-color);
+    border: 1px solid #eeebee;
     background: transparent;
-    color: var(--body-text-color);
+    color: #5c5962;
     font: inherit;
     cursor: pointer;
   }
   .consent-banner .btn-consent--primary {
-    background: var(--link-color);
-    border-color: var(--link-color);
-    color: var(--body-background-color);
+    background: #0fa3a3;
+    border-color: #0fa3a3;
+    color: #ffffff;
     font-weight: 600;
   }
+  /* teal-dark scheme: sidebar bg #27262b, border #44434d, text #e6e1e8, link #14c8c8 */
+  .consent-banner.consent-banner--dark {
+    background: #27262b;
+    border-color: #44434d;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, .5);
+  }
+  .consent-banner--dark .consent-banner-text { color: #e6e1e8; }
+  .consent-banner--dark .consent-banner-text a { color: #14c8c8; }
+  .consent-banner--dark .btn-consent { border-color: #44434d; color: #e6e1e8; }
+  .consent-banner--dark .btn-consent--primary { background: #14c8c8; border-color: #14c8c8; color: #1e0010; }
 </style>
 <div
   id="consent-banner"
@@ -145,6 +160,29 @@
 
     var banner = document.getElementById('consent-banner');
     if (!banner) return;
+
+    // Reflect the active JTD color scheme (light vs dark) on the banner. The theme
+    // toggle swaps the stylesheet href, so watch it and read the scheme name.
+    function syncScheme() {
+      var link = document.querySelector('link[href*="just-the-docs-"]');
+      var dark = false;
+      if (link) {
+        var m = /just-the-docs-([a-z-]+)\.css/.exec(link.getAttribute('href') || '');
+        dark = !!(m && /dark/.test(m[1]));
+      } else {
+        var saved = null;
+        try { saved = localStorage.getItem('jtd-theme'); } catch (e) { /* ignore */ }
+        dark = /dark/.test(saved || '');
+      }
+      banner.classList.toggle('consent-banner--dark', dark);
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      syncScheme();
+      var link = document.querySelector('link[href*="just-the-docs-"]');
+      if (link) {
+        new MutationObserver(syncScheme).observe(link, { attributes: true, attributeFilter: ['href'] });
+      }
+    });
 
     function show() { banner.hidden = false; }
     function hide() { banner.hidden = true; }

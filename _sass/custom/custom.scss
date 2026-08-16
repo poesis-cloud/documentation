@@ -1,3 +1,20 @@
+// Mobile footer fix (Poesis)
+// --------------------------------------------------
+// The theme pins the Jekyll footer (".site-footer") with
+// `body { position: relative; padding-bottom: 4rem }` and
+// `.site-footer { position: absolute; bottom: 0 }` on viewports below the `md`
+// breakpoint (50rem). Our longer footer_content (copyright + legal links) needs
+// more than the reserved 4rem, so the footer overflowed the reserve and climbed
+// over the page content ("stuck mid-screen"). Restore a matching reserve so the
+// absolutely-pinned footer sits in the cleared gap at the true page bottom.
+
+@media (max-width: 49.99rem) {
+  body {
+    // ~1.5rem/line at fs-2, 6 lines for the legal footer + 2rem vertical padding
+    padding-bottom: 11rem;
+  }
+}
+
 // Adaptive, responsive sidebar
 // --------------------------------------------------
 // The theme sets a calc()-based width at @media (min-width: 66.5rem)
