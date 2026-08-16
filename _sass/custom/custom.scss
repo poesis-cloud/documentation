@@ -1,17 +1,27 @@
 // Mobile footer fix (Poesis)
 // --------------------------------------------------
-// The theme pins the Jekyll footer (".site-footer") with
-// `body { position: relative; padding-bottom: 4rem }` and
-// `.site-footer { position: absolute; bottom: 0 }` on viewports below the `md`
-// breakpoint (50rem). Our longer footer_content (copyright + legal links) needs
-// more than the reserved 4rem, so the footer overflowed the reserve and climbed
-// over the page content ("stuck mid-screen"). Restore a matching reserve so the
-// absolutely-pinned footer sits in the cleared gap at the true page bottom.
+// The theme renders the "Just the Docs" footer (".site-footer") inside the
+// sidebar, then pins it with `.site-footer { position: absolute; bottom: 0 }`
+// relative to `body` on viewports below the `md` breakpoint (50rem). Because it
+// is absolutely positioned it is taken out of flow and does NOT sit after the
+// sidebar content — it lands at the body bottom, and our longer footer_content
+// (copyright + legal links) overflows the small `body { padding-bottom: 4rem }`
+// reserve, so it climbs over the page content and looks "stuck mid-screen".
+//
+// Fix: on mobile, put the sidebar footer back into normal flow so it sits right
+// after the nav (inside the sidebar), not pinned to the body bottom. Desktop
+// (fixed sidebar, position: static already) is unaffected.
 
 @media (max-width: 49.99rem) {
-  body {
-    // ~1.5rem/line at fs-2, 6 lines for the legal footer + 2rem vertical padding
-    padding-bottom: 11rem;
+  .side-bar .site-footer,
+  .site-footer {
+    position: static;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 }
 
