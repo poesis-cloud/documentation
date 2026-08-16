@@ -1,0 +1,167 @@
+{%- comment -%}
+  Overrides the theme default to also host the consent banner, which must live in
+  the body (it was previously emitted from head_custom.html, i.e. inside <head>).
+{%- endcomment -%}
+
+{%- if site.footer_content -%}
+  <p class="text-small text-grey-dk-100 mb-0">{{ site.footer_content }}</p>
+{%- endif -%}
+
+<!-- Consent banner (gates GA4 + Google Translate). JTD compiles to hardcoded
+     colors (no CSS custom properties at runtime), so we use the real compiled
+     hexes per scheme; .consent-banner--dark is toggled by the script below. -->
+<style>
+  .consent-banner {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: min(56rem, calc(100vw - 2rem));
+    padding: .9rem 1.1rem;
+    background: #ffffff;
+    border: 1px solid #eeebee;
+    border-radius: 8px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, .18);
+    font-size: .85rem;
+    text-align: left;
+  }
+  .consent-banner[hidden] { display: none; }
+  .consent-banner-text { flex: 1 1 26rem; margin: 0; color: #5c5962; }
+  .consent-banner-text a { color: #0fa3a3; }
+  .consent-banner-actions { display: flex; gap: .55rem; flex: none; }
+  .consent-banner .btn-consent {
+    padding: .4rem .85rem;
+    border-radius: 6px;
+    border: 1px solid #eeebee;
+    background: transparent;
+    color: #5c5962;
+    font: inherit;
+    cursor: pointer;
+  }
+  .consent-banner .btn-consent--primary {
+    background: #0fa3a3;
+    border-color: #0fa3a3;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  .consent-banner.consent-banner--dark {
+    background: #27262b;
+    border-color: #44434d;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, .5);
+  }
+  .consent-banner--dark .consent-banner-text { color: #e6e1e8; }
+  .consent-banner--dark .consent-banner-text a { color: #14c8c8; }
+  .consent-banner--dark .btn-consent { border-color: #44434d; color: #e6e1e8; }
+  .consent-banner--dark .btn-consent--primary { background: #14c8c8; border-color: #14c8c8; color: #1e0010; }
+</style>
+<div
+  id="consent-banner"
+  class="consent-banner"
+  role="dialog"
+  aria-modal="false"
+  aria-label="Cookie consent"
+  aria-describedby="consent-banner-text"
+  hidden
+>
+  <p id="consent-banner-text" class="consent-banner-text">
+    We use Google Analytics to understand how the docs are used. Analytics cookies
+    are only set with your consent. See the
+    <a href="https://poesis.cloud/legal/cookies">cookie policy</a> and
+    <a href="https://poesis.cloud/legal/privacy">privacy policy</a>.
+  </p>
+  <div class="consent-banner-actions">
+    <button type="button" class="btn-consent" data-consent="denied">Reject</button>
+    <button type="button" class="btn-consent btn-consent--primary" data-consent="granted">Accept</button>
+  </div>
+</div>
+<script>
+  (function () {
+    var KEY = 'poesis-consent-v1';
+
+    function readConsent() {
+      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+    }
+
+    function applyConsent(value, clearStale) {
+      try { localStorage.setItem(KEY, value); } catch (e) { /* ignore */ }
+      if (value === 'granted') {
+        // Only on an explicit accept click: clearing on every stored-consent page
+        // load would wipe the valid cookie and force a new client ID each visit.
+        if (clearStale) deleteGACookies();
+        if (typeof window.poesisLoadGA4 === 'function') window.poesisLoadGA4();
+        if (typeof window.poesisLoadGoogleTranslate === 'function') window.poesisLoadGoogleTranslate();
+      } else {
+        deleteGACookies();
+      }
+    }
+
+    function deleteGACookies() {
+      var hosts = [location.hostname, '.' + location.hostname];
+      var parts = location.hostname.split('.');
+      if (parts.length > 2) hosts.push('.' + parts.slice(-2).join('.'), parts.slice(-2).join('.'));
+      document.cookie.split(';').forEach(function (c) {
+        var name = c.split('=')[0].trim();
+        if (name === '_ga' || name.indexOf('_ga_') === 0) {
+          hosts.forEach(function (h) {
+            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + h;
+          });
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+        }
+      });
+    }
+
+    var banner = document.getElementById('consent-banner');
+    if (!banner) return;
+
+    // The theme toggle swaps the stylesheet href, so read the scheme from it.
+    function syncScheme() {
+      var link = document.querySelector('link[href*="just-the-docs-"]');
+      var dark = false;
+      if (link) {
+        var m = /just-the-docs-([a-z-]+)\.css/.exec(link.getAttribute('href') || '');
+        dark = !!(m && /dark/.test(m[1]));
+      } else {
+        var saved = null;
+        try { saved = localStorage.getItem('jtd-theme'); } catch (e) { /* ignore */ }
+        dark = /dark/.test(saved || '');
+      }
+      banner.classList.toggle('consent-banner--dark', dark);
+    }
+    syncScheme();
+    var themeLink = document.querySelector('link[href*="just-the-docs-"]');
+    if (themeLink) {
+      new MutationObserver(syncScheme).observe(themeLink, { attributes: true, attributeFilter: ['href'] });
+    }
+
+    function show() { banner.hidden = false; }
+    function hide() { banner.hidden = true; }
+
+    banner.addEventListener('click', function (e) {
+      var btn = e.target && e.target.closest ? e.target.closest('[data-consent]') : null;
+      if (!btn) return;
+      applyConsent(btn.getAttribute('data-consent'), true);
+      hide();
+    });
+
+    document.addEventListener('click', function (e) {
+      var t = e.target && e.target.closest ? e.target.closest('[data-cookie-settings]') : null;
+      if (!t) return;
+      e.preventDefault();
+      show();
+    });
+
+    var stored = readConsent();
+    if (stored === 'granted') {
+      applyConsent('granted');
+    } else if (stored === 'denied') {
+      deleteGACookies();
+    } else {
+      show();
+    }
+  })();
+</script>
