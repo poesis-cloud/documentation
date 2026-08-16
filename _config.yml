@@ -13,7 +13,9 @@ nav_sort: case_insensitive
 
 # GA4 — same web stream as poesis.cloud (subdomains share the .poesis.cloud cookie,
 # so corporate → docs journeys are one session; split reporting by hostname).
-ga_tracking: G-KZGGY5D9GW
+# NOTE: do NOT set `ga_tracking` here — the theme would inject gtag unconditionally,
+# which would violate GDPR/ePrivacy. GA4 is loaded consent-gated from
+# _includes/head_custom.html instead (consent mode default: denied).
 
 aux_links:
   "poesis.cloud":
@@ -21,7 +23,7 @@ aux_links:
   "Poesis on GitHub":
     - "https://github.com/poesis-cloud"
 
-footer_content: '&copy; 2026 <a href="https://poesis.cloud">Poesis</a>. All rights reserved.'
+footer_content: '&copy; 2026 <a href="https://poesis.cloud">Poesis</a>. All rights reserved. &middot; <a href="https://poesis.cloud/legal/mentions-legales">Legal notice</a> &middot; <a href="https://poesis.cloud/legal/privacy">Privacy</a> &middot; <a href="https://poesis.cloud/legal/cookies">Cookies</a> &middot; <a href="#" data-cookie-settings>Cookie settings</a>'
 
 search_enabled: true
 

@@ -3,17 +3,47 @@
 <link rel="icon" href="{{ '/assets/images/favicon-16.png' | relative_url }}" type="image/png" sizes="16x16">
 <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
 
-<!-- Google Translate (hidden widget — triggered by header button) -->
+<!-- Consent mode default — must run BEFORE gtag.js so no analytics cookies are
+     set until the user grants consent (GDPR/ePrivacy). -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+</script>
+<!-- Google tag (gtag.js) — GA4 measurement G-KZGGY5D9GW, stays in consent-denied
+     cookieless mode until the consent banner grants 'analytics_storage'. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KZGGY5D9GW"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-KZGGY5D9GW', { anonymize_ip: true });
+</script>
+
+<!-- Google Translate (hidden widget — triggered by header button). Loaded ONLY
+     after analytics/functional consent, since it sets the googtrans cookie. -->
 <div id="google_translate_element" style="display:none;"></div>
-<script type="text/javascript">
+<script>
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'en',
       autoDisplay: false
     }, 'google_translate_element');
   }
+
+  window.poesisLoadGoogleTranslate = function () {
+    if (window.__poesisGTranslateLoaded) return;
+    window.__poesisGTranslateLoaded = true;
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    document.head.appendChild(s);
+  };
 </script>
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <style>
   /* Suppress Google Translate toolbar completely */
   .goog-te-banner-frame { display: none !important; height: 0 !important; visibility: hidden !important; }
@@ -29,6 +59,117 @@
       }
     }).observe(document.body, { attributes: true, attributeFilter: ["style"] });
   });
+</script>
+
+<!-- Consent banner (GA4 + Google Translate gating) -->
+<style>
+  .consent-banner {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: min(56rem, calc(100vw - 2rem));
+    padding: .9rem 1.1rem;
+    background: var(--body-background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, .25);
+    font-size: .85rem;
+  }
+  .consent-banner[hidden] { display: none; }
+  .consent-banner-text { flex: 1 1 26rem; margin: 0; color: var(--body-text-color); }
+  .consent-banner-actions { display: flex; gap: .55rem; flex: none; }
+  .consent-banner .btn-consent {
+    padding: .4rem .85rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--body-text-color);
+    font: inherit;
+    cursor: pointer;
+  }
+  .consent-banner .btn-consent--primary {
+    background: var(--link-color);
+    border-color: var(--link-color);
+    color: var(--body-background-color);
+    font-weight: 600;
+  }
+</style>
+<div
+  id="consent-banner"
+  class="consent-banner"
+  role="dialog"
+  aria-modal="false"
+  aria-label="Cookie consent"
+  aria-describedby="consent-banner-text"
+  hidden
+>
+  <p id="consent-banner-text" class="consent-banner-text">
+    We use Google Analytics to understand how the docs are used. Analytics cookies
+    are only set with your consent. See the
+    <a href="https://poesis.cloud/legal/cookies">cookie policy</a> and
+    <a href="https://poesis.cloud/legal/privacy">privacy policy</a>.
+  </p>
+  <div class="consent-banner-actions">
+    <button type="button" class="btn-consent" data-consent="denied">Reject</button>
+    <button type="button" class="btn-consent btn-consent--primary" data-consent="granted">Accept</button>
+  </div>
+</div>
+<script>
+  (function () {
+    var KEY = 'poesis-consent-v1';
+
+    function readConsent() {
+      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+    }
+
+    function applyConsent(value) {
+      try { localStorage.setItem(KEY, value); } catch (e) { /* ignore */ }
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', {
+          analytics_storage: value,
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+        });
+      }
+      if (value === 'granted' && typeof window.poesisLoadGoogleTranslate === 'function') {
+        window.poesisLoadGoogleTranslate();
+      }
+    }
+
+    var banner = document.getElementById('consent-banner');
+    if (!banner) return;
+
+    function show() { banner.hidden = false; }
+    function hide() { banner.hidden = true; }
+
+    banner.addEventListener('click', function (e) {
+      var btn = e.target && e.target.closest ? e.target.closest('[data-consent]') : null;
+      if (!btn) return;
+      applyConsent(btn.getAttribute('data-consent'));
+      hide();
+    });
+
+    document.addEventListener('click', function (e) {
+      var t = e.target && e.target.closest ? e.target.closest('[data-cookie-settings]') : null;
+      if (!t) return;
+      e.preventDefault();
+      show();
+    });
+
+    var stored = readConsent();
+    if (stored === 'granted' || stored === 'denied') {
+      applyConsent(stored);
+    } else {
+      show();
+    }
+  })();
 </script>
 
 <!-- Dark / Light mode toggle -->
