@@ -123,9 +123,16 @@ Versions are ordered, not scheduled. ✅ marks shipped.
 | 0.1 ✅ | First pre-GA increment — workspace scaffold |
 | **1.0 (MVP/GA)** | Workspace data plane · installer · CI/CD artifact pipelines |
 
+**SAF SIE Bridge** — current **v0.0**
+
+| Version | Milestone |
+| --- | --- |
+| **1.0 (MVP/GA)** | Harness history sourcing into GSM contributions on the Definition Blackboard Manager |
+
 ## How versions depend on each other
 
 1. **GSM Specifications are at 1.0** — SIE products conform to it; their GA is gated on hardening, not on the standard.
 2. **Definition Blackboard Manager GA gates the Code Sourcer GA** — the sourcer needs a stable server contract.
 3. **Agentic Harness GA gates the Organization and Workspace GA** — both version against the harness's stable CLI contract.
 4. **ITIP GA does not gate on SIE GA** — ITIP 1.0 may ship against SIE 0.x.
+5. **Definition Blackboard Manager GA also gates the SAF SIE Bridge GA** — the same stable server contract the ITIP sourcer depends on.

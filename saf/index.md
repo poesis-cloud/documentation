@@ -103,6 +103,8 @@ flowchart LR
   - [Features]({% link saf/safe-agentic-organization/features.md %}) — the capability catalogue with milestones
 - **[Agentic Workspace]({% link saf/agentic-workspace/index.md %})** — the shared data plane storing the artifacts local agentic workflows produce. *Documentation in construction.*
   - [Features]({% link saf/agentic-workspace/features.md %}) — the capability catalogue with milestones
+- **[SAF SIE Bridge]({% link saf/saf-sie-bridge/index.md %})** — the client sourcer turning the harness-governed agentic-execution history into GSM contributions on the Definition Blackboard Manager. *Documentation in construction.*
+  - [Features]({% link saf/saf-sie-bridge/features.md %}) — the capability catalogue with milestones
 
 **Next: [Quickstart — your first orchestrated PR →]({% link saf/quickstart.md %})**
 {: .fs-5 .fw-300 }
