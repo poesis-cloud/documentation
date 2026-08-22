@@ -181,8 +181,8 @@ GSM keeps the **model and governance** and leaves the **execution** to Kubernete
 
 GSM's value is *above* the control plane: a portable, vendor-neutral, governed definition that any executor — Kubernetes today, something else tomorrow — can realize.
 
-## Why this matters for CNCF
+## Why this needs a neutral standards home
 
-This is the deepest answer to "is GSM cloud-native?": **GSM generalizes the pattern Kubernetes pioneered.** Kubernetes gave container workloads a declarative, reconciliation-governed model and a neutral home at CNCF. GSM gives *that same pattern* a governance grammar, a lifecycle, and cross-domain reach — and needs the same neutral home for the same reason: so the definitions Kubernetes and its neighbors enforce are portable, not locked in.
+This is the deepest answer to "is GSM cloud-native?": **GSM generalizes the pattern Kubernetes pioneered.** Kubernetes gave container workloads a declarative, reconciliation-governed model and a neutral home. GSM gives *that same pattern* a governance grammar, a lifecycle, and cross-domain reach — and needs a neutral home for the same reason: so the definitions Kubernetes and its neighbors enforce are portable, not locked in. GSM seeks that home at [OASIS Open](https://www.oasis-open.org/), whose portfolio — policy, governance, topology, and interoperability standards — is where a definition-and-governance standard natively belongs.
 
 > See also: [Cloud-Native Use Cases](cloud-native-use-cases.md), the [Specification](specification.md) (normative model), and the [Primer](primer.md) (intuition).

@@ -16,7 +16,7 @@ redirect_from:
 
 <dl>
   <dt>Status of this document</dt>
-  <dd><strong>1.0 — publication pending.</strong> This is the source-available 1.0 release of GSM, prepared as a candidate for contribution as an open standard to the <a href="https://www.cncf.io/">Cloud Native Computing Foundation (CNCF)</a>. It has <em>not</em> been submitted to, reviewed by, or endorsed by the CNCF. Normative content is frozen; changes now follow semantic versioning.</dd>
+  <dd><strong>1.0 — publication pending.</strong> This is the source-available 1.0 release of GSM, prepared as a candidate for contribution as an open standard to <a href="https://www.oasis-open.org/">OASIS Open</a>. It has <em>not</em> been submitted to, reviewed by, or endorsed by OASIS. Normative content is frozen; changes now follow semantic versioning.</dd>
   <dt>Originating maintainer</dt>
   <dd>Poesis — <a href="https://github.com/poesis-cloud">github.com/poesis-cloud</a></dd>
   <dt>Editors</dt>
@@ -27,7 +27,7 @@ redirect_from:
   <dd>SIE — the Systemic Intelligence Engine (Definition Manager). See <a href="https://docs.poesis.cloud/sie/definition-manager/">SIE</a>.</dd>
 </dl>
 
-> **Related documents.** This Specification is the normative core of the GSM document set: the non-normative [Primer](primer.md), the [Conformance](conformance.md) catalog (stable requirement IDs), the proposed [Charter](charter.md), and the draft [CNCF Sandbox Proposal](cncf-sandbox-proposal.md).
+> **Related documents.** This Specification is the normative core of the GSM document set: the non-normative [Primer](primer.md), the [Conformance](conformance.md) catalog (stable requirement IDs), the proposed [Charter](charter.md), and the draft [OASIS TC Proposal](oasis-tc-proposal.md).
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -53,7 +53,7 @@ Prose cannot be machine-checked, composed, or enforced. As soon as software — 
 
 GSM is **generative**, not descriptive. A description records what a system *is*, after the fact. A definition declares what a system *must become* and carries the governance machinery to get there. This **Generative Inversion** is the core commitment of the model: a definition is the single source from which build-side execution is derived and against which run-side observation is compared.
 
-> **Positioning.** GSM is intended to become to the THINK side of IT what OpenTelemetry is to the RUN side: one open standard so that governed definitions are portable, rather than fragmented across vendors. GSM is complementary to — not a replacement for — CNCF runtime standards (see [§17](#17-relationship-to-other-work)).
+> **Positioning.** GSM is intended to become to the THINK side of IT what OpenTelemetry is to the RUN side: one open standard so that governed definitions are portable, rather than fragmented across vendors. GSM is complementary to — not a replacement for — runtime standards such as OpenTelemetry and CloudEvents (see [§17](#17-relationship-to-other-work)).
 
 This specification standardizes the *model and its interchange*. It is intentionally independent of any storage technology, programming language, or deployment topology. The companion **[Manifesto](manifesto.md)** states the design intent and principles in non-normative form.
 
@@ -633,8 +633,8 @@ A GSM Document is a JSON object with a `definitions` array. Each entry pairs a D
 
 - This specification uses semantic versioning. Pre-1.0 drafts MAY introduce breaking changes; from 1.0, breaking changes **MUST** increment the major version.
 - The canonical model artifacts (the eight base Archetype schemas and the seed meta-schema) are versioned with the specification.
-- **IP and licensing (proposed).** For CNCF contribution, the intended posture is: specification text under **CC BY 4.0**, and reference schemas/implementations under **Apache-2.0**, governed by the CNCF IP Policy. This posture is a proposal of the originating maintainer and is **not** a completed licensing change; the repository's current licenses remain authoritative until formally updated.
-- **Change process (proposed).** Post-contribution, changes would proceed by public proposal and review under a CNCF project governance charter. No such charter is in force at the time of this draft.
+- **IP and licensing (proposed).** For contribution to OASIS Open, the intended posture is: specification text under **CC BY 4.0**, and reference schemas/implementations under **Apache-2.0**, with the initial contribution made under the OASIS IPR Policy (proposed mode: Non-Assertion). This posture is a proposal of the originating maintainer and is **not** a completed licensing change; the repository's current licenses remain authoritative until formally updated.
+- **Change process (proposed).** Post-contribution, changes would proceed by public proposal and review under the OASIS TC Process within a chartered Technical Committee. No such committee is chartered at the time of this draft.
 
 ## 21. References
 
@@ -652,7 +652,7 @@ A GSM Document is a JSON object with a `definitions` array. Each entry pairs a D
 
 - [Manifesto](manifesto.md) — The GSM Manifesto (design intent and principles).
 - [SIE](https://docs.poesis.cloud/sie/definition-manager/) — Reference implementation overview.
-- OpenTelemetry; CloudEvents — complementary CNCF specifications.
+- OpenTelemetry; CloudEvents — complementary runtime and event-interchange specifications.
 
 ---
 

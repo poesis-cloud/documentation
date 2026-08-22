@@ -165,20 +165,20 @@ Norm:       platform-tenants ON CostProperties:
 
 **Payoff.** Golden paths and budgets are discoverable, versioned obligations a platform can publish — and that any conforming tool can read.
 
-## Why this belongs in CNCF
+## Where this sits in the cloud-native ecosystem
 
-Each use case maps GSM onto cloud-native projects and the CNCF Technical Advisory Groups that steward them:
+Each use case maps GSM onto cloud-native projects and the ecosystem domains that steward them:
 
-| Use case | Realized / observed by | Relevant CNCF TAG |
+| Use case | Realized / observed by | Ecosystem domain |
 |---|---|---|
-| SLO governance | OpenTelemetry, Prometheus | App Delivery · Observability |
-| Admission & policy | OPA/Gatekeeper, Kyverno | App Delivery · Security & Compliance |
-| Supply chain | sigstore, SLSA, in-toto, TUF | Security & Compliance |
-| Zero-trust / mesh | SPIFFE/SPIRE, Istio, Linkerd | Security & Compliance · Network |
-| Progressive delivery | Argo, Flux, Flagger | App Delivery |
-| Continuous compliance | Falco, policy engines | Security & Compliance |
-| Platform & FinOps | Backstage, Crossplane, OpenCost | App Delivery |
+| SLO governance | OpenTelemetry, Prometheus | App delivery · Observability |
+| Admission & policy | OPA/Gatekeeper, Kyverno | App delivery · Security & compliance |
+| Supply chain | sigstore, SLSA, in-toto, TUF | Security & compliance |
+| Zero-trust / mesh | SPIFFE/SPIRE, Istio, Linkerd | Security & compliance · Network |
+| Progressive delivery | Argo, Flux, Flagger | App delivery |
+| Continuous compliance | Falco, policy engines | Security & compliance |
+| Platform & FinOps | Backstage, Crossplane, OpenCost | App delivery |
 
-The throughline: **GSM is the definitional complement to CNCF's runtime standards.** OpenTelemetry gave the RUN layer a vendor-neutral home at CNCF; the THINK layer — the definitions those runtimes enforce and measure against — needs the same neutral home, for the same reason: portability instead of lock-in.
+The throughline: **GSM is the definitional complement to the runtime standards.** OpenTelemetry gave the RUN layer a vendor-neutral home; the THINK layer — the definitions those runtimes enforce and measure against — needs a neutral standards home for the same reason: portability instead of lock-in. GSM seeks that home at [OASIS Open](https://www.oasis-open.org/), whose portfolio (policy, governance, topology, interoperability) is the natural fit for a definition-and-governance standard.
 
-> See also: **[GSM and the Kubernetes Model](gsm-and-kubernetes.md)** (how GSM generalizes the Kubernetes pattern), the [Specification](specification.md) (normative model), the [Primer](primer.md) (intuition), and the [CNCF Sandbox Proposal](cncf-sandbox-proposal.md).
+> See also: **[GSM and the Kubernetes Model](gsm-and-kubernetes.md)** (how GSM generalizes the Kubernetes pattern), the [Specification](specification.md) (normative model), the [Primer](primer.md) (intuition), and the [OASIS TC Proposal](oasis-tc-proposal.md).

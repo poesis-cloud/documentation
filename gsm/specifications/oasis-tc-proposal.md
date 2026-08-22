@@ -1,20 +1,21 @@
 ---
 layout: default
-title: "GSM — CNCF Sandbox Proposal (Draft)"
+title: "GSM — OASIS TC Proposal (Draft)"
 parent: GSM Specifications
 grand_parent: GSM — the standard
 nav_order: 7
 redirect_from:
   - /gsm/cncf-sandbox-proposal/
+  - /gsm/specifications/cncf-sandbox-proposal/
 ---
 
-# GSM — CNCF Sandbox Proposal (Draft)
+# GSM — OASIS TC Charter Proposal (Draft)
 {: .no_toc }
 
-**Status:** Draft application — not submitted
+**Status:** Draft charter proposal — not submitted
 {: .fs-5 .fw-300 }
 
-This is a **draft** application proposing the Generative System Model (GSM) for the [CNCF](https://www.cncf.io/) **Sandbox** maturity level. It follows the structure of the CNCF Sandbox intake. It has **not** been submitted to the CNCF, and nothing here implies CNCF review or acceptance. Fields that depend on people or relationships not yet established are marked **TBD** rather than filled speculatively.
+This is a **draft** proposal to charter an [OASIS Open](https://www.oasis-open.org/) **Technical Committee (TC)** to standardize the Generative System Model (GSM). It follows the charter elements required by the [OASIS TC Process](https://www.oasis-open.org/policies-guidelines/tc-process/). It has **not** been submitted to OASIS, and nothing here implies OASIS review or acceptance. Fields that depend on people or relationships not yet established are marked **TBD** rather than filled speculatively.
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -24,34 +25,35 @@ This is a **draft** application proposing the Generative System Model (GSM) for 
 
 ---
 
-## 1. Application contact
+## 1. Proposer contact
 
 - **Originating maintainer:** Poesis — [github.com/poesis-cloud](https://github.com/poesis-cloud)
 - **Primary contact:** TBD
+- **Co-proposers:** TBD — the TC Process requires support from Eligible Persons across multiple OASIS member organizations.
 - **Maintainers file:** to be added at contribution time (see [Charter §4](charter.md)).
 
-## 2. Project name
+## 2. Proposed TC name
 
-**Generative System Model (GSM)** — a vendor-neutral standard for defining and governing software-intensive systems, developed as a candidate open standard.
+**OASIS Generative System Model (GSM) TC** *(working name; final naming per OASIS naming policies)* — a vendor-neutral standard for defining and governing software-intensive systems, developed as a candidate open standard.
 
-## 3. Project description
+## 3. Statement of purpose
 
 GSM is a small, fixed vocabulary for expressing **what a software-intensive system must be** — its purpose, obligations, and constraints — as **typed, versioned, machine-evaluable definitions** rather than prose. It standardizes the **THINK** layer of IT (definition and governance), complementing the BUILD layer (pipelines) and the RUN layer (observability). The standard specifies eight primitives, a three-tempo governance grammar (Directives, Norms, Ascriptions), an extensible Archetype type system, a normative lifecycle, two sandboxed expression-language profiles, and a canonical JSON interchange so that governed definitions are portable across conforming tools.
 
-## 4. Statement on alignment with CNCF mission
+## 4. Statement on alignment with the OASIS portfolio
 
-The CNCF fosters and sustains an ecosystem of open, vendor-neutral projects for cloud-native systems. Cloud-native systems are governed systems: they carry compliance, security, reliability, and architectural obligations that today live in non-portable, tool-specific prose. GSM provides an **open, vendor-neutral, machine-evaluable** way to express those obligations and bind them to subjects across their lifecycle — directly serving CNCF's goals of interoperability and avoidance of lock-in. GSM is the definitional complement to existing CNCF runtime standards.
+OASIS Open develops open standards for governance, policy, security, and interoperability — XACML (access control and policy), TOSCA (topology), LegalRuleML and Akoma Ntoso (legal and regulatory rules), STIX/TAXII/CSAF (security exchange), UBL (business interchange) — and hosts the Coalition for Secure AI. GSM is a **machine-evaluable definition-and-governance standard**: it sits squarely inside that portfolio. Modern systems carry compliance, security, reliability, and architectural obligations that today live in non-portable, tool-specific prose; GSM provides an **open, vendor-neutral, machine-evaluable** way to express those obligations and bind them to subjects across their lifecycle — directly serving OASIS's goals of interoperability and avoidance of lock-in.
 
-## 5. Cloud-native fit, alignment, and gap
+## 5. Fit, alignment, and gap
 
-- **Fit.** GSM is model-and-interchange first, infrastructure-independent, and implementable by many tools — the same shape as CloudEvents and OpenTelemetry.
-- **Alignment.** It composes with CNCF projects rather than competing: OpenTelemetry produces the descriptive evidence a GSM Norm is evaluated against; a GSM Effector's output may be carried as a CloudEvent; workload-identity and feature-flag standards realize definitions GSM governs.
+- **Fit.** GSM is model-and-interchange first, infrastructure-independent, and implementable by many tools — the same shape as UBL, TOSCA, CloudEvents, and OpenTelemetry.
+- **Alignment.** It composes with existing ecosystems rather than competing: OpenTelemetry produces the descriptive evidence a GSM Norm is evaluated against; a GSM Effector's output may be carried as a CloudEvent; policy engines (XACML-family, OPA) enforce the obligations GSM makes portable.
 - **Gap it fills.** There is no open, vendor-neutral standard for the *definition/governance* (THINK) layer. Governance is fragmented across architecture wikis, compliance spreadsheets, and proprietary GRC tools whose models do not interoperate. GSM closes that gap.
 
-**Representative cloud-native use cases** (full detail: [Cloud-Native Use Cases](cloud-native-use-cases.md)):
+**Representative use cases** (full detail: [Cloud-Native Use Cases](cloud-native-use-cases.md)):
 
 - **SLO governance** — Norms express SLOs; OpenTelemetry supplies the evidence.
-- **Admission & policy** — the Directive/Norm is the authoritative obligation; OPA/Gatekeeper and Kyverno enforce.
+- **Admission & policy** — the Directive/Norm is the authoritative obligation; OPA/Gatekeeper, Kyverno, and XACML-family engines enforce.
 - **Supply chain** — provenance/signing/SBOM obligations as DNA; sigstore, SLSA, in-toto, and TUF as evidence.
 - **Zero-trust / mesh** — service coupling as Interactions governed by Norms; SPIFFE/SPIRE, Istio, and Linkerd realize them.
 - **Progressive delivery** — rollout guardrails as Norms; Argo, Flux, and Flagger realize them.
@@ -62,45 +64,49 @@ The CNCF fosters and sustains an ecosystem of open, vendor-neutral projects for 
 
 - **OpenTelemetry** — RUN layer (telemetry). Complementary, not overlapping.
 - **CloudEvents** — event interchange. GSM reuses it as a carrier, not a substitute.
-- **Open Policy Agent / policy-as-code** — evaluates rules against current state. GSM governs the *definition of the state* (slow-moving identity and obligations) with a full lifecycle and governance grammar; the two are complementary.
+- **Open Policy Agent / XACML / policy-as-code** — evaluates rules against current state. GSM governs the *definition of the state* (slow-moving identity and obligations) with a full lifecycle and governance grammar; the two are complementary.
+- **TOSCA** — topology and orchestration definitions; GSM adds the governance grammar and lifecycle over definitions. Complementary.
 - **Enterprise-architecture frameworks (TOGAF, ArchiMate) and quality/regulatory standards (ISO 25010, GDPR, NIS2, DORA)** — these are *sourced into* GSM as Archetypes and DNA, not replaced.
 
 ## 7. Vendor neutrality
 
 The standard mandates no vendor, language, runtime, or storage technology. Conformance is defined for documents, producers, consumers, and processors so that independent implementations interoperate. The reference implementation is one conformant processor among potential others and holds no privileged status in the specification.
 
-## 8. Why CNCF, and why Sandbox
+## 8. Why OASIS, and why a TC
 
-- **Why CNCF.** Neutral stewardship is what turns a model into a standard. The THINK layer needs the same neutral home the RUN layer found in CNCF for OpenTelemetry; CNCF's IP policy, governance scaffolding, and ecosystem are the right environment for vendor-neutral adoption.
-- **Why Sandbox.** GSM is young (1.0 recently frozen, single-vendor). Sandbox is the appropriate entry maturity: it signals early-stage, invites community contribution, and sets expectations honestly. Incubation would be sought only after demonstrating multi-party adoption.
+- **Why OASIS.** Neutral stewardship is what turns a model into a standard. GSM's domain — governance, policy, interoperability — is OASIS's core portfolio, and OASIS offers a real standards track: Committee Specification → Candidate OASIS Standard → **OASIS Standard**, with optional submission to ISO/IEC JTC 1 (the path taken by UBL → ISO/IEC 19845 and ebXML → ISO 15000).
+- **Why a TC.** A Technical Committee is the formal standards-track vehicle. It requires multi-organization participation from chartering onward, which sets the vendor-neutrality expectation honestly; OASIS Standard approval additionally requires Statements of Use from implementing organizations.
 
-## 9. Roadmap (high level)
+## 9. Scope of work and deliverables (high level)
 
-- **Near term:** stabilize the 0.x specification; publish the conformance catalog and a reference test fixture set; gather implementer feedback.
-- **Mid term:** independent implementations beyond the reference; framework-mapping guides (TOGAF/ISO/GDPR → GSM); a 1.0 candidate with a frozen conformance surface.
-- **Longer term:** broaden domain adoption beyond IT governance; formal interoperability tests with complementary CNCF projects.
+- **Deliverables:** the GSM specification (standards-track), the conformance requirement catalog and reference test fixtures, and the canonical JSON interchange schemas.
+- **Out of scope:** implementations (including the Poesis reference implementation), which remain outside the TC.
+- **Near term:** charter the TC; contribute the specification as the initial contribution; iterate through Committee Specification Drafts with public reviews.
+- **Mid term:** independent implementations beyond the reference (the future Statements of Use); framework-mapping guides (TOGAF/ISO/GDPR → GSM); Committee Specification.
+- **Longer term:** Candidate OASIS Standard → OASIS Standard; broaden domain adoption beyond IT governance.
 
 Dates are intentionally omitted; this is an early-stage draft.
 
 ## 10. Governance and maintainers
 
-Proposed governance is documented in the [Charter](charter.md): maintainer roles, lazy-consensus default with supermajority for normative change, a written change-proposal process, and semantic versioning. A `MAINTAINERS` file would be established at contribution time. Current steward: Poesis.
+Proposed pre-chartering governance is documented in the [Charter](charter.md): maintainer roles, lazy-consensus default with supermajority for normative change, a written change-proposal process, and semantic versioning. Once chartered, the OASIS TC Process governs the TC's work. Current steward: Poesis.
 
 ## 11. Contributing and Code of Conduct
 
-Contribution would follow the hosting foundation's DCO/CLA and Code of Conduct. Until hosted, the source repositories' `CONTRIBUTING` and `CODE_OF_CONDUCT`/`CONTRIBUTING` guidance applies.
+Once chartered, contribution follows the OASIS TC Process and IPR Policy, and OASIS's Code of Conduct applies to TC activities. Until then, the source repositories' `CONTRIBUTING` and `CODE_OF_CONDUCT` guidance applies.
 
-## 12. License
+## 12. License and IPR mode
 
 - **Current repository license:** BUSL-1.1 (source-available, not Open Source).
-- **Specification text:** CC BY 4.0 (proposed).
+- **Specification text:** CC BY 4.0 (proposed, at publication).
 - **Reference schemas and implementation:** Apache-2.0 (proposed, OSI-approved).
+- **Proposed TC IPR mode:** **Non-Assertion** — the most adoption-friendly OASIS IPR mode.
 
-This relicensing is **proposed**; current repository licenses remain authoritative until formally updated by the rights holder.
+The relicensing is **proposed**; current repository licenses remain authoritative until formally updated by the rights holder. The initial contribution to the TC is then made under the OASIS IPR Policy.
 
 ## 13. Trademark and IP
 
-The originating maintainer is willing, in principle, to transfer the project name/marks and to operate under the hosting foundation's IP Policy as part of contribution. Specific terms are **TBD** and subject to the rights holder's formal decision.
+**No trademark donation is required by the OASIS route.** Poesis retains all its marks (Poesis, SIE, ITIP, certification marks, and the GSM name); TC and work-product naming will be aligned with OASIS naming policies. The specification text is contributed to the TC under the OASIS IPR Policy. Specific terms are **TBD** and subject to the rights holder's formal decision.
 
 ## 14. External dependencies
 
@@ -115,7 +121,7 @@ No external (third-party) adopters are claimed at this draft stage.
 
 ## 16. Existing sponsorship / funding
 
-Developed within the **Poesis** project. No external CNCF or vendor funding. Requested TOC sponsors: **TBD**.
+Developed within the **Poesis** project. No external consortium or vendor funding; OASIS membership dues would be borne by Poesis. Co-proposing member organizations: **TBD**.
 
 ---
 

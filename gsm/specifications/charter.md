@@ -14,7 +14,7 @@ redirect_from:
 **Status:** Proposed — not in force
 {: .fs-5 .fw-300 }
 
-This charter describes the **proposed** governance for the GSM standard if it is contributed to a neutral foundation such as the [CNCF](https://www.cncf.io/). It is a draft of intent by the originating maintainer (Poesis). It is **not** an enacted governance document, and it does not yet bind any party. Until enacted, the source repositories' existing `CONTRIBUTING`, `LICENSE`, and `GOVERNANCE` files remain authoritative.
+This charter describes the **proposed** governance for the GSM standard if it is contributed to a neutral standards consortium — the intended home is [OASIS Open](https://www.oasis-open.org/). It is a draft of intent by the originating maintainer (Poesis). It is **not** an enacted governance document, and it does not yet bind any party. Until enacted, the source repositories' existing `CONTRIBUTING`, `LICENSE`, and `GOVERNANCE` files remain authoritative.
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -85,7 +85,7 @@ This posture is a **proposal**; the repositories' current licenses remain author
 
 ## 9. Code of Conduct
 
-The project would adopt the hosting foundation's Code of Conduct (e.g. the [CNCF Code of Conduct](https://github.com/cncf/foundation)). Until then, contributor conduct is governed by the existing repository `CONTRIBUTING` guidance.
+The project would adopt the hosting consortium's Code of Conduct — once an OASIS Technical Committee is chartered, the [OASIS Code of Conduct](https://www.oasis-open.org/policies-guidelines/oasis-participants-code-of-conduct/) applies to TC activities. Until then, contributor conduct is governed by the existing repository `CONTRIBUTING` guidance.
 
 ## 10. Amending this charter
 

@@ -10,7 +10,7 @@ has_children: true
 
 {: .no_toc }
 
-The **Specifications** are the core of GSM: eight primitives, the DNA governance grammar, the Archetype type system, and the systemic lifecycle. They are published as a CNCF-style document set — normative documents (Specification, Conformance) alongside the non-normative material that makes them approachable. The **[Features]({% link gsm/specifications/features.md %})** page summarizes what the document set defines.
+The **Specifications** are the core of GSM: eight primitives, the DNA governance grammar, the Archetype type system, and the systemic lifecycle. They are published as a standards-track document set — normative documents (Specification, Conformance) alongside the non-normative material that makes them approachable. The **[Features]({% link gsm/specifications/features.md %})** page summarizes what the document set defines.
 
 ## In this section
 
@@ -20,9 +20,9 @@ The **Specifications** are the core of GSM: eight primitives, the DNA governance
 - **[Specification]({% link gsm/specifications/specification.md %})** — the normative standard: the eight primitives, the DNA governance grammar, the Archetype type system, the Ascription lifecycle, the expression-language profiles, the canonical JSON interchange, and conformance.
 - **[Conformance]({% link gsm/specifications/conformance.md %})** — the testable requirement catalog with stable assertion IDs and conformance profiles.
 - **[Charter]({% link gsm/specifications/charter.md %})** — the proposed project governance (mission, roles, decision-making, licensing).
-- **[CNCF Sandbox Proposal]({% link gsm/specifications/cncf-sandbox-proposal.md %})** — the draft application proposing GSM to the CNCF at the Sandbox maturity level.
+- **[OASIS TC Proposal]({% link gsm/specifications/oasis-tc-proposal.md %})** — the draft charter proposal for an OASIS Open Technical Committee to standardize GSM.
 - **[Cloud-Native Use Cases]({% link gsm/specifications/cloud-native-use-cases.md %})** — concrete cloud-native scenarios (SLOs, policy, supply chain, zero-trust, delivery, compliance, platform/FinOps) showing how GSM composes with OpenTelemetry, OPA, sigstore, SPIFFE, Argo, and more.
 - **[GSM and the Kubernetes Model]({% link gsm/specifications/gsm-and-kubernetes.md %})** — how GSM generalizes the declarative, reconciliation-governed pattern Kubernetes pioneered: a concept mapping (CRD↔Archetype, controller↔Mechanism, admission CEL↔Norm) and Kubernetes-specific use cases.
-- **[CNCF Submission Playbook]({% link gsm/specifications/cncf-submission-playbook.md %})** — how CNCF acceptance works and the path GSM follows to Sandbox.
+- **[OASIS Submission Playbook]({% link gsm/specifications/oasis-submission-playbook.md %})** — how OASIS standardization works and the path GSM follows to a Technical Committee.
 
 GSM also has an academic-publication track (a paper and a book); that track is separate from this documentation site and from the normative Specification above.

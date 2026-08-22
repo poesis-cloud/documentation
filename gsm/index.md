@@ -23,7 +23,7 @@ GSM is at **v1.0** — normative content frozen, publication of the document set
 
 ## Products
 
-- **Specifications** — the core spec: eight primitives, DNA grammar, Archetyping, and the systemic lifecycle, prepared as a CNCF-style document set. *Publication pending — the specification document set is being finalized for release.*
+- **Specifications** — the core spec: eight primitives, DNA grammar, Archetyping, and the systemic lifecycle, prepared as a standards-track document set (intended home: OASIS Open). *Publication pending — the specification document set is being finalized for release.*
 - **[Frameworks]({% link gsm/frameworks/index.md %})** — domain, standard, and legal vocabularies sourced into GSM, ready to enforce. *Documentation in construction.*
   - [Features]({% link gsm/frameworks/features.md %}) — the capability catalogue with milestones
 
