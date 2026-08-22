@@ -102,11 +102,11 @@ Versions are ordered, not scheduled. ✅ marks shipped.
 
 ### SAF
 
-**Agentic Harness** — current **v0.0**
+**Agentic Harness** — current **v1.0**
 
 | Version | Milestone |
 | --- | --- |
-| **1.0 (MVP/GA)** | Workflow & step resolution · prompt injection · LLM resolution · artifact validation · authorization · logging |
+| **1.0 (MVP/GA)** ✅ | Workflow & step resolution · prompt injection · LLM resolution · artifact validation · authorization · logging |
 
 **SAFe Agentic Organization** — current **v0.1**
 
@@ -131,6 +131,6 @@ Versions are ordered, not scheduled. ✅ marks shipped.
 
 1. **GSM Specifications are at 1.0** — SIE products conform to it; their GA is gated on hardening, not on the standard.
 2. **Definition Blackboard Manager GA gates the Code Sourcer GA** — the sourcer needs a stable server contract.
-3. **Agentic Harness GA gates the Organization and Workspace GA** — both version against the harness's stable CLI contract, though the Organization already shipped its own **v0.1.0** ahead of the harness.
+3. **The Agentic Harness is at 1.0** — the Organization and Workspace version against its stable CLI contract; their GA is gated on their own scope, not the harness.
 4. **ITIP GA does not gate on SIE GA** — ITIP 1.0 may ship against SIE 0.x.
 5. **Definition Blackboard Manager GA also gates the SAF SIE Bridge GA** — the same stable server contract the ITIP sourcer depends on.

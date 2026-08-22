@@ -27,9 +27,9 @@ Capability catalogue for the Agentic Harness.
 
 | Feature | Representative content | Milestone |
 |---------|------------------------|-----------|
-| Workflow & step resolution | Workflow and step graphs resolved deterministically from plain files | v1.0 (MVP/GA) |
-| Skill and instruction prompt injection | Skills and instructions injected into the agent session at open | v1.0 (MVP/GA) |
-| LLM resolution | Deterministic model tier + capability-score routing | v1.0 (MVP/GA) |
-| Artifact validation | Staged bytes validated against JSON Schema contracts before commit | v1.0 (MVP/GA) |
-| Agent authorization | Pre, invariant, and post conditions gate every step | v1.0 (MVP/GA) |
-| Logging | Session ledger appended on every step execution | v1.0 (MVP/GA) |
+| Workflow & step resolution | Workflow and step graphs resolved deterministically from plain files | Shipped · v1.0 (MVP/GA) |
+| Skill and instruction prompt injection | Skills and instructions injected into the agent session at open | Shipped · v1.0 (MVP/GA) |
+| LLM resolution | Deterministic model tier + capability-score routing | Shipped · v1.0 (MVP/GA) |
+| Artifact validation | Staged bytes validated against JSON Schema contracts before commit | Shipped · v1.0 (MVP/GA) |
+| Agent authorization | Pre, invariant, and post conditions gate every step | Shipped · v1.0 (MVP/GA) |
+| Logging | Session ledger appended on every step execution | Shipped · v1.0 (MVP/GA) |
