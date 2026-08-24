@@ -100,6 +100,13 @@ Versions are ordered, not scheduled. ✅ marks shipped.
 | **1.0 (MVP/GA)** | HTTP, TOGAF, and ITIP complete & validated |
 | 1.x | Remaining protocol semantics · ISO 25010 · ISO 25012 · GDPR · NIS2 · SCAP · DORA · SAFe · ITIL · catalogue update stream (unordered) |
 
+**Research Lab** — current **v1.0.0-beta.1**
+
+| Version | Milestone |
+| --- | --- |
+| 1.0.0-beta.1 ✅ | Research product extracted — generative governance and archetype referential model |
+| **1.0 (MVP/GA)** | Research protocol · published programs · promotion path into GSM Change Proposals |
+
 ### SAF
 
 **Agentic Harness** — current **v1.0**

@@ -21,7 +21,7 @@ Content mirrors the Poesis portfolio taxonomy — Solutions → Products → Pag
 |---|---|
 | `itip/` | ITIP — IT Intelligence Platform (Web Application, Definition Blackboard Code Sourcer) |
 | `sie/` | SIE — Systemic Intelligence Engine (Definition Manager, Operator, Definition Blackboard Manager) |
-| `gsm/` | GSM — the standard (Specifications, Frameworks) |
+| `gsm/` | GSM — the standard (Specifications, Research Lab, Ontology) |
 | `saf/` | SAF — Systemic Agentic Framework (Agentic Harness, SAFe Agentic Organization, Agentic Workspace) |
 
 ## Editorial policy
@@ -30,6 +30,17 @@ This site is **neutral, task-first user documentation**. Persuasion content — 
 competitive positioning, ROI, CTAs — belongs on [poesis.cloud](https://poesis.cloud), not here.
 
 ## Local build
+
+Refresh the checked-in GSM research, model, and schema content from sibling
+`gsm/gsm-research-lab` and `gsm/gsm-specifications` checkouts before building:
+
+```bash
+./scripts/sync-gsm-content.sh
+```
+
+The GSM source repository remains authoritative. The documentation repository
+checks in the synchronized output because the Pages build cannot fetch the
+private source repository.
 
 ```bash
 bundle install
