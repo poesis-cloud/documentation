@@ -30,7 +30,7 @@ Engineers, architects, and governance practitioners who want to understand *how 
 
 ## The one-paragraph version
 
-GSM is a small, fixed vocabulary for writing down **what a system must be** — its purpose, its obligations, its constraints — in a form a machine can check. Instead of governance living in wikis and spreadsheets that drift from reality, GSM expresses it as **typed, versioned definitions** that build pipelines can implement and observability tools can measure against. Eight primitives, one governance grammar, one type system, one lifecycle.
+GSM is a small, fixed vocabulary for writing down **what a system must be** — its purpose, its obligations, its constraints — in a form a machine can check. Instead of governance living in wikis and spreadsheets that drift from reality, GSM expresses it as **typed, versioned definitions** that build pipelines can implement and observability tools can measure against. Eight primitives, one generative governance grammar, one type system, one lifecycle.
 
 ## Define, don't describe
 

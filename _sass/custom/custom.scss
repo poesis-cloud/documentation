@@ -56,3 +56,107 @@
   padding-left: 0;
   font-size: 0.85rem;
 }
+
+// Visual roadmap timeline (milestones.md, via _includes/roadmap_timeline.html)
+// --------------------------------------------------
+// Accent mirrors the active teal color scheme's $link-color (color_schemes/teal.scss).
+$roadmap-accent: #0fa3a3;
+
+.roadmap-timeline {
+  margin: 0 0 2rem;
+}
+
+.roadmap-timeline-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.roadmap-timeline-product {
+  font-weight: 600;
+}
+
+.roadmap-timeline-current {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: $roadmap-accent;
+  border: 1px solid rgba($roadmap-accent, 0.5);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  white-space: nowrap;
+}
+
+.roadmap-timeline-track {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 1.75rem 0 1rem;
+  overflow-x: auto;
+}
+
+.roadmap-timeline-item {
+  position: relative;
+  flex: 0 0 auto;
+  min-width: 9rem;
+  max-width: 11.5rem;
+  padding: 0 0.75rem;
+  text-align: center;
+}
+
+.roadmap-timeline-item + .roadmap-timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 0.3rem;
+  left: -50%;
+  width: 100%;
+  height: 2px;
+  background: rgba($roadmap-accent, 0.25);
+}
+
+.roadmap-timeline-item.is-shipped + .roadmap-timeline-item::before,
+.roadmap-timeline-item.is-ga + .roadmap-timeline-item::before {
+  background: rgba($roadmap-accent, 0.25);
+}
+
+.roadmap-timeline-item.is-shipped::before,
+.roadmap-timeline-item.is-ga::before {
+  background: $roadmap-accent;
+}
+
+.roadmap-timeline-dot {
+  display: block;
+  width: 0.65rem;
+  height: 0.65rem;
+  margin: 0 auto 0.5rem;
+  border-radius: 50%;
+  background: rgba($roadmap-accent, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.roadmap-timeline-item.is-shipped .roadmap-timeline-dot,
+.roadmap-timeline-item.is-ga .roadmap-timeline-dot {
+  background: $roadmap-accent;
+  box-shadow: 0 0 0 3px rgba($roadmap-accent, 0.18);
+}
+
+.roadmap-timeline-version {
+  display: block;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.roadmap-timeline-item.is-ga .roadmap-timeline-version {
+  color: $roadmap-accent;
+}
+
+.roadmap-timeline-label {
+  display: block;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  margin-top: 0.2rem;
+  opacity: 0.85;
+}

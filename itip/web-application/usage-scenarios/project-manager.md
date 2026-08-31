@@ -80,7 +80,7 @@ ITIP tracks which architecture deliverables are published and which are still in
 
 Deliverables are served directly from ITIP. No manual export needed (Confluence sync is available for wider distribution).
 
-## Using frameworks
+## Using ontologies
 
 ### TOGAF ADM — Architecture Development Method
 
@@ -88,7 +88,7 @@ As a PM, the TOGAF ADM lifecycle maps to your governance checkpoints:
 
 | ADM phase | ITIP governance checkpoint |
 |-----------|---------------------------|
-| Preliminary | Framework stack composed, governing Structures defined |
+| Preliminary | Ontology stack composed, governing Structures defined |
 | Architecture Vision | Directives authored and in PROPOSED state |
 | Business / Application / Technology Architecture | Structures defined, Norms authored |
 | Opportunities & Solutions | All Norms operationalized, gap analysis complete |

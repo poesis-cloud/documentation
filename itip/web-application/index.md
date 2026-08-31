@@ -102,15 +102,16 @@ RUN was not always well-served. A decade ago, observability looked much like THI
 
 THINK is still waiting for its OpenTelemetry. The definition of what systems *should be* — architecture, governance, compliance, quality — lives in incompatible, proprietary silos that nobody can compose or verify.
 
-**GSM is the intended standard.** What OpenTelemetry did for *running* systems — a shared semantic model that ended fragmentation — GSM does for *defining and governing* them: one vendor-neutral standard (a candidate open standard) that pairs a governance **grammar** (DNA) with shared **semantics** (Archetypes) for the **build** side of IT, the way OpenTelemetry is the open standard for the **run** side.
+**GSM is the intended standard.** What OpenTelemetry did for *observing* systems — a shared semantic model that ended fragmentation — GSM does for *defining* them: one vendor-neutral standard (a candidate open standard) that pairs a generative governance **grammar** (DNA) with shared **semantics** (Archetypes).
 
 ---
 
 ## How ITIP works: DNA governance
 
-ITIP is built on **SIE (Systemic Intelligence Engine)**, which implements the **Generative System Model (GSM)** — a formal model for defining and governing systems.
+ITIP is built on **SIE (Systemic Intelligence Engine)**, which implements the **Generative System Model (GSM)** — the vendor-neutral standard for defining systems.
 
-At the heart of GSM is a governance grammar called **DNA**:
+At the heart of GSM is a generative governance grammar called **DNA**. Its
+three layers also express governance tempo:
 
 | Letter | Primitive | What it does |
 |--------|-----------|-------------|
@@ -143,7 +144,7 @@ So frameworks both **constitute** and **extend** the standard:
 
 And because every framework speaks the same DNA, they compose. A regulatory standard, a quality model, and an architecture framework layer into one coherent governance fabric — no reconciliation, no silos. Adopt a framework and its governance is *already* expressed, versioned, and enforceable in your model.
 
-[General Usage]({% link itip/web-application/general-usage.md %}) covers the framework catalogue and how to compose framework stacks in practice.
+[General Usage]({% link itip/web-application/general-usage.md %}) covers the ontology catalogue and how to compose ontology stacks in practice.
 
 ---
 

@@ -15,6 +15,6 @@ redirect_from:
 
 In the meantime:
 
-- **[ITIP overview]({% link itip/web-application/index.md %})** — the concepts behind ITIP and the DNA governance grammar.
+- **[ITIP overview]({% link itip/web-application/index.md %})** — the concepts behind ITIP and the DNA generative governance grammar.
 - **[General Usage]({% link itip/web-application/general-usage.md %})** — Directives, Norms, Ascriptions, and Frameworks in practice.
 - **[Usage Scenarios]({% link itip/web-application/usage-scenarios/index.md %})** — role-by-role workflows for each IT profile.

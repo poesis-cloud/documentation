@@ -42,97 +42,9 @@ The ITIP Web Application catalogue also uses **v1 / v2**: **v1** is the v1.0 (MV
 
 ## Product version milestones
 
-Versions are ordered, not scheduled. ✅ marks shipped.
+Versions are ordered, not scheduled. Each line below is one product's version timeline; the filled segment and dots mark what has shipped or reached GA.
 
-### ITIP
-
-**Web Application** — current **v0.1**
-
-| Version | Milestone |
-| --- | --- |
-| 0.1 ✅ | First pre-GA increment — application & BFF foundation |
-| **1.0 (MVP/GA)** | GSM Definitions management + GSM Frameworks management + RBAC/ABAC, hardened |
-| 1.x | Truth sourcing management · IT artifact factory · IT compliance evaluation · IT impact simulation (unordered) |
-
-**Definition Blackboard Code Sourcer** — current **v0.0**
-
-| Version | Milestone |
-| --- | --- |
-| **1.0 (MVP/GA)** | GSM Definitions automatic sourcing from code repos |
-
-### SIE
-
-**Definition Manager** — current **v1.0**
-
-| Version | Milestone |
-| --- | --- |
-| **1.0 (MVP/GA)** ✅ | GSM Definitions management RESTful API · lifecycle enforcement · retention |
-| 1.x | GSM Definitions and tooling serving (MCP) |
-
-**Operator** — current **v0.1**
-
-| Version | Milestone |
-| --- | --- |
-| 0.1 ✅ | Basic Mechanism runtime |
-| **1.0 (MVP/GA)** | GSM Norms evaluation API |
-| 1.x | GSM Mechanisms execution API |
-
-**Definition Blackboard Manager** — current **v1.0**
-
-| Version | Milestone |
-| --- | --- |
-| **1.0 (MVP/GA)** ✅ | KS Contributions management RESTful API · lifecycle enforcement · retention |
-
-### GSM
-
-**Specifications** — current **v1.0** (normative content frozen; publication of the document set pending, target ≈ October 2026)
-
-| Version | Milestone |
-| --- | --- |
-| 1.0 ✅ | Eight primitives · DNA grammar · Archetyping · systemic lifecycle — frozen |
-| 1.1 | Enhanced Directives and Norms model |
-
-**Frameworks** — current **v0.1**
-
-| Version | Milestone |
-| --- | --- |
-| 0.1 ✅ | First frameworks sourced |
-| **1.0 (MVP/GA)** | HTTP, TOGAF, and ITIP complete & validated |
-| 1.x | Remaining protocol semantics · ISO 25010 · ISO 25012 · GDPR · NIS2 · SCAP · DORA · SAFe · ITIL · catalogue update stream (unordered) |
-
-**Research Lab** — current **v1.0.0-beta.1**
-
-| Version | Milestone |
-| --- | --- |
-| 1.0.0-beta.1 ✅ | Research product extracted — generative governance and archetype referential model |
-| **1.0 (MVP/GA)** | Research protocol · published programs · promotion path into GSM Change Proposals |
-
-### SAF
-
-**Agentic Harness** — current **v1.0**
-
-| Version | Milestone |
-| --- | --- |
-| **1.0 (MVP/GA)** ✅ | Workflow & step resolution · prompt injection · LLM resolution · artifact validation · authorization · logging |
-
-**SAFe Agentic Organization** — current **v0.1**
-
-| Version | Milestone |
-| --- | --- |
-| 0.1 ✅ | First pre-GA increment — framework scaffold |
-| **1.0 (MVP/GA)** | Agents · skills · workflows · instructions · artifacts |
-
-**Agentic Workspace** — current **v0.0**
-
-| Version | Milestone |
-| --- | --- |
-| **1.0 (MVP/GA)** | Workspace data plane · installer · CI/CD artifact pipelines |
-
-**SAF SIE Bridge** — current **v0.0**
-
-| Version | Milestone |
-| --- | --- |
-| **1.0 (MVP/GA)** | Harness history sourcing into GSM contributions on the Definition Blackboard Manager |
+{% include roadmap_timeline.html %}
 
 ## How versions depend on each other
 

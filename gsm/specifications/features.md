@@ -13,7 +13,7 @@ What the GSM specification document set defines. GSM is at v1.0: the constructs 
 
 | Construct | What it defines | Where |
 |-----------|-----------------|-------|
-| Eight systemic primitives | Structure, Mechanism, Effector, Receptor, Interaction, Archetype, Directive, Norm — a small, fixed core that composes any system | [Specification]({% link gsm/specifications/specification.md %}) |
+| Systemic Primitives | Structure, Mechanism, Effector, Receptor, Interaction, Archetype, Directive, Norm — a small, fixed core that composes any system | [Specification]({% link gsm/specifications/specification.md %}) |
 | DNA grammar | Directives, Norms, and Ascriptions — the three-tempo grammar for how intent becomes an evaluable, bound obligation | [Specification]({% link gsm/specifications/specification.md %}), [Primer]({% link gsm/specifications/primer.md %}) |
 | Archetyping | Typed JSON Schema domain schemas that carry vocabulary, grammar, and semantics — meaning travels with the type | [Specification]({% link gsm/specifications/specification.md %}) |
 | Systemic lifecycle management | The normative state machine governing how every definition is drafted, proposed, approved, activated, deprecated, and retired | [Specification]({% link gsm/specifications/specification.md %}) |

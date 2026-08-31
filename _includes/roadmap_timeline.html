@@ -1,0 +1,26 @@
+<!--
+  Visual roadmap timeline — renders documentation/_data/roadmap.yml as a line-and-milestones
+  timeline per product, grouped by solution. Mirrors the corporate site's ProductRoadmap.astro
+  pattern. Styling lives in _sass/custom/custom.scss (.roadmap-timeline*).
+-->
+{% for solution in site.data.roadmap %}
+<h3>{{ solution.solution }}</h3>
+
+{% for product in solution.products %}
+<div class="roadmap-timeline">
+  <div class="roadmap-timeline-head">
+    <span class="roadmap-timeline-product">{{ product.name }}</span>
+    <span class="roadmap-timeline-current">current v{{ product.current }}</span>
+  </div>
+  <ol class="roadmap-timeline-track">
+    {% for m in product.milestones %}
+    <li class="roadmap-timeline-item{% if m.shipped %} is-shipped{% endif %}{% if m.ga %} is-ga{% endif %}">
+      <span class="roadmap-timeline-dot" aria-hidden="true"></span>
+      <span class="roadmap-timeline-version">{{ m.version }}{% if m.shipped %} ✅{% endif %}</span>
+      <span class="roadmap-timeline-label">{{ m.label }}</span>
+    </li>
+    {% endfor %}
+  </ol>
+</div>
+{% endfor %}
+{% endfor %}

@@ -29,4 +29,4 @@ Capability catalogue for the Definition Blackboard Code Sourcer.
 
 | Feature | Representative content | Milestone |
 |---------|------------------------|-----------|
-| GSM Definitions automatic sourcing from code repos | Source repositories, API contracts, SBOMs, and infrastructure into governed GSM definitions posted as evidence-backed contributions (confidence + provenance envelopes) to the Definition Blackboard Manager | v1.0 (MVP/GA) |
+| GSM Definitions automatic sourcing from code repos | Source repositories, API contracts, SBOMs, and infrastructure into governed GSM definitions posted as evidence-backed contributions (confidence + provenance envelopes) to the Definition Blackboard Manager | 1.0.0 (MVP/GA) |

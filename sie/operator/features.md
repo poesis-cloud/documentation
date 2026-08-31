@@ -28,4 +28,5 @@ Capability catalogue for the Operator, grouped by functional component.
 | Feature | Representative content | Milestone |
 |---------|------------------------|-----------|
 | GSM Norms evaluation API | Evaluate machine-evaluable Norms (CEL) against observed state, in a sandboxed, reproducible rule runtime | v1.0 (MVP/GA) |
-| GSM Mechanisms execution API | Execute governed Mechanisms in the same sandboxed, reproducible rule runtime (basic runtime exists today) | v1.x |
+| GSM Mechanism execution foundations | Execute governed Mechanisms in the same sandboxed, reproducible rule runtime (basic runtime exists today) | v1.1.0 |
+| GSM Mechanism execution technos integrations | Extend Mechanism execution to further target technologies, ongoing after the foundations land | v1.x |

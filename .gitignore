@@ -4,5 +4,6 @@ _site/
 .jekyll-metadata
 vendor/
 
-# GSM docs are maintained in this repository (gsm repo is private; Pages cannot
-# fetch it at build time). Keep the full GSM section published with the site.
+# GSM source is private, so Pages cannot fetch it at build time. Research,
+# model, and schema publication copies are refreshed locally with
+# scripts/sync-gsm-content.sh and checked in with the documentation changes.

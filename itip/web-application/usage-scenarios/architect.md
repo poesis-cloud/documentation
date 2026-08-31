@@ -22,7 +22,7 @@ redirect_from:
 
 ## What you do in ITIP
 
-You are the primary **governance author**. You define Structures, write Directives and Norms, compose framework stacks, and produce architecture deliverables — all from governed definitions.
+You are the primary **governance author**. You define Structures, write Directives and Norms, compose ontology stacks, and produce architecture deliverables — all from governed definitions.
 
 ITIP replaces the disconnected toolchain (EA tool + Confluence + spreadsheets + manual audits) with a single governed workspace where every definition is versioned, lifecycle-managed, and machine-evaluable.
 
@@ -71,9 +71,9 @@ payment-gateway ON availability:
 
 Copilot assists: given a natural-language NFR like *"99.9% uptime over 30 days"*, it suggests the CEL assertion and tolerance mode.
 
-### Compose framework stacks
+### Compose ontology stacks
 
-Frameworks provide pre-built governance vocabulary. You compose them into layered stacks:
+Ontologies provide pre-built governance vocabulary. You compose them into layered stacks:
 
 1. Navigate to **Presets > Compose Stack**.
 2. Select layers: **Geopolitical** (EU), **Regulatory** (GDPR, NIS2), **Industry** (PCI-DSS), **Cross-framework** (ISO 27001).
@@ -93,7 +93,7 @@ All architecture deliverables are authored within ITIP from governed definitions
 
 Deliverables are published and served from ITIP. No manual export to Confluence required (though sync is available).
 
-## Using frameworks
+## Using ontologies
 
 ### TOGAF
 

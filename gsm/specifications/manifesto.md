@@ -46,7 +46,7 @@ There is a hard reason this must be made explicit. As long as "what the system s
 
 A standard for the THINK layer needs two things a wiki can never offer: a shared **grammar** for expressing governance, and shared **semantics** so that expression means the same thing everywhere. GSM provides both, on a deliberately small core.
 
-**DNA — the governance grammar.** Every governed concern is expressed in three primitives:
+**DNA — the generative governance grammar.** Every governed concern is expressed in three primitives:
 
 - a **Directive** — strategic operational intent, declaring what a system must achieve or avoid;
 - a **Norm** — a tactical, machine-evaluable assertion that operationalizes a Directive into something a machine can measure;
@@ -66,7 +66,7 @@ A decade ago, RUN looked like THINK looks today. Every vendor shipped its own ag
 
 THINK is still waiting for its OpenTelemetry.
 
-GSM is built to be that standard for the THINK side of IT — the open model for *defining and governing* systems, the way OpenTelemetry is the open model for *observing* them. A governed definition should be portable: any tool should be able to produce it, and any tool should be able to consume it, without translation and without lock-in.
+GSM is the vendor-neutral standard for *defining systems*, the way OpenTelemetry is the vendor-neutral standard for *observing* them. Its generative governance grammar makes those definitions governable. A system definition should be portable: any tool should be able to produce it, and any tool should be able to consume it, without translation and without lock-in.
 
 This is why GSM is open by design. It is implemented today by **SIE (Systemic Intelligence Engine)** — the reference implementation that hosts the model and runs its governance — and applied by **ITIP**, the first domain application built on SIE. But the model is not the implementation. The standard is meant to be shared, so the THINK layer becomes common ground rather than fragmented territory.
 

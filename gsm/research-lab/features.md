@@ -28,7 +28,8 @@ semantics.
 
 | Feature | Representative content | Milestone |
 |---------|------------------------|-----------|
-| Generative governance program | Causal model, governance chain, DNA production, cases, decision register | ✓ v1.0.0-beta.1 |
-| Archetype referential model | Identity, versioning, composition, lifecycle eligibility | ✓ v1.0.0-beta.1 |
-| Systemics paradigm | Systemics is the paradigm; GSM is a candidate model under test | ✓ v1.0.0-beta.1 |
-| Promotion path | Accepted research becomes a GSM Change Proposal; the lab never amends the standard | ✓ v1.0.0-beta.1 |
+| Causal model | Organization, purpose, function, and viability evaluations | ✓ v1.0.0-beta.1 |
+| Governance chain | Regulation, feedback, variety, and operational closure | ✓ v1.0.0-beta.1 |
+| DNA production | Autopoietic production of DNA and lifecycle handoff | ✓ v1.0.0-beta.1 |
+| Cases | Executed, discriminating examples | ✓ v1.0.0-beta.1 |
+| Decision register | Stable IDs for unresolved decisions shared across the dossier | ✓ v1.0.0-beta.1 |

@@ -121,7 +121,7 @@ An implementation claims conformance by naming a **profile**, the **specificatio
 | `GSM-PROC-22` | MUST | Treat terminal statuses (`RETIRED`, `ABANDONED`, `REJECTED`) as permanent. | §12.2 |
 | `GSM-PROC-23` | MUST | Record an immutable audit entry (pre-status, post-status, timestamp) per transition. | §12.2, §16.4 |
 
-### 6.5 Governance grammar
+### 6.5 Generative governance grammar
 
 | ID | Level | Requirement | Spec ref |
 |---|---|---|---|

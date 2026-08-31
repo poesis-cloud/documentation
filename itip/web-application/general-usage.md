@@ -237,13 +237,13 @@ You rarely interact with "Ascriptions" directly — ITIP presents them as the de
 
 ---
 
-## Frameworks — Governance Building Blocks
+## Ontologies — Governance Building Blocks
 
 Frameworks are **pre-built governance vocabularies** sourced from established standards (TOGAF, ISO 25010, GDPR, NIS2, etc.). They provide ready-made Archetypes, Directives, and Norms that you can adopt, compose, and customize in ITIP.
 
-Instead of starting governance from scratch, you compose **framework stacks** — layered combinations of regulatory, quality, and architectural standards that apply to your systems.
+Instead of starting governance from scratch, you compose **ontology stacks** — layered combinations of regulatory, quality, and architectural standards that apply to your systems.
 
-### What frameworks provide
+### What ontologies provide
 
 | Framework type | Examples | What they bring |
 |---------------|---------|----------------|
@@ -252,19 +252,19 @@ Instead of starting governance from scratch, you compose **framework stacks** �
 | **Regulatory** | GDPR, NIS2, PCI-DSS | Pre-built Directives and Norms that encode regulatory requirements as machine-evaluable governance |
 | **Industry** | ISO 27001, SOC 2 | Control frameworks translated into Directive/Norm pairs |
 
-### Composing framework stacks
+### Composing ontology stacks
 
 In ITIP, you compose frameworks into governance stacks:
 
-1. **Browse** available frameworks in the framework catalog
+1. **Browse** available ontologies in the ontology catalogue
 2. **Inspect** their Directives and Norms to understand what governance they encode
-3. **Compose** a multi-framework stack (e.g., TOGAF + ISO 25010 + GDPR + NIS2)
+3. **Compose** a multi-ontology stack (e.g., TOGAF + ISO 25010 + GDPR + NIS2)
 4. **Resolve conflicts** where frameworks overlap or contradict
 5. **Attach** the composed stack to your governed structures
 
 Once attached, framework Norms are evaluated alongside your custom Norms — same lifecycle, same continuous compliance evaluation.
 
-### Frameworks as vocabulary
+### Ontologies as vocabulary
 
 Beyond governance constraints, frameworks provide the **vocabulary** you use to describe your IT landscape. TOGAF's architecture domains give you structured terminology for business, application, data, and technology layers. ISO quality models give you standardized dimensions for reliability, security, performance, and data quality.
 

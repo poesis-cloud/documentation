@@ -21,7 +21,7 @@ For the full ITIP capability catalogue, see **[Features]({% link itip/web-applic
 
 | Profile | Primary activity in ITIP |
 |---------|------------------------|
-| [Enterprise / Solution Architect]({% link itip/web-application/usage-scenarios/architect.md %}) | Define Structures, author Directives, compose framework stacks, produce architecture deliverables |
+| [Enterprise / Solution Architect]({% link itip/web-application/usage-scenarios/architect.md %}) | Define Structures, author Directives, compose ontology stacks, produce architecture deliverables |
 | [Developer / Tech Lead]({% link itip/web-application/usage-scenarios/developer.md %}) | Consult specifications, verify code-sourced definitions, check Norm compliance |
 | [Project / Product Manager]({% link itip/web-application/usage-scenarios/project-manager.md %}) | Track governance readiness, monitor definition lifecycle state, coordinate deliverables |
 | [Operations / SRE Engineer]({% link itip/web-application/usage-scenarios/operations.md %}) | Monitor compliance drift, inspect real-time architecture state, trigger remediation |
