@@ -29,8 +29,8 @@ Capability catalogue for the Definition Manager, grouped by functional component
 
 | Feature | Representative content | Milestone |
 |---------|------------------------|-----------|
-| GSM Definitions management RESTful API | Create, read, update, query every governed definition; live OpenAPI; isolated tenant schemas | Shipped · v1.0.0-beta.1 (Beta) |
-| GSM Definitions lifecycle enforcement | Ascription lifecycle as a validated state machine (DRAFT → … → RETIRED) with referee preconditions | Shipped · v1.0.0-beta.1 (Beta) |
-| GSM Definitions retention | Definitions and history retained as versioned state transitions | Shipped · v1.0.0-beta.1 (Beta) |
-| GSM Definitions lifecycle events mediation | Lifecycle state transitions published as events other services and agents can react to, instead of polling | v1.1.0 |
-| MCP | The governed model and its tooling served to AI applications and agents via the Model Context Protocol — definitions as typed, trustworthy context | v1.2.0 |
+| GSM Definitions management RESTful API | Create, read, update, query every governed definition; live OpenAPI; isolated tenant schemas | Shipped · v1.0 (MVP/GA) |
+| GSM Definitions lifecycle enforcement | Ascription lifecycle as a validated state machine (DRAFT → … → RETIRED) with referee preconditions | Shipped · v1.0 (MVP/GA) |
+| GSM Definitions retention | Definitions and history retained as versioned state transitions | Shipped · v1.0 (MVP/GA) |
+| GSM Definitions lifecycle events mediation | Lifecycle state transitions published as events other services and agents can react to, instead of polling | v1.1 |
+| MCP | The governed model and its tooling served to AI applications and agents via the Model Context Protocol — definitions as typed, trustworthy context | v1.2 |

@@ -35,10 +35,12 @@ Each **product** carries its own version line (solutions are not versioned):
 | --- | --- |
 | **Shipped (✓ vX.Y)** | implemented today, delivered in the version shown |
 | **v1.0 (MVP/GA)** | the first-release scope — production-ready, commercially supportable |
-| **v1.x** | post-GA feature batches; unordered unless stated |
+| **v1.1, v1.2, …** | planned post-GA feature batches, in the order the product's timeline states |
+| **v1.x** | post-GA scope that is open and not yet sequenced |
 | **Unversioned** | exploratory / research-tier; may never ship |
 
-The ITIP Web Application catalogue also uses **v1 / v2**: **v1** is the v1.0 (MVP/GA) scope; **v2** is the v1.x scope.
+Feature catalogues use these same markers — a feature's marker is the version its
+product's timeline below assigns to it. There is no separate catalogue vocabulary.
 
 ## Product version milestones
 
